@@ -1,0 +1,925 @@
+detector,detector_label,dataset,metric,value
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-ORIGINAL-C23,video_auc,0.9723
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-ORIGINAL-C23,video_acc,0.9329
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-ORIGINAL-C23,video_f1,0.9571
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-ORIGINAL-C23,video_eer,0.0705
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-ORIGINAL-C23,frame_auc,0.9535
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-ORIGINAL-C23,frame_acc,0.9083
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-ORIGINAL-C23,video_count,700
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-DF-C23,video_auc,0.9917
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-DF-C23,video_acc,0.95
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-DF-C23,video_f1,0.9514
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-DF-C23,video_eer,0.0321
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-DF-C23,frame_auc,0.9809
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-DF-C23,frame_acc,0.9191
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-DF-C23,video_count,280
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-F2F-C23,video_auc,0.9717
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-F2F-C23,video_acc,0.9286
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-F2F-C23,video_f1,0.9291
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-F2F-C23,video_eer,0.0714
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-F2F-C23,frame_auc,0.9515
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-F2F-C23,frame_acc,0.8876
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-F2F-C23,video_count,280
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-FS-C23,video_auc,0.9863
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-FS-C23,video_acc,0.9536
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-FS-C23,video_f1,0.955
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-FS-C23,video_eer,0.0357
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-FS-C23,frame_auc,0.9732
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-FS-C23,frame_acc,0.914
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-FS-C23,video_count,280
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-NT-C23,video_auc,0.9397
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-NT-C23,video_acc,0.8821
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-NT-C23,video_f1,0.8773
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-NT-C23,video_eer,0.1357
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-NT-C23,frame_auc,0.9086
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-NT-C23,frame_acc,0.8471
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-NT-C23,video_count,280
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-FSH-C23,video_auc,0.8507
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-FSH-C23,video_acc,0.7679
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-FSH-C23,video_f1,0.7257
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-FSH-C23,video_eer,0.2143
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-FSH-C23,frame_auc,0.7953
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-FSH-C23,frame_acc,0.7251
+GenD_CLIP_L_14,GenD (CLIP-L/14),FF-FSH-C23,video_count,280
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv1,video_auc,0.9329
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv1,video_acc,0.81
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv1,video_f1,0.8652
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv1,video_eer,0.1596
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv1,frame_auc,0.8907
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv1,frame_acc,0.7728
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv1,video_count,100
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv2,video_auc,0.9479
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv2,video_acc,0.8514
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv2,video_f1,0.8964
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv2,video_eer,0.1351
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv2,frame_auc,0.8927
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv2,frame_acc,0.8128
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv2,video_count,518
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv3,video_auc,0.7919
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv3,video_acc,0.7723
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv3,video_f1,0.8693
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv3,video_eer,0.2802
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv3,frame_auc,0.7486
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv3,frame_acc,0.7274
+GenD_CLIP_L_14,GenD (CLIP-L/14),CDFv3,video_count,7107
+GenD_CLIP_L_14,GenD (CLIP-L/14),DeFo,video_auc,0.957
+GenD_CLIP_L_14,GenD (CLIP-L/14),DeFo,video_acc,0.9009
+GenD_CLIP_L_14,GenD (CLIP-L/14),DeFo,video_f1,0.9306
+GenD_CLIP_L_14,GenD (CLIP-L/14),DeFo,video_eer,0.0944
+GenD_CLIP_L_14,GenD (CLIP-L/14),DeFo,frame_auc,0.9325
+GenD_CLIP_L_14,GenD (CLIP-L/14),DeFo,frame_acc,0.8702
+GenD_CLIP_L_14,GenD (CLIP-L/14),DeFo,video_count,3089
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFD-C23,video_auc,0.9758
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFD-C23,video_acc,0.9481
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFD-C23,video_f1,0.9708
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFD-C23,video_eer,0.0765
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFD-C23,frame_auc,0.948
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFD-C23,frame_acc,0.9187
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFD-C23,video_count,3431
+GenD_CLIP_L_14,GenD (CLIP-L/14),DSv1,video_auc,0.9024
+GenD_CLIP_L_14,GenD (CLIP-L/14),DSv1,video_acc,0.7916
+GenD_CLIP_L_14,GenD (CLIP-L/14),DSv1,video_f1,0.8164
+GenD_CLIP_L_14,GenD (CLIP-L/14),DSv1,video_eer,0.1665
+GenD_CLIP_L_14,GenD (CLIP-L/14),DSv1,frame_auc,0.8638
+GenD_CLIP_L_14,GenD (CLIP-L/14),DSv1,frame_acc,0.7666
+GenD_CLIP_L_14,GenD (CLIP-L/14),DSv1,video_count,2913
+GenD_CLIP_L_14,GenD (CLIP-L/14),DSv2,video_auc,0.7373
+GenD_CLIP_L_14,GenD (CLIP-L/14),DSv2,video_acc,0.6712
+GenD_CLIP_L_14,GenD (CLIP-L/14),DSv2,video_f1,0.6631
+GenD_CLIP_L_14,GenD (CLIP-L/14),DSv2,video_eer,0.3184
+GenD_CLIP_L_14,GenD (CLIP-L/14),DSv2,frame_auc,0.7054
+GenD_CLIP_L_14,GenD (CLIP-L/14),DSv2,frame_acc,0.6523
+GenD_CLIP_L_14,GenD (CLIP-L/14),DSv2,video_count,3279
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDCP,video_auc,0.8992
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDCP,video_acc,0.8338
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDCP,video_f1,0.871
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDCP,video_eer,0.1818
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDCP,frame_auc,0.8447
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDCP,frame_acc,0.7682
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDCP,video_count,770
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDC,video_auc,0.856
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDC,video_acc,0.7654
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDC,video_f1,0.7744
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDC,video_eer,0.2322
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDC,frame_auc,0.8127
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDC,frame_acc,0.7285
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDC,video_count,4979
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDM-C23,video_auc,0.9977
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDM-C23,video_acc,0.9321
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDM-C23,video_f1,0.9585
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDM-C23,video_eer,0.025
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDM-C23,frame_auc,0.9819
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDM-C23,frame_acc,0.9246
+GenD_CLIP_L_14,GenD (CLIP-L/14),DFDM-C23,video_count,2740
+GenD_CLIP_L_14,GenD (CLIP-L/14),FAVC,video_auc,0.9481
+GenD_CLIP_L_14,GenD (CLIP-L/14),FAVC,video_acc,0.7993
+GenD_CLIP_L_14,GenD (CLIP-L/14),FAVC,video_f1,0.8678
+GenD_CLIP_L_14,GenD (CLIP-L/14),FAVC,video_eer,0.1283
+GenD_CLIP_L_14,GenD (CLIP-L/14),FAVC,frame_auc,0.9135
+GenD_CLIP_L_14,GenD (CLIP-L/14),FAVC,frame_acc,0.7837
+GenD_CLIP_L_14,GenD (CLIP-L/14),FAVC,video_count,2994
+GenD_CLIP_L_14,GenD (CLIP-L/14),FFIW10K,video_auc,0.8747
+GenD_CLIP_L_14,GenD (CLIP-L/14),FFIW10K,video_acc,0.7886
+GenD_CLIP_L_14,GenD (CLIP-L/14),FFIW10K,video_f1,0.7939
+GenD_CLIP_L_14,GenD (CLIP-L/14),FFIW10K,video_eer,0.2087
+GenD_CLIP_L_14,GenD (CLIP-L/14),FFIW10K,frame_auc,0.8107
+GenD_CLIP_L_14,GenD (CLIP-L/14),FFIW10K,frame_acc,0.7361
+GenD_CLIP_L_14,GenD (CLIP-L/14),FFIW10K,video_count,19949
+GenD_CLIP_L_14,GenD (CLIP-L/14),IDFv1,video_auc,0.9401
+GenD_CLIP_L_14,GenD (CLIP-L/14),IDFv1,video_acc,0.8667
+GenD_CLIP_L_14,GenD (CLIP-L/14),IDFv1,video_f1,0.9093
+GenD_CLIP_L_14,GenD (CLIP-L/14),IDFv1,video_eer,0.128
+GenD_CLIP_L_14,GenD (CLIP-L/14),IDFv1,frame_auc,0.8935
+GenD_CLIP_L_14,GenD (CLIP-L/14),IDFv1,frame_acc,0.8272
+GenD_CLIP_L_14,GenD (CLIP-L/14),IDFv1,video_count,2386
+GenD_CLIP_L_14,GenD (CLIP-L/14),KoDF,video_auc,0.8671
+GenD_CLIP_L_14,GenD (CLIP-L/14),KoDF,video_acc,0.7579
+GenD_CLIP_L_14,GenD (CLIP-L/14),KoDF,video_f1,0.7629
+GenD_CLIP_L_14,GenD (CLIP-L/14),KoDF,video_eer,0.2131
+GenD_CLIP_L_14,GenD (CLIP-L/14),KoDF,frame_auc,0.8516
+GenD_CLIP_L_14,GenD (CLIP-L/14),KoDF,frame_acc,0.7488
+GenD_CLIP_L_14,GenD (CLIP-L/14),KoDF,video_count,4618
+GenD_CLIP_L_14,GenD (CLIP-L/14),PGF,video_auc,0.895
+GenD_CLIP_L_14,GenD (CLIP-L/14),PGF,video_acc,0.8556
+GenD_CLIP_L_14,GenD (CLIP-L/14),PGF,video_f1,0.9187
+GenD_CLIP_L_14,GenD (CLIP-L/14),PGF,video_eer,0.1839
+GenD_CLIP_L_14,GenD (CLIP-L/14),PGF,frame_auc,0.8388
+GenD_CLIP_L_14,GenD (CLIP-L/14),PGF,frame_acc,0.8151
+GenD_CLIP_L_14,GenD (CLIP-L/14),PGF,video_count,14367
+GenD_CLIP_L_14,GenD (CLIP-L/14),UADFV,video_auc,0.9946
+GenD_CLIP_L_14,GenD (CLIP-L/14),UADFV,video_acc,0.8878
+GenD_CLIP_L_14,GenD (CLIP-L/14),UADFV,video_f1,0.8972
+GenD_CLIP_L_14,GenD (CLIP-L/14),UADFV,video_eer,0.0408
+GenD_CLIP_L_14,GenD (CLIP-L/14),UADFV,frame_auc,0.9827
+GenD_CLIP_L_14,GenD (CLIP-L/14),UADFV,frame_acc,0.8729
+GenD_CLIP_L_14,GenD (CLIP-L/14),UADFV,video_count,98
+GenD_DINOv3_L,GenD (DINOv3-L),FF-ORIGINAL-C23,video_auc,0.9871
+GenD_DINOv3_L,GenD (DINOv3-L),FF-ORIGINAL-C23,video_acc,0.9471
+GenD_DINOv3_L,GenD (DINOv3-L),FF-ORIGINAL-C23,video_f1,0.9661
+GenD_DINOv3_L,GenD (DINOv3-L),FF-ORIGINAL-C23,video_eer,0.0491
+GenD_DINOv3_L,GenD (DINOv3-L),FF-ORIGINAL-C23,frame_auc,0.9694
+GenD_DINOv3_L,GenD (DINOv3-L),FF-ORIGINAL-C23,frame_acc,0.9214
+GenD_DINOv3_L,GenD (DINOv3-L),FF-ORIGINAL-C23,video_count,700
+GenD_DINOv3_L,GenD (DINOv3-L),FF-DF-C23,video_auc,0.9967
+GenD_DINOv3_L,GenD (DINOv3-L),FF-DF-C23,video_acc,0.9679
+GenD_DINOv3_L,GenD (DINOv3-L),FF-DF-C23,video_f1,0.968
+GenD_DINOv3_L,GenD (DINOv3-L),FF-DF-C23,video_eer,0.0321
+GenD_DINOv3_L,GenD (DINOv3-L),FF-DF-C23,frame_auc,0.9855
+GenD_DINOv3_L,GenD (DINOv3-L),FF-DF-C23,frame_acc,0.9369
+GenD_DINOv3_L,GenD (DINOv3-L),FF-DF-C23,video_count,280
+GenD_DINOv3_L,GenD (DINOv3-L),FF-F2F-C23,video_auc,0.9916
+GenD_DINOv3_L,GenD (DINOv3-L),FF-F2F-C23,video_acc,0.9679
+GenD_DINOv3_L,GenD (DINOv3-L),FF-F2F-C23,video_f1,0.968
+GenD_DINOv3_L,GenD (DINOv3-L),FF-F2F-C23,video_eer,0.0286
+GenD_DINOv3_L,GenD (DINOv3-L),FF-F2F-C23,frame_auc,0.9785
+GenD_DINOv3_L,GenD (DINOv3-L),FF-F2F-C23,frame_acc,0.9306
+GenD_DINOv3_L,GenD (DINOv3-L),FF-F2F-C23,video_count,280
+GenD_DINOv3_L,GenD (DINOv3-L),FF-FS-C23,video_auc,0.9938
+GenD_DINOv3_L,GenD (DINOv3-L),FF-FS-C23,video_acc,0.9714
+GenD_DINOv3_L,GenD (DINOv3-L),FF-FS-C23,video_f1,0.9716
+GenD_DINOv3_L,GenD (DINOv3-L),FF-FS-C23,video_eer,0.0321
+GenD_DINOv3_L,GenD (DINOv3-L),FF-FS-C23,frame_auc,0.9785
+GenD_DINOv3_L,GenD (DINOv3-L),FF-FS-C23,frame_acc,0.9299
+GenD_DINOv3_L,GenD (DINOv3-L),FF-FS-C23,video_count,280
+GenD_DINOv3_L,GenD (DINOv3-L),FF-NT-C23,video_auc,0.9664
+GenD_DINOv3_L,GenD (DINOv3-L),FF-NT-C23,video_acc,0.9071
+GenD_DINOv3_L,GenD (DINOv3-L),FF-NT-C23,video_f1,0.9015
+GenD_DINOv3_L,GenD (DINOv3-L),FF-NT-C23,video_eer,0.0964
+GenD_DINOv3_L,GenD (DINOv3-L),FF-NT-C23,frame_auc,0.9352
+GenD_DINOv3_L,GenD (DINOv3-L),FF-NT-C23,frame_acc,0.8661
+GenD_DINOv3_L,GenD (DINOv3-L),FF-NT-C23,video_count,280
+GenD_DINOv3_L,GenD (DINOv3-L),FF-FSH-C23,video_auc,0.9002
+GenD_DINOv3_L,GenD (DINOv3-L),FF-FSH-C23,video_acc,0.7607
+GenD_DINOv3_L,GenD (DINOv3-L),FF-FSH-C23,video_f1,0.6996
+GenD_DINOv3_L,GenD (DINOv3-L),FF-FSH-C23,video_eer,0.1857
+GenD_DINOv3_L,GenD (DINOv3-L),FF-FSH-C23,frame_auc,0.8367
+GenD_DINOv3_L,GenD (DINOv3-L),FF-FSH-C23,frame_acc,0.7323
+GenD_DINOv3_L,GenD (DINOv3-L),FF-FSH-C23,video_count,280
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv1,video_auc,0.924
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv1,video_acc,0.85
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv1,video_f1,0.88
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv1,video_eer,0.1596
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv1,frame_auc,0.8527
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv1,frame_acc,0.7684
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv1,video_count,100
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv2,video_auc,0.913
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv2,video_acc,0.861
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv2,video_f1,0.8941
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv2,video_eer,0.1508
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv2,frame_auc,0.8419
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv2,frame_acc,0.7803
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv2,video_count,518
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv3,video_auc,0.7951
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv3,video_acc,0.6987
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv3,video_f1,0.8184
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv3,video_eer,0.2533
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv3,frame_auc,0.7396
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv3,frame_acc,0.6683
+GenD_DINOv3_L,GenD (DINOv3-L),CDFv3,video_count,7107
+GenD_DINOv3_L,GenD (DINOv3-L),DeFo,video_auc,0.9857
+GenD_DINOv3_L,GenD (DINOv3-L),DeFo,video_acc,0.8763
+GenD_DINOv3_L,GenD (DINOv3-L),DeFo,video_f1,0.9045
+GenD_DINOv3_L,GenD (DINOv3-L),DeFo,video_eer,0.0509
+GenD_DINOv3_L,GenD (DINOv3-L),DeFo,frame_auc,0.97
+GenD_DINOv3_L,GenD (DINOv3-L),DeFo,frame_acc,0.8591
+GenD_DINOv3_L,GenD (DINOv3-L),DeFo,video_count,3089
+GenD_DINOv3_L,GenD (DINOv3-L),DFD-C23,video_auc,0.979
+GenD_DINOv3_L,GenD (DINOv3-L),DFD-C23,video_acc,0.9289
+GenD_DINOv3_L,GenD (DINOv3-L),DFD-C23,video_f1,0.959
+GenD_DINOv3_L,GenD (DINOv3-L),DFD-C23,video_eer,0.0718
+GenD_DINOv3_L,GenD (DINOv3-L),DFD-C23,frame_auc,0.9402
+GenD_DINOv3_L,GenD (DINOv3-L),DFD-C23,frame_acc,0.8841
+GenD_DINOv3_L,GenD (DINOv3-L),DFD-C23,video_count,3431
+GenD_DINOv3_L,GenD (DINOv3-L),DSv1,video_auc,0.8777
+GenD_DINOv3_L,GenD (DINOv3-L),DSv1,video_acc,0.793
+GenD_DINOv3_L,GenD (DINOv3-L),DSv1,video_f1,0.8079
+GenD_DINOv3_L,GenD (DINOv3-L),DSv1,video_eer,0.2015
+GenD_DINOv3_L,GenD (DINOv3-L),DSv1,frame_auc,0.8344
+GenD_DINOv3_L,GenD (DINOv3-L),DSv1,frame_acc,0.7594
+GenD_DINOv3_L,GenD (DINOv3-L),DSv1,video_count,2913
+GenD_DINOv3_L,GenD (DINOv3-L),DSv2,video_auc,0.8017
+GenD_DINOv3_L,GenD (DINOv3-L),DSv2,video_acc,0.7466
+GenD_DINOv3_L,GenD (DINOv3-L),DSv2,video_f1,0.6941
+GenD_DINOv3_L,GenD (DINOv3-L),DSv2,video_eer,0.2629
+GenD_DINOv3_L,GenD (DINOv3-L),DSv2,frame_auc,0.769
+GenD_DINOv3_L,GenD (DINOv3-L),DSv2,frame_acc,0.7181
+GenD_DINOv3_L,GenD (DINOv3-L),DSv2,video_count,3279
+GenD_DINOv3_L,GenD (DINOv3-L),DFDCP,video_auc,0.8882
+GenD_DINOv3_L,GenD (DINOv3-L),DFDCP,video_acc,0.813
+GenD_DINOv3_L,GenD (DINOv3-L),DFDCP,video_f1,0.8512
+GenD_DINOv3_L,GenD (DINOv3-L),DFDCP,video_eer,0.1954
+GenD_DINOv3_L,GenD (DINOv3-L),DFDCP,frame_auc,0.8308
+GenD_DINOv3_L,GenD (DINOv3-L),DFDCP,frame_acc,0.7627
+GenD_DINOv3_L,GenD (DINOv3-L),DFDCP,video_count,770
+GenD_DINOv3_L,GenD (DINOv3-L),DFDC,video_auc,0.8466
+GenD_DINOv3_L,GenD (DINOv3-L),DFDC,video_acc,0.7644
+GenD_DINOv3_L,GenD (DINOv3-L),DFDC,video_f1,0.7404
+GenD_DINOv3_L,GenD (DINOv3-L),DFDC,video_eer,0.2358
+GenD_DINOv3_L,GenD (DINOv3-L),DFDC,frame_auc,0.801
+GenD_DINOv3_L,GenD (DINOv3-L),DFDC,frame_acc,0.7292
+GenD_DINOv3_L,GenD (DINOv3-L),DFDC,video_count,4979
+GenD_DINOv3_L,GenD (DINOv3-L),DFDM-C23,video_auc,0.9981
+GenD_DINOv3_L,GenD (DINOv3-L),DFDM-C23,video_acc,0.9449
+GenD_DINOv3_L,GenD (DINOv3-L),DFDM-C23,video_f1,0.9661
+GenD_DINOv3_L,GenD (DINOv3-L),DFDM-C23,video_eer,0.0193
+GenD_DINOv3_L,GenD (DINOv3-L),DFDM-C23,frame_auc,0.9722
+GenD_DINOv3_L,GenD (DINOv3-L),DFDM-C23,frame_acc,0.9318
+GenD_DINOv3_L,GenD (DINOv3-L),DFDM-C23,video_count,2740
+GenD_DINOv3_L,GenD (DINOv3-L),FAVC,video_auc,0.9782
+GenD_DINOv3_L,GenD (DINOv3-L),FAVC,video_acc,0.8851
+GenD_DINOv3_L,GenD (DINOv3-L),FAVC,video_f1,0.9074
+GenD_DINOv3_L,GenD (DINOv3-L),FAVC,video_eer,0.0711
+GenD_DINOv3_L,GenD (DINOv3-L),FAVC,frame_auc,0.9488
+GenD_DINOv3_L,GenD (DINOv3-L),FAVC,frame_acc,0.8595
+GenD_DINOv3_L,GenD (DINOv3-L),FAVC,video_count,2994
+GenD_DINOv3_L,GenD (DINOv3-L),FFIW10K,video_auc,0.8931
+GenD_DINOv3_L,GenD (DINOv3-L),FFIW10K,video_acc,0.7977
+GenD_DINOv3_L,GenD (DINOv3-L),FFIW10K,video_f1,0.7695
+GenD_DINOv3_L,GenD (DINOv3-L),FFIW10K,video_eer,0.1826
+GenD_DINOv3_L,GenD (DINOv3-L),FFIW10K,frame_auc,0.8289
+GenD_DINOv3_L,GenD (DINOv3-L),FFIW10K,frame_acc,0.7446
+GenD_DINOv3_L,GenD (DINOv3-L),FFIW10K,video_count,19949
+GenD_DINOv3_L,GenD (DINOv3-L),IDFv1,video_auc,0.9666
+GenD_DINOv3_L,GenD (DINOv3-L),IDFv1,video_acc,0.8948
+GenD_DINOv3_L,GenD (DINOv3-L),IDFv1,video_f1,0.9288
+GenD_DINOv3_L,GenD (DINOv3-L),IDFv1,video_eer,0.0905
+GenD_DINOv3_L,GenD (DINOv3-L),IDFv1,frame_auc,0.9318
+GenD_DINOv3_L,GenD (DINOv3-L),IDFv1,frame_acc,0.8561
+GenD_DINOv3_L,GenD (DINOv3-L),IDFv1,video_count,2386
+GenD_DINOv3_L,GenD (DINOv3-L),KoDF,video_auc,0.9096
+GenD_DINOv3_L,GenD (DINOv3-L),KoDF,video_acc,0.8428
+GenD_DINOv3_L,GenD (DINOv3-L),KoDF,video_f1,0.8097
+GenD_DINOv3_L,GenD (DINOv3-L),KoDF,video_eer,0.1706
+GenD_DINOv3_L,GenD (DINOv3-L),KoDF,frame_auc,0.8911
+GenD_DINOv3_L,GenD (DINOv3-L),KoDF,frame_acc,0.8304
+GenD_DINOv3_L,GenD (DINOv3-L),KoDF,video_count,4618
+GenD_DINOv3_L,GenD (DINOv3-L),PGF,video_auc,0.9228
+GenD_DINOv3_L,GenD (DINOv3-L),PGF,video_acc,0.8134
+GenD_DINOv3_L,GenD (DINOv3-L),PGF,video_f1,0.8916
+GenD_DINOv3_L,GenD (DINOv3-L),PGF,video_eer,0.1562
+GenD_DINOv3_L,GenD (DINOv3-L),PGF,frame_auc,0.8835
+GenD_DINOv3_L,GenD (DINOv3-L),PGF,frame_acc,0.7698
+GenD_DINOv3_L,GenD (DINOv3-L),PGF,video_count,14367
+GenD_DINOv3_L,GenD (DINOv3-L),UADFV,video_auc,0.9888
+GenD_DINOv3_L,GenD (DINOv3-L),UADFV,video_acc,0.9286
+GenD_DINOv3_L,GenD (DINOv3-L),UADFV,video_f1,0.9333
+GenD_DINOv3_L,GenD (DINOv3-L),UADFV,video_eer,0.0612
+GenD_DINOv3_L,GenD (DINOv3-L),UADFV,frame_auc,0.9599
+GenD_DINOv3_L,GenD (DINOv3-L),UADFV,frame_acc,0.8787
+GenD_DINOv3_L,GenD (DINOv3-L),UADFV,video_count,98
+GenD_PE_L,GenD (PE-L),FF-ORIGINAL-C23,video_auc,0.9862
+GenD_PE_L,GenD (PE-L),FF-ORIGINAL-C23,video_acc,0.9586
+GenD_PE_L,GenD (PE-L),FF-ORIGINAL-C23,video_f1,0.9738
+GenD_PE_L,GenD (PE-L),FF-ORIGINAL-C23,video_eer,0.0446
+GenD_PE_L,GenD (PE-L),FF-ORIGINAL-C23,frame_auc,0.9778
+GenD_PE_L,GenD (PE-L),FF-ORIGINAL-C23,frame_acc,0.9397
+GenD_PE_L,GenD (PE-L),FF-ORIGINAL-C23,video_count,700
+GenD_PE_L,GenD (PE-L),FF-DF-C23,video_auc,0.997
+GenD_PE_L,GenD (PE-L),FF-DF-C23,video_acc,0.9607
+GenD_PE_L,GenD (PE-L),FF-DF-C23,video_f1,0.9614
+GenD_PE_L,GenD (PE-L),FF-DF-C23,video_eer,0.0214
+GenD_PE_L,GenD (PE-L),FF-DF-C23,frame_auc,0.9907
+GenD_PE_L,GenD (PE-L),FF-DF-C23,frame_acc,0.9456
+GenD_PE_L,GenD (PE-L),FF-DF-C23,video_count,280
+GenD_PE_L,GenD (PE-L),FF-F2F-C23,video_auc,0.9884
+GenD_PE_L,GenD (PE-L),FF-F2F-C23,video_acc,0.9571
+GenD_PE_L,GenD (PE-L),FF-F2F-C23,video_f1,0.9577
+GenD_PE_L,GenD (PE-L),FF-F2F-C23,video_eer,0.0393
+GenD_PE_L,GenD (PE-L),FF-F2F-C23,frame_auc,0.9829
+GenD_PE_L,GenD (PE-L),FF-F2F-C23,frame_acc,0.9417
+GenD_PE_L,GenD (PE-L),FF-F2F-C23,video_count,280
+GenD_PE_L,GenD (PE-L),FF-FS-C23,video_auc,0.9914
+GenD_PE_L,GenD (PE-L),FF-FS-C23,video_acc,0.9643
+GenD_PE_L,GenD (PE-L),FF-FS-C23,video_f1,0.965
+GenD_PE_L,GenD (PE-L),FF-FS-C23,video_eer,0.025
+GenD_PE_L,GenD (PE-L),FF-FS-C23,frame_auc,0.9841
+GenD_PE_L,GenD (PE-L),FF-FS-C23,frame_acc,0.94
+GenD_PE_L,GenD (PE-L),FF-FS-C23,video_count,280
+GenD_PE_L,GenD (PE-L),FF-NT-C23,video_auc,0.9679
+GenD_PE_L,GenD (PE-L),FF-NT-C23,video_acc,0.9286
+GenD_PE_L,GenD (PE-L),FF-NT-C23,video_f1,0.9275
+GenD_PE_L,GenD (PE-L),FF-NT-C23,video_eer,0.0643
+GenD_PE_L,GenD (PE-L),FF-NT-C23,frame_auc,0.9535
+GenD_PE_L,GenD (PE-L),FF-NT-C23,frame_acc,0.9018
+GenD_PE_L,GenD (PE-L),FF-NT-C23,video_count,280
+GenD_PE_L,GenD (PE-L),FF-FSH-C23,video_auc,0.8711
+GenD_PE_L,GenD (PE-L),FF-FSH-C23,video_acc,0.7107
+GenD_PE_L,GenD (PE-L),FF-FSH-C23,video_f1,0.6233
+GenD_PE_L,GenD (PE-L),FF-FSH-C23,video_eer,0.2
+GenD_PE_L,GenD (PE-L),FF-FSH-C23,frame_auc,0.8226
+GenD_PE_L,GenD (PE-L),FF-FSH-C23,frame_acc,0.6939
+GenD_PE_L,GenD (PE-L),FF-FSH-C23,video_count,280
+GenD_PE_L,GenD (PE-L),CDFv1,video_auc,0.9542
+GenD_PE_L,GenD (PE-L),CDFv1,video_acc,0.88
+GenD_PE_L,GenD (PE-L),CDFv1,video_f1,0.9091
+GenD_PE_L,GenD (PE-L),CDFv1,video_eer,0.093
+GenD_PE_L,GenD (PE-L),CDFv1,frame_auc,0.8823
+GenD_PE_L,GenD (PE-L),CDFv1,frame_acc,0.8009
+GenD_PE_L,GenD (PE-L),CDFv1,video_count,100
+GenD_PE_L,GenD (PE-L),CDFv2,video_auc,0.9566
+GenD_PE_L,GenD (PE-L),CDFv2,video_acc,0.8996
+GenD_PE_L,GenD (PE-L),CDFv2,video_f1,0.9257
+GenD_PE_L,GenD (PE-L),CDFv2,video_eer,0.1121
+GenD_PE_L,GenD (PE-L),CDFv2,frame_auc,0.9035
+GenD_PE_L,GenD (PE-L),CDFv2,frame_acc,0.8355
+GenD_PE_L,GenD (PE-L),CDFv2,video_count,518
+GenD_PE_L,GenD (PE-L),CDFv3,video_auc,0.8796
+GenD_PE_L,GenD (PE-L),CDFv3,video_acc,0.8089
+GenD_PE_L,GenD (PE-L),CDFv3,video_f1,0.892
+GenD_PE_L,GenD (PE-L),CDFv3,video_eer,0.1915
+GenD_PE_L,GenD (PE-L),CDFv3,frame_auc,0.8368
+GenD_PE_L,GenD (PE-L),CDFv3,frame_acc,0.7681
+GenD_PE_L,GenD (PE-L),CDFv3,video_count,7107
+GenD_PE_L,GenD (PE-L),DeFo,video_auc,0.9376
+GenD_PE_L,GenD (PE-L),DeFo,video_acc,0.8543
+GenD_PE_L,GenD (PE-L),DeFo,video_f1,0.8888
+GenD_PE_L,GenD (PE-L),DeFo,video_eer,0.1244
+GenD_PE_L,GenD (PE-L),DeFo,frame_auc,0.9156
+GenD_PE_L,GenD (PE-L),DeFo,frame_acc,0.8305
+GenD_PE_L,GenD (PE-L),DeFo,video_count,3089
+GenD_PE_L,GenD (PE-L),DFD-C23,video_auc,0.9771
+GenD_PE_L,GenD (PE-L),DFD-C23,video_acc,0.9198
+GenD_PE_L,GenD (PE-L),DFD-C23,video_f1,0.9535
+GenD_PE_L,GenD (PE-L),DFD-C23,video_eer,0.0742
+GenD_PE_L,GenD (PE-L),DFD-C23,frame_auc,0.9426
+GenD_PE_L,GenD (PE-L),DFD-C23,frame_acc,0.8853
+GenD_PE_L,GenD (PE-L),DFD-C23,video_count,3431
+GenD_PE_L,GenD (PE-L),DSv1,video_auc,0.8951
+GenD_PE_L,GenD (PE-L),DSv1,video_acc,0.8229
+GenD_PE_L,GenD (PE-L),DSv1,video_f1,0.8365
+GenD_PE_L,GenD (PE-L),DSv1,video_eer,0.1854
+GenD_PE_L,GenD (PE-L),DSv1,frame_auc,0.8691
+GenD_PE_L,GenD (PE-L),DSv1,frame_acc,0.7931
+GenD_PE_L,GenD (PE-L),DSv1,video_count,2913
+GenD_PE_L,GenD (PE-L),DSv2,video_auc,0.7919
+GenD_PE_L,GenD (PE-L),DSv2,video_acc,0.7142
+GenD_PE_L,GenD (PE-L),DSv2,video_f1,0.6596
+GenD_PE_L,GenD (PE-L),DSv2,video_eer,0.2881
+GenD_PE_L,GenD (PE-L),DSv2,frame_auc,0.7702
+GenD_PE_L,GenD (PE-L),DSv2,frame_acc,0.7056
+GenD_PE_L,GenD (PE-L),DSv2,video_count,3279
+GenD_PE_L,GenD (PE-L),DFDCP,video_auc,0.864
+GenD_PE_L,GenD (PE-L),DFDCP,video_acc,0.7532
+GenD_PE_L,GenD (PE-L),DFDCP,video_f1,0.7907
+GenD_PE_L,GenD (PE-L),DFDCP,video_eer,0.2287
+GenD_PE_L,GenD (PE-L),DFDCP,frame_auc,0.8126
+GenD_PE_L,GenD (PE-L),DFDCP,frame_acc,0.7205
+GenD_PE_L,GenD (PE-L),DFDCP,video_count,770
+GenD_PE_L,GenD (PE-L),DFDC,video_auc,0.816
+GenD_PE_L,GenD (PE-L),DFDC,video_acc,0.7441
+GenD_PE_L,GenD (PE-L),DFDC,video_f1,0.7301
+GenD_PE_L,GenD (PE-L),DFDC,video_eer,0.2555
+GenD_PE_L,GenD (PE-L),DFDC,frame_auc,0.7895
+GenD_PE_L,GenD (PE-L),DFDC,frame_acc,0.711
+GenD_PE_L,GenD (PE-L),DFDC,video_count,4979
+GenD_PE_L,GenD (PE-L),DFDM-C23,video_auc,0.9854
+GenD_PE_L,GenD (PE-L),DFDM-C23,video_acc,0.9409
+GenD_PE_L,GenD (PE-L),DFDM-C23,video_f1,0.963
+GenD_PE_L,GenD (PE-L),DFDM-C23,video_eer,0.0643
+GenD_PE_L,GenD (PE-L),DFDM-C23,frame_auc,0.9654
+GenD_PE_L,GenD (PE-L),DFDM-C23,frame_acc,0.9123
+GenD_PE_L,GenD (PE-L),DFDM-C23,video_count,2740
+GenD_PE_L,GenD (PE-L),FAVC,video_auc,0.9703
+GenD_PE_L,GenD (PE-L),FAVC,video_acc,0.8577
+GenD_PE_L,GenD (PE-L),FAVC,video_f1,0.8823
+GenD_PE_L,GenD (PE-L),FAVC,video_eer,0.0924
+GenD_PE_L,GenD (PE-L),FAVC,frame_auc,0.9402
+GenD_PE_L,GenD (PE-L),FAVC,frame_acc,0.8379
+GenD_PE_L,GenD (PE-L),FAVC,video_count,2994
+GenD_PE_L,GenD (PE-L),FFIW10K,video_auc,0.8647
+GenD_PE_L,GenD (PE-L),FFIW10K,video_acc,0.7744
+GenD_PE_L,GenD (PE-L),FFIW10K,video_f1,0.7571
+GenD_PE_L,GenD (PE-L),FFIW10K,video_eer,0.2152
+GenD_PE_L,GenD (PE-L),FFIW10K,frame_auc,0.8174
+GenD_PE_L,GenD (PE-L),FFIW10K,frame_acc,0.7306
+GenD_PE_L,GenD (PE-L),FFIW10K,video_count,19949
+GenD_PE_L,GenD (PE-L),IDFv1,video_auc,0.9505
+GenD_PE_L,GenD (PE-L),IDFv1,video_acc,0.8726
+GenD_PE_L,GenD (PE-L),IDFv1,video_f1,0.9126
+GenD_PE_L,GenD (PE-L),IDFv1,video_eer,0.1095
+GenD_PE_L,GenD (PE-L),IDFv1,frame_auc,0.916
+GenD_PE_L,GenD (PE-L),IDFv1,frame_acc,0.8252
+GenD_PE_L,GenD (PE-L),IDFv1,video_count,2386
+GenD_PE_L,GenD (PE-L),KoDF,video_auc,0.8598
+GenD_PE_L,GenD (PE-L),KoDF,video_acc,0.8272
+GenD_PE_L,GenD (PE-L),KoDF,video_f1,0.7857
+GenD_PE_L,GenD (PE-L),KoDF,video_eer,0.2228
+GenD_PE_L,GenD (PE-L),KoDF,frame_auc,0.8584
+GenD_PE_L,GenD (PE-L),KoDF,frame_acc,0.809
+GenD_PE_L,GenD (PE-L),KoDF,video_count,4618
+GenD_PE_L,GenD (PE-L),PGF,video_auc,0.9247
+GenD_PE_L,GenD (PE-L),PGF,video_acc,0.8389
+GenD_PE_L,GenD (PE-L),PGF,video_f1,0.9077
+GenD_PE_L,GenD (PE-L),PGF,video_eer,0.14
+GenD_PE_L,GenD (PE-L),PGF,frame_auc,0.8886
+GenD_PE_L,GenD (PE-L),PGF,frame_acc,0.8021
+GenD_PE_L,GenD (PE-L),PGF,video_count,14367
+GenD_PE_L,GenD (PE-L),UADFV,video_auc,0.9813
+GenD_PE_L,GenD (PE-L),UADFV,video_acc,0.8367
+GenD_PE_L,GenD (PE-L),UADFV,video_f1,0.8571
+GenD_PE_L,GenD (PE-L),UADFV,video_eer,0.0408
+GenD_PE_L,GenD (PE-L),UADFV,frame_auc,0.9713
+GenD_PE_L,GenD (PE-L),UADFV,frame_acc,0.8078
+GenD_PE_L,GenD (PE-L),UADFV,video_count,98
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-ORIGINAL-C23,video_auc,0.94
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-ORIGINAL-C23,video_acc,0.8714
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-ORIGINAL-C23,video_f1,0.9164
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-ORIGINAL-C23,video_eer,0.1348
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-ORIGINAL-C23,frame_auc,0.9156
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-ORIGINAL-C23,frame_acc,0.8499
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-ORIGINAL-C23,video_count,700
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-DF-C23,video_auc,0.9942
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-DF-C23,video_acc,0.9107
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-DF-C23,video_f1,0.9169
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-DF-C23,video_eer,0.0286
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-DF-C23,frame_auc,0.9881
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-DF-C23,frame_acc,0.8989
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-DF-C23,video_count,280
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-F2F-C23,video_auc,0.9379
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-F2F-C23,video_acc,0.85
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-F2F-C23,video_f1,0.8521
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-F2F-C23,video_eer,0.1464
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-F2F-C23,frame_auc,0.9069
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-F2F-C23,frame_acc,0.8328
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-F2F-C23,video_count,280
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-FS-C23,video_auc,0.9859
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-FS-C23,video_acc,0.9107
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-FS-C23,video_f1,0.9169
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-FS-C23,video_eer,0.0536
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-FS-C23,frame_auc,0.9708
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-FS-C23,frame_acc,0.8888
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-FS-C23,video_count,280
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-NT-C23,video_auc,0.842
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-NT-C23,video_acc,0.7607
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-NT-C23,video_f1,0.7413
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-NT-C23,video_eer,0.2214
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-NT-C23,frame_auc,0.7964
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-NT-C23,frame_acc,0.7289
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-NT-C23,video_count,280
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-FSH-C23,video_auc,0.907
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-FSH-C23,video_acc,0.825
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-FSH-C23,video_f1,0.8231
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-FSH-C23,video_eer,0.1786
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-FSH-C23,frame_auc,0.862
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-FSH-C23,frame_acc,0.7982
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FF-FSH-C23,video_count,280
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv1,video_auc,0.9508
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv1,video_acc,0.8
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv1,video_f1,0.8611
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv1,video_eer,0.1252
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv1,frame_auc,0.9199
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv1,frame_acc,0.7753
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv1,video_count,100
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv2,video_auc,0.9303
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv2,video_acc,0.8301
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv2,video_f1,0.882
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv2,video_eer,0.138
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv2,frame_auc,0.8851
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv2,frame_acc,0.7982
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv2,video_count,518
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv3,video_auc,0.7743
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv3,video_acc,0.7683
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv3,video_f1,0.8668
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv3,video_eer,0.3037
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv3,frame_auc,0.7366
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv3,frame_acc,0.7167
+Effort-AIGI-Detection_FFpp,Effort (FFpp),CDFv3,video_count,7107
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DeFo,video_auc,0.9896
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DeFo,video_acc,0.9424
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DeFo,video_f1,0.9583
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DeFo,video_eer,0.0556
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DeFo,frame_auc,0.9767
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DeFo,frame_acc,0.9172
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DeFo,video_count,3089
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFD-C23,video_auc,0.9555
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFD-C23,video_acc,0.9187
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFD-C23,video_f1,0.9541
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFD-C23,video_eer,0.1015
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFD-C23,frame_auc,0.9311
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFD-C23,frame_acc,0.8937
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFD-C23,video_count,3431
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DSv1,video_auc,0.8199
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DSv1,video_acc,0.701
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DSv1,video_f1,0.7446
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DSv1,video_eer,0.2534
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DSv1,frame_auc,0.7742
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DSv1,frame_acc,0.6726
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DSv1,video_count,2913
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DSv2,video_auc,0.6343
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DSv2,video_acc,0.5679
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DSv2,video_f1,0.5601
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DSv2,video_eer,0.4163
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DSv2,frame_auc,0.6204
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DSv2,frame_acc,0.5684
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DSv2,video_count,3279
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDCP,video_auc,0.8413
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDCP,video_acc,0.7091
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDCP,video_f1,0.7371
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDCP,video_eer,0.2584
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDCP,frame_auc,0.7967
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDCP,frame_acc,0.6817
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDCP,video_count,770
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDC,video_auc,0.8402
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDC,video_acc,0.7574
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDC,video_f1,0.7599
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDC,video_eer,0.2402
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDC,frame_auc,0.8032
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDC,frame_acc,0.7178
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDC,video_count,4979
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDM-C23,video_auc,0.9797
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDM-C23,video_acc,0.9036
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDM-C23,video_f1,0.9416
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDM-C23,video_eer,0.0709
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDM-C23,frame_auc,0.9536
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDM-C23,frame_acc,0.8866
+Effort-AIGI-Detection_FFpp,Effort (FFpp),DFDM-C23,video_count,2740
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FAVC,video_auc,0.8879
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FAVC,video_acc,0.7168
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FAVC,video_f1,0.8238
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FAVC,video_eer,0.1981
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FAVC,frame_auc,0.8663
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FAVC,frame_acc,0.7196
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FAVC,video_count,2994
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FFIW10K,video_auc,0.8566
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FFIW10K,video_acc,0.7623
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FFIW10K,video_f1,0.7728
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FFIW10K,video_eer,0.2298
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FFIW10K,frame_auc,0.8203
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FFIW10K,frame_acc,0.7314
+Effort-AIGI-Detection_FFpp,Effort (FFpp),FFIW10K,video_count,19949
+Effort-AIGI-Detection_FFpp,Effort (FFpp),IDFv1,video_auc,0.8968
+Effort-AIGI-Detection_FFpp,Effort (FFpp),IDFv1,video_acc,0.8236
+Effort-AIGI-Detection_FFpp,Effort (FFpp),IDFv1,video_f1,0.8802
+Effort-AIGI-Detection_FFpp,Effort (FFpp),IDFv1,video_eer,0.1823
+Effort-AIGI-Detection_FFpp,Effort (FFpp),IDFv1,frame_auc,0.8576
+Effort-AIGI-Detection_FFpp,Effort (FFpp),IDFv1,frame_acc,0.779
+Effort-AIGI-Detection_FFpp,Effort (FFpp),IDFv1,video_count,2386
+Effort-AIGI-Detection_FFpp,Effort (FFpp),KoDF,video_auc,0.8819
+Effort-AIGI-Detection_FFpp,Effort (FFpp),KoDF,video_acc,0.7971
+Effort-AIGI-Detection_FFpp,Effort (FFpp),KoDF,video_f1,0.7918
+Effort-AIGI-Detection_FFpp,Effort (FFpp),KoDF,video_eer,0.1945
+Effort-AIGI-Detection_FFpp,Effort (FFpp),KoDF,frame_auc,0.8687
+Effort-AIGI-Detection_FFpp,Effort (FFpp),KoDF,frame_acc,0.783
+Effort-AIGI-Detection_FFpp,Effort (FFpp),KoDF,video_count,4618
+Effort-AIGI-Detection_FFpp,Effort (FFpp),PGF,video_auc,0.841
+Effort-AIGI-Detection_FFpp,Effort (FFpp),PGF,video_acc,0.7455
+Effort-AIGI-Detection_FFpp,Effort (FFpp),PGF,video_f1,0.8469
+Effort-AIGI-Detection_FFpp,Effort (FFpp),PGF,video_eer,0.2349
+Effort-AIGI-Detection_FFpp,Effort (FFpp),PGF,frame_auc,0.8034
+Effort-AIGI-Detection_FFpp,Effort (FFpp),PGF,frame_acc,0.7019
+Effort-AIGI-Detection_FFpp,Effort (FFpp),PGF,video_count,14367
+Effort-AIGI-Detection_FFpp,Effort (FFpp),UADFV,video_auc,0.9792
+Effort-AIGI-Detection_FFpp,Effort (FFpp),UADFV,video_acc,0.8673
+Effort-AIGI-Detection_FFpp,Effort (FFpp),UADFV,video_f1,0.8807
+Effort-AIGI-Detection_FFpp,Effort (FFpp),UADFV,video_eer,0.0408
+Effort-AIGI-Detection_FFpp,Effort (FFpp),UADFV,frame_auc,0.9643
+Effort-AIGI-Detection_FFpp,Effort (FFpp),UADFV,frame_acc,0.8437
+Effort-AIGI-Detection_FFpp,Effort (FFpp),UADFV,video_count,98
+ForensicAdapter_v1,ForensicsAdapter,FF-ORIGINAL-C23,video_auc,0.9553
+ForensicAdapter_v1,ForensicsAdapter,FF-ORIGINAL-C23,video_acc,0.8771
+ForensicAdapter_v1,ForensicsAdapter,FF-ORIGINAL-C23,video_f1,0.9189
+ForensicAdapter_v1,ForensicsAdapter,FF-ORIGINAL-C23,video_eer,0.1286
+ForensicAdapter_v1,ForensicsAdapter,FF-ORIGINAL-C23,frame_auc,0.9238
+ForensicAdapter_v1,ForensicsAdapter,FF-ORIGINAL-C23,frame_acc,0.8455
+ForensicAdapter_v1,ForensicsAdapter,FF-ORIGINAL-C23,video_count,700
+ForensicAdapter_v1,ForensicsAdapter,FF-DF-C23,video_auc,0.993
+ForensicAdapter_v1,ForensicsAdapter,FF-DF-C23,video_acc,0.9429
+ForensicAdapter_v1,ForensicsAdapter,FF-DF-C23,video_f1,0.9448
+ForensicAdapter_v1,ForensicsAdapter,FF-DF-C23,video_eer,0.0357
+ForensicAdapter_v1,ForensicsAdapter,FF-DF-C23,frame_auc,0.986
+ForensicAdapter_v1,ForensicsAdapter,FF-DF-C23,frame_acc,0.9157
+ForensicAdapter_v1,ForensicsAdapter,FF-DF-C23,video_count,280
+ForensicAdapter_v1,ForensicsAdapter,FF-F2F-C23,video_auc,0.9564
+ForensicAdapter_v1,ForensicsAdapter,FF-F2F-C23,video_acc,0.8964
+ForensicAdapter_v1,ForensicsAdapter,FF-F2F-C23,video_f1,0.8953
+ForensicAdapter_v1,ForensicsAdapter,FF-F2F-C23,video_eer,0.1
+ForensicAdapter_v1,ForensicsAdapter,FF-F2F-C23,frame_auc,0.917
+ForensicAdapter_v1,ForensicsAdapter,FF-F2F-C23,frame_acc,0.8394
+ForensicAdapter_v1,ForensicsAdapter,FF-F2F-C23,video_count,280
+ForensicAdapter_v1,ForensicsAdapter,FF-FS-C23,video_auc,0.977
+ForensicAdapter_v1,ForensicsAdapter,FF-FS-C23,video_acc,0.9179
+ForensicAdapter_v1,ForensicsAdapter,FF-FS-C23,video_f1,0.9187
+ForensicAdapter_v1,ForensicsAdapter,FF-FS-C23,video_eer,0.0714
+ForensicAdapter_v1,ForensicsAdapter,FF-FS-C23,frame_auc,0.9446
+ForensicAdapter_v1,ForensicsAdapter,FF-FS-C23,frame_acc,0.8778
+ForensicAdapter_v1,ForensicsAdapter,FF-FS-C23,video_count,280
+ForensicAdapter_v1,ForensicsAdapter,FF-NT-C23,video_auc,0.8946
+ForensicAdapter_v1,ForensicsAdapter,FF-NT-C23,video_acc,0.7964
+ForensicAdapter_v1,ForensicsAdapter,FF-NT-C23,video_f1,0.7711
+ForensicAdapter_v1,ForensicsAdapter,FF-NT-C23,video_eer,0.1679
+ForensicAdapter_v1,ForensicsAdapter,FF-NT-C23,frame_auc,0.8475
+ForensicAdapter_v1,ForensicsAdapter,FF-NT-C23,frame_acc,0.768
+ForensicAdapter_v1,ForensicsAdapter,FF-NT-C23,video_count,280
+ForensicAdapter_v1,ForensicsAdapter,FF-FSH-C23,video_auc,0.763
+ForensicAdapter_v1,ForensicsAdapter,FF-FSH-C23,video_acc,0.6643
+ForensicAdapter_v1,ForensicsAdapter,FF-FSH-C23,video_f1,0.5566
+ForensicAdapter_v1,ForensicsAdapter,FF-FSH-C23,video_eer,0.3321
+ForensicAdapter_v1,ForensicsAdapter,FF-FSH-C23,frame_auc,0.7157
+ForensicAdapter_v1,ForensicsAdapter,FF-FSH-C23,frame_acc,0.6526
+ForensicAdapter_v1,ForensicsAdapter,FF-FSH-C23,video_count,280
+ForensicAdapter_v1,ForensicsAdapter,CDFv1,video_auc,0.9355
+ForensicAdapter_v1,ForensicsAdapter,CDFv1,video_acc,0.82
+ForensicAdapter_v1,ForensicsAdapter,CDFv1,video_f1,0.8676
+ForensicAdapter_v1,ForensicsAdapter,CDFv1,video_eer,0.1273
+ForensicAdapter_v1,ForensicsAdapter,CDFv1,frame_auc,0.8952
+ForensicAdapter_v1,ForensicsAdapter,CDFv1,frame_acc,0.7997
+ForensicAdapter_v1,ForensicsAdapter,CDFv1,video_count,100
+ForensicAdapter_v1,ForensicsAdapter,CDFv2,video_auc,0.9374
+ForensicAdapter_v1,ForensicsAdapter,CDFv2,video_acc,0.8707
+ForensicAdapter_v1,ForensicsAdapter,CDFv2,video_f1,0.9033
+ForensicAdapter_v1,ForensicsAdapter,CDFv2,video_eer,0.1336
+ForensicAdapter_v1,ForensicsAdapter,CDFv2,frame_auc,0.8821
+ForensicAdapter_v1,ForensicsAdapter,CDFv2,frame_acc,0.8033
+ForensicAdapter_v1,ForensicsAdapter,CDFv2,video_count,518
+ForensicAdapter_v1,ForensicsAdapter,CDFv3,video_auc,0.7398
+ForensicAdapter_v1,ForensicsAdapter,CDFv3,video_acc,0.5917
+ForensicAdapter_v1,ForensicsAdapter,CDFv3,video_f1,0.737
+ForensicAdapter_v1,ForensicsAdapter,CDFv3,video_eer,0.3236
+ForensicAdapter_v1,ForensicsAdapter,CDFv3,frame_auc,0.7
+ForensicAdapter_v1,ForensicsAdapter,CDFv3,frame_acc,0.562
+ForensicAdapter_v1,ForensicsAdapter,CDFv3,video_count,7107
+ForensicAdapter_v1,ForensicsAdapter,DeFo,video_auc,0.99
+ForensicAdapter_v1,ForensicsAdapter,DeFo,video_acc,0.8634
+ForensicAdapter_v1,ForensicsAdapter,DeFo,video_f1,0.8934
+ForensicAdapter_v1,ForensicsAdapter,DeFo,video_eer,0.0411
+ForensicAdapter_v1,ForensicsAdapter,DeFo,frame_auc,0.9716
+ForensicAdapter_v1,ForensicsAdapter,DeFo,frame_acc,0.8394
+ForensicAdapter_v1,ForensicsAdapter,DeFo,video_count,3089
+ForensicAdapter_v1,ForensicsAdapter,DFD-C23,video_auc,0.9657
+ForensicAdapter_v1,ForensicsAdapter,DFD-C23,video_acc,0.8892
+ForensicAdapter_v1,ForensicsAdapter,DFD-C23,video_f1,0.9346
+ForensicAdapter_v1,ForensicsAdapter,DFD-C23,video_eer,0.0939
+ForensicAdapter_v1,ForensicsAdapter,DFD-C23,frame_auc,0.9325
+ForensicAdapter_v1,ForensicsAdapter,DFD-C23,frame_acc,0.8468
+ForensicAdapter_v1,ForensicsAdapter,DFD-C23,video_count,3431
+ForensicAdapter_v1,ForensicsAdapter,DSv1,video_auc,0.8389
+ForensicAdapter_v1,ForensicsAdapter,DSv1,video_acc,0.7274
+ForensicAdapter_v1,ForensicsAdapter,DSv1,video_f1,0.6502
+ForensicAdapter_v1,ForensicsAdapter,DSv1,video_eer,0.2461
+ForensicAdapter_v1,ForensicsAdapter,DSv1,frame_auc,0.794
+ForensicAdapter_v1,ForensicsAdapter,DSv1,frame_acc,0.6916
+ForensicAdapter_v1,ForensicsAdapter,DSv1,video_count,2913
+ForensicAdapter_v1,ForensicsAdapter,DSv2,video_auc,0.7204
+ForensicAdapter_v1,ForensicsAdapter,DSv2,video_acc,0.6542
+ForensicAdapter_v1,ForensicsAdapter,DSv2,video_f1,0.4661
+ForensicAdapter_v1,ForensicsAdapter,DSv2,video_eer,0.3129
+ForensicAdapter_v1,ForensicsAdapter,DSv2,frame_auc,0.6966
+ForensicAdapter_v1,ForensicsAdapter,DSv2,frame_acc,0.6472
+ForensicAdapter_v1,ForensicsAdapter,DSv2,video_count,3279
+ForensicAdapter_v1,ForensicsAdapter,DFDCP,video_auc,0.892
+ForensicAdapter_v1,ForensicsAdapter,DFDCP,video_acc,0.6844
+ForensicAdapter_v1,ForensicsAdapter,DFDCP,video_f1,0.684
+ForensicAdapter_v1,ForensicsAdapter,DFDCP,video_eer,0.176
+ForensicAdapter_v1,ForensicsAdapter,DFDCP,frame_auc,0.8264
+ForensicAdapter_v1,ForensicsAdapter,DFDCP,frame_acc,0.6783
+ForensicAdapter_v1,ForensicsAdapter,DFDCP,video_count,770
+ForensicAdapter_v1,ForensicsAdapter,DFDC,video_auc,0.8541
+ForensicAdapter_v1,ForensicsAdapter,DFDC,video_acc,0.7554
+ForensicAdapter_v1,ForensicsAdapter,DFDC,video_f1,0.7075
+ForensicAdapter_v1,ForensicsAdapter,DFDC,video_eer,0.2207
+ForensicAdapter_v1,ForensicsAdapter,DFDC,frame_auc,0.8036
+ForensicAdapter_v1,ForensicsAdapter,DFDC,frame_acc,0.7257
+ForensicAdapter_v1,ForensicsAdapter,DFDC,video_count,4979
+ForensicAdapter_v1,ForensicsAdapter,DFDM-C23,video_auc,0.9602
+ForensicAdapter_v1,ForensicsAdapter,DFDM-C23,video_acc,0.915
+ForensicAdapter_v1,ForensicsAdapter,DFDM-C23,video_f1,0.9454
+ForensicAdapter_v1,ForensicsAdapter,DFDM-C23,video_eer,0.1031
+ForensicAdapter_v1,ForensicsAdapter,DFDM-C23,frame_auc,0.9132
+ForensicAdapter_v1,ForensicsAdapter,DFDM-C23,frame_acc,0.851
+ForensicAdapter_v1,ForensicsAdapter,DFDM-C23,video_count,2740
+ForensicAdapter_v1,ForensicsAdapter,FAVC,video_auc,0.8906
+ForensicAdapter_v1,ForensicsAdapter,FAVC,video_acc,0.7328
+ForensicAdapter_v1,ForensicsAdapter,FAVC,video_f1,0.7576
+ForensicAdapter_v1,ForensicsAdapter,FAVC,video_eer,0.1994
+ForensicAdapter_v1,ForensicsAdapter,FAVC,frame_auc,0.8488
+ForensicAdapter_v1,ForensicsAdapter,FAVC,frame_acc,0.7195
+ForensicAdapter_v1,ForensicsAdapter,FAVC,video_count,2994
+ForensicAdapter_v1,ForensicsAdapter,FFIW10K,video_auc,0.8306
+ForensicAdapter_v1,ForensicsAdapter,FFIW10K,video_acc,0.7542
+ForensicAdapter_v1,ForensicsAdapter,FFIW10K,video_f1,0.7328
+ForensicAdapter_v1,ForensicsAdapter,FFIW10K,video_eer,0.25
+ForensicAdapter_v1,ForensicsAdapter,FFIW10K,frame_auc,0.7752
+ForensicAdapter_v1,ForensicsAdapter,FFIW10K,frame_acc,0.7052
+ForensicAdapter_v1,ForensicsAdapter,FFIW10K,video_count,19949
+ForensicAdapter_v1,ForensicsAdapter,IDFv1,video_auc,0.8585
+ForensicAdapter_v1,ForensicsAdapter,IDFv1,video_acc,0.7255
+ForensicAdapter_v1,ForensicsAdapter,IDFv1,video_f1,0.7988
+ForensicAdapter_v1,ForensicsAdapter,IDFv1,video_eer,0.2397
+ForensicAdapter_v1,ForensicsAdapter,IDFv1,frame_auc,0.8036
+ForensicAdapter_v1,ForensicsAdapter,IDFv1,frame_acc,0.6905
+ForensicAdapter_v1,ForensicsAdapter,IDFv1,video_count,2386
+ForensicAdapter_v1,ForensicsAdapter,KoDF,video_auc,0.836
+ForensicAdapter_v1,ForensicsAdapter,KoDF,video_acc,0.7765
+ForensicAdapter_v1,ForensicsAdapter,KoDF,video_f1,0.6965
+ForensicAdapter_v1,ForensicsAdapter,KoDF,video_eer,0.2453
+ForensicAdapter_v1,ForensicsAdapter,KoDF,frame_auc,0.8281
+ForensicAdapter_v1,ForensicsAdapter,KoDF,frame_acc,0.7711
+ForensicAdapter_v1,ForensicsAdapter,KoDF,video_count,4618
+ForensicAdapter_v1,ForensicsAdapter,PGF,video_auc,0.8288
+ForensicAdapter_v1,ForensicsAdapter,PGF,video_acc,0.6328
+ForensicAdapter_v1,ForensicsAdapter,PGF,video_f1,0.7618
+ForensicAdapter_v1,ForensicsAdapter,PGF,video_eer,0.2427
+ForensicAdapter_v1,ForensicsAdapter,PGF,frame_auc,0.7858
+ForensicAdapter_v1,ForensicsAdapter,PGF,frame_acc,0.599
+ForensicAdapter_v1,ForensicsAdapter,PGF,video_count,14367
+ForensicAdapter_v1,ForensicsAdapter,UADFV,video_auc,0.9863
+ForensicAdapter_v1,ForensicsAdapter,UADFV,video_acc,0.8776
+ForensicAdapter_v1,ForensicsAdapter,UADFV,video_f1,0.8889
+ForensicAdapter_v1,ForensicsAdapter,UADFV,video_eer,0.0306
+ForensicAdapter_v1,ForensicsAdapter,UADFV,frame_auc,0.9691
+ForensicAdapter_v1,ForensicsAdapter,UADFV,frame_acc,0.8572
+ForensicAdapter_v1,ForensicsAdapter,UADFV,video_count,98
+FakeSTormer_c23,FakeSTormer (c23),FF-ORIGINAL-C23,video_auc,0.8539
+FakeSTormer_c23,FakeSTormer (c23),FF-ORIGINAL-C23,video_acc,0.5186
+FakeSTormer_c23,FakeSTormer (c23),FF-ORIGINAL-C23,video_f1,0.5718
+FakeSTormer_c23,FakeSTormer (c23),FF-ORIGINAL-C23,video_eer,0.2411
+FakeSTormer_c23,FakeSTormer (c23),FF-ORIGINAL-C23,frame_auc,0.8421
+FakeSTormer_c23,FakeSTormer (c23),FF-ORIGINAL-C23,frame_acc,0.5279
+FakeSTormer_c23,FakeSTormer (c23),FF-ORIGINAL-C23,video_count,700
+FakeSTormer_c23,FakeSTormer (c23),FF-DF-C23,video_auc,0.9893
+FakeSTormer_c23,FakeSTormer (c23),FF-DF-C23,video_acc,0.9429
+FakeSTormer_c23,FakeSTormer (c23),FF-DF-C23,video_f1,0.9403
+FakeSTormer_c23,FakeSTormer (c23),FF-DF-C23,video_eer,0.05
+FakeSTormer_c23,FakeSTormer (c23),FF-DF-C23,frame_auc,0.9862
+FakeSTormer_c23,FakeSTormer (c23),FF-DF-C23,frame_acc,0.9366
+FakeSTormer_c23,FakeSTormer (c23),FF-DF-C23,video_count,280
+FakeSTormer_c23,FakeSTormer (c23),FF-F2F-C23,video_auc,0.7821
+FakeSTormer_c23,FakeSTormer (c23),FF-F2F-C23,video_acc,0.5893
+FakeSTormer_c23,FakeSTormer (c23),FF-F2F-C23,video_f1,0.3195
+FakeSTormer_c23,FakeSTormer (c23),FF-F2F-C23,video_eer,0.2786
+FakeSTormer_c23,FakeSTormer (c23),FF-F2F-C23,frame_auc,0.773
+FakeSTormer_c23,FakeSTormer (c23),FF-F2F-C23,frame_acc,0.5973
+FakeSTormer_c23,FakeSTormer (c23),FF-F2F-C23,video_count,280
+FakeSTormer_c23,FakeSTormer (c23),FF-FS-C23,video_auc,0.8436
+FakeSTormer_c23,FakeSTormer (c23),FF-FS-C23,video_acc,0.6571
+FakeSTormer_c23,FakeSTormer (c23),FF-FS-C23,video_f1,0.4894
+FakeSTormer_c23,FakeSTormer (c23),FF-FS-C23,video_eer,0.2357
+FakeSTormer_c23,FakeSTormer (c23),FF-FS-C23,frame_auc,0.8215
+FakeSTormer_c23,FakeSTormer (c23),FF-FS-C23,frame_acc,0.6643
+FakeSTormer_c23,FakeSTormer (c23),FF-FS-C23,video_count,280
+FakeSTormer_c23,FakeSTormer (c23),FF-NT-C23,video_auc,0.7956
+FakeSTormer_c23,FakeSTormer (c23),FF-NT-C23,video_acc,0.5786
+FakeSTormer_c23,FakeSTormer (c23),FF-NT-C23,video_f1,0.2892
+FakeSTormer_c23,FakeSTormer (c23),FF-NT-C23,video_eer,0.2714
+FakeSTormer_c23,FakeSTormer (c23),FF-NT-C23,frame_auc,0.7877
+FakeSTormer_c23,FakeSTormer (c23),FF-NT-C23,frame_acc,0.5813
+FakeSTormer_c23,FakeSTormer (c23),FF-NT-C23,video_count,280
+FakeSTormer_c23,FakeSTormer (c23),FF-FSH-C23,video_auc,0.7919
+FakeSTormer_c23,FakeSTormer (c23),FF-FSH-C23,video_acc,0.6
+FakeSTormer_c23,FakeSTormer (c23),FF-FSH-C23,video_f1,0.3488
+FakeSTormer_c23,FakeSTormer (c23),FF-FSH-C23,video_eer,0.2929
+FakeSTormer_c23,FakeSTormer (c23),FF-FSH-C23,frame_auc,0.76
+FakeSTormer_c23,FakeSTormer (c23),FF-FSH-C23,frame_acc,0.6036
+FakeSTormer_c23,FakeSTormer (c23),FF-FSH-C23,video_count,280
+FakeSTormer_c23,FakeSTormer (c23),CDFv1,video_auc,0.9015
+FakeSTormer_c23,FakeSTormer (c23),CDFv1,video_acc,0.77
+FakeSTormer_c23,FakeSTormer (c23),CDFv1,video_f1,0.7928
+FakeSTormer_c23,FakeSTormer (c23),CDFv1,video_eer,0.1677
+FakeSTormer_c23,FakeSTormer (c23),CDFv1,frame_auc,0.8649
+FakeSTormer_c23,FakeSTormer (c23),CDFv1,frame_acc,0.755
+FakeSTormer_c23,FakeSTormer (c23),CDFv1,video_count,100
+FakeSTormer_c23,FakeSTormer (c23),CDFv2,video_auc,0.8983
+FakeSTormer_c23,FakeSTormer (c23),CDFv2,video_acc,0.722
+FakeSTormer_c23,FakeSTormer (c23),CDFv2,video_f1,0.7438
+FakeSTormer_c23,FakeSTormer (c23),CDFv2,video_eer,0.1839
+FakeSTormer_c23,FakeSTormer (c23),CDFv2,frame_auc,0.8645
+FakeSTormer_c23,FakeSTormer (c23),CDFv2,frame_acc,0.7084
+FakeSTormer_c23,FakeSTormer (c23),CDFv2,video_count,518
+FakeSTormer_c23,FakeSTormer (c23),CDFv3,video_auc,0.6862
+FakeSTormer_c23,FakeSTormer (c23),CDFv3,video_acc,0.2761
+FakeSTormer_c23,FakeSTormer (c23),CDFv3,video_f1,0.4113
+FakeSTormer_c23,FakeSTormer (c23),CDFv3,video_eer,0.3708
+FakeSTormer_c23,FakeSTormer (c23),CDFv3,frame_auc,0.6844
+FakeSTormer_c23,FakeSTormer (c23),CDFv3,frame_acc,0.2876
+FakeSTormer_c23,FakeSTormer (c23),CDFv3,video_count,7106
+FakeSTormer_c23,FakeSTormer (c23),DeFo,video_auc,0.5326
+FakeSTormer_c23,FakeSTormer (c23),DeFo,video_acc,0.4261
+FakeSTormer_c23,FakeSTormer (c23),DeFo,video_f1,0.3629
+FakeSTormer_c23,FakeSTormer (c23),DeFo,video_eer,0.4813
+FakeSTormer_c23,FakeSTormer (c23),DeFo,frame_auc,0.5111
+FakeSTormer_c23,FakeSTormer (c23),DeFo,frame_acc,0.4252
+FakeSTormer_c23,FakeSTormer (c23),DeFo,video_count,3077
+FakeSTormer_c23,FakeSTormer (c23),DFD-C23,video_auc,0.8738
+FakeSTormer_c23,FakeSTormer (c23),DFD-C23,video_acc,0.673
+FakeSTormer_c23,FakeSTormer (c23),DFD-C23,video_f1,0.7782
+FakeSTormer_c23,FakeSTormer (c23),DFD-C23,video_eer,0.2032
+FakeSTormer_c23,FakeSTormer (c23),DFD-C23,frame_auc,0.8557
+FakeSTormer_c23,FakeSTormer (c23),DFD-C23,frame_acc,0.6529
+FakeSTormer_c23,FakeSTormer (c23),DFD-C23,video_count,3425
+FakeSTormer_c23,FakeSTormer (c23),DSv1,video_auc,0.7395
+FakeSTormer_c23,FakeSTormer (c23),DSv1,video_acc,0.6152
+FakeSTormer_c23,FakeSTormer (c23),DSv1,video_f1,0.4921
+FakeSTormer_c23,FakeSTormer (c23),DSv1,video_eer,0.3206
+FakeSTormer_c23,FakeSTormer (c23),DSv1,frame_auc,0.7328
+FakeSTormer_c23,FakeSTormer (c23),DSv1,frame_acc,0.6153
+FakeSTormer_c23,FakeSTormer (c23),DSv1,video_count,2913
+FakeSTormer_c23,FakeSTormer (c23),DSv2,video_auc,0.6191
+FakeSTormer_c23,FakeSTormer (c23),DSv2,video_acc,0.6315
+FakeSTormer_c23,FakeSTormer (c23),DSv2,video_f1,0.4187
+FakeSTormer_c23,FakeSTormer (c23),DSv2,video_eer,0.422
+FakeSTormer_c23,FakeSTormer (c23),DSv2,frame_auc,0.622
+FakeSTormer_c23,FakeSTormer (c23),DSv2,frame_acc,0.6211
+FakeSTormer_c23,FakeSTormer (c23),DSv2,video_count,3278
+FakeSTormer_c23,FakeSTormer (c23),DFDCP,video_auc,0.901
+FakeSTormer_c23,FakeSTormer (c23),DFDCP,video_acc,0.8031
+FakeSTormer_c23,FakeSTormer (c23),DFDCP,video_f1,0.8318
+FakeSTormer_c23,FakeSTormer (c23),DFDCP,video_eer,0.1809
+FakeSTormer_c23,FakeSTormer (c23),DFDCP,frame_auc,0.8725
+FakeSTormer_c23,FakeSTormer (c23),DFDCP,frame_acc,0.7732
+FakeSTormer_c23,FakeSTormer (c23),DFDCP,video_count,762
+FakeSTormer_c23,FakeSTormer (c23),DFDC,video_auc,0.7464
+FakeSTormer_c23,FakeSTormer (c23),DFDC,video_acc,0.6257
+FakeSTormer_c23,FakeSTormer (c23),DFDC,video_f1,0.4568
+FakeSTormer_c23,FakeSTormer (c23),DFDC,video_eer,0.3205
+FakeSTormer_c23,FakeSTormer (c23),DFDC,frame_auc,0.7297
+FakeSTormer_c23,FakeSTormer (c23),DFDC,frame_acc,0.6232
+FakeSTormer_c23,FakeSTormer (c23),DFDC,video_count,4974
+FakeSTormer_c23,FakeSTormer (c23),DFDM-C23,video_auc,0.9967
+FakeSTormer_c23,FakeSTormer (c23),DFDM-C23,video_acc,0.9712
+FakeSTormer_c23,FakeSTormer (c23),DFDM-C23,video_f1,0.9815
+FakeSTormer_c23,FakeSTormer (c23),DFDM-C23,video_eer,0.0324
+FakeSTormer_c23,FakeSTormer (c23),DFDM-C23,frame_auc,0.9903
+FakeSTormer_c23,FakeSTormer (c23),DFDM-C23,frame_acc,0.9596
+FakeSTormer_c23,FakeSTormer (c23),DFDM-C23,video_count,2739
+FakeSTormer_c23,FakeSTormer (c23),FAVC,video_auc,0.8824
+FakeSTormer_c23,FakeSTormer (c23),FAVC,video_acc,0.5872
+FakeSTormer_c23,FakeSTormer (c23),FAVC,video_f1,0.5557
+FakeSTormer_c23,FakeSTormer (c23),FAVC,video_eer,0.2102
+FakeSTormer_c23,FakeSTormer (c23),FAVC,frame_auc,0.8718
+FakeSTormer_c23,FakeSTormer (c23),FAVC,frame_acc,0.5921
+FakeSTormer_c23,FakeSTormer (c23),FAVC,video_count,2994
+FakeSTormer_c23,FakeSTormer (c23),FFIW10K,video_auc,0.7182
+FakeSTormer_c23,FakeSTormer (c23),FFIW10K,video_acc,0.5829
+FakeSTormer_c23,FakeSTormer (c23),FFIW10K,video_f1,0.3819
+FakeSTormer_c23,FakeSTormer (c23),FFIW10K,video_eer,0.344
+FakeSTormer_c23,FakeSTormer (c23),FFIW10K,frame_auc,0.7069
+FakeSTormer_c23,FakeSTormer (c23),FFIW10K,frame_acc,0.5824
+FakeSTormer_c23,FakeSTormer (c23),FFIW10K,video_count,19924
+FakeSTormer_c23,FakeSTormer (c23),IDFv1,video_auc,0.8897
+FakeSTormer_c23,FakeSTormer (c23),IDFv1,video_acc,0.6168
+FakeSTormer_c23,FakeSTormer (c23),IDFv1,video_f1,0.6752
+FakeSTormer_c23,FakeSTormer (c23),IDFv1,video_eer,0.1901
+FakeSTormer_c23,FakeSTormer (c23),IDFv1,frame_auc,0.8767
+FakeSTormer_c23,FakeSTormer (c23),IDFv1,frame_acc,0.6093
+FakeSTormer_c23,FakeSTormer (c23),IDFv1,video_count,2380
+FakeSTormer_c23,FakeSTormer (c23),KoDF,video_auc,0.8148
+FakeSTormer_c23,FakeSTormer (c23),KoDF,video_acc,0.764
+FakeSTormer_c23,FakeSTormer (c23),KoDF,video_f1,0.68
+FakeSTormer_c23,FakeSTormer (c23),KoDF,video_eer,0.2575
+FakeSTormer_c23,FakeSTormer (c23),KoDF,frame_auc,0.8095
+FakeSTormer_c23,FakeSTormer (c23),KoDF,frame_acc,0.7609
+FakeSTormer_c23,FakeSTormer (c23),KoDF,video_count,4618
+FakeSTormer_c23,FakeSTormer (c23),PGF,video_auc,0.7386
+FakeSTormer_c23,FakeSTormer (c23),PGF,video_acc,0.2575
+FakeSTormer_c23,FakeSTormer (c23),PGF,video_f1,0.359
+FakeSTormer_c23,FakeSTormer (c23),PGF,video_eer,0.3239
+FakeSTormer_c23,FakeSTormer (c23),PGF,frame_auc,0.7254
+FakeSTormer_c23,FakeSTormer (c23),PGF,frame_acc,0.2687
+FakeSTormer_c23,FakeSTormer (c23),PGF,video_count,14366
+FakeSTormer_c23,FakeSTormer (c23),UADFV,video_auc,0.9821
+FakeSTormer_c23,FakeSTormer (c23),UADFV,video_acc,0.898
+FakeSTormer_c23,FakeSTormer (c23),UADFV,video_f1,0.8913
+FakeSTormer_c23,FakeSTormer (c23),UADFV,video_eer,0.0408
+FakeSTormer_c23,FakeSTormer (c23),UADFV,frame_auc,0.9547
+FakeSTormer_c23,FakeSTormer (c23),UADFV,frame_acc,0.8886
+FakeSTormer_c23,FakeSTormer (c23),UADFV,video_count,98

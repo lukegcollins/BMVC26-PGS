@@ -1,0 +1,368 @@
+2026-05-21 14:39:57 | INFO     | __main__:209 | Starting training: orthoflow_gtl_ln_no_geom_s137
+2026-05-21 14:39:57 | INFO     | __main__:210 | Log directory: training/logs/orthoflow_gtl_ln_no_geom_s137
+2026-05-21 14:39:57 | INFO     | src.utilities.reproducibility:48 | Random seed set to 137, deterministic=False
+2026-05-21 14:39:58 | INFO     | src.utilities.reproducibility:161 | Reproducibility info saved to training/logs/orthoflow_gtl_ln_no_geom_s137/reproducibility.json
+2026-05-21 14:39:58 | INFO     | src.backbones.dinov3_backbone:254 | Loading DINOv3 from HuggingFace: facebook/dinov3-vitl16-pretrain-lvd1689m
+2026-05-21 14:39:59 | INFO     | src.backbones.dinov3_backbone:176 | Backbone params: 100,352 / 303,129,600 trainable (0.033%)
+2026-05-21 14:39:59 | INFO     | src.backbones.dinov3_backbone:111 | Initialized DINOv3 backbone: dinov3_vitl16, embed_dim=1024, patch=16, depth=24, freeze_mode=layernorm
+2026-05-21 14:39:59 | INFO     | src.heads.classification:56 | LinearHead: 1024 -> 2 (dropout=0.0)
+2026-05-21 14:39:59 | INFO     | src.detectors.orthoflow_detector:84 | ============================================================
+2026-05-21 14:39:59 | INFO     | src.detectors.orthoflow_detector:85 | OrthoFlowGTL Detector Statistics
+2026-05-21 14:39:59 | INFO     | src.detectors.orthoflow_detector:86 | ============================================================
+2026-05-21 14:39:59 | INFO     | src.detectors.orthoflow_detector:87 |   Backbone: 100,352 / 303,129,600 trainable (0.033%)
+2026-05-21 14:39:59 | INFO     | src.detectors.orthoflow_detector:91 |   Head: 2,050 / 2,050 trainable
+2026-05-21 14:39:59 | INFO     | src.detectors.orthoflow_detector:92 |   Total: 102,402 / 303,131,650 trainable
+2026-05-21 14:39:59 | INFO     | src.detectors.orthoflow_detector:93 | ============================================================
+2026-05-21 14:39:59 | INFO     | src.lightning.module:139 | Loss Function initialized with input dimension: 1024
+2026-05-21 14:39:59 | INFO     | src.lightning.module:81 | Using OrthoPairGTLGSDLoss (OPA + GSD, embed_dim=1024)
+2026-05-21 14:39:59 | INFO     | src.loss._orthoflow_gtl_core:353 | ============================================================
+2026-05-21 14:39:59 | INFO     | src.loss._orthoflow_gtl_core:354 | OrthoPairGTL Loss Configuration
+2026-05-21 14:39:59 | INFO     | src.loss._orthoflow_gtl_core:355 | ============================================================
+2026-05-21 14:39:59 | INFO     | src.loss._orthoflow_gtl_core:356 |   Weighting mode:     static
+2026-05-21 14:39:59 | INFO     | src.loss._orthoflow_gtl_core:357 |   Alpha (alignment):  0.0
+2026-05-21 14:39:59 | INFO     | src.loss._orthoflow_gtl_core:358 |   Beta (uniformity):  0.0
+2026-05-21 14:39:59 | INFO     | src.loss._orthoflow_gtl_core:359 |   Gamma (GTL):        0.0
+2026-05-21 14:39:59 | INFO     | src.loss._orthoflow_gtl_core:360 |   Use GTL:            False
+2026-05-21 14:39:59 | INFO     | src.loss._orthoflow_gtl_core:361 |   Use axis margin:    False (margin=1.5)
+2026-05-21 14:39:59 | INFO     | src.loss._orthoflow_gtl_core:362 |   Use residual unif:  False
+2026-05-21 14:39:59 | INFO     | src.loss._orthoflow_gtl_core:363 |   Use SLERP aug:      False
+2026-05-21 14:39:59 | INFO     | src.loss._orthoflow_gtl_core:364 |   Hard RR negatives:  True
+2026-05-21 14:39:59 | INFO     | src.loss._orthoflow_gtl_core:365 |   Residual loss:      l2
+2026-05-21 14:39:59 | INFO     | src.loss._orthoflow_gtl_core:366 |   Active tasks:       2 with weights [0.0, 0.0]
+2026-05-21 14:39:59 | INFO     | src.loss._orthoflow_gtl_core:367 | ============================================================
+2026-05-21 14:39:59 | WARNING  | src.loss._orthoflow_gtl_core:371 | [CONFIG-WARNING] alpha=0, beta=0, use_gtl=False: Only CE loss will be used. Auxiliary losses disabled.
+2026-05-21 14:39:59 | INFO     | src.loss.orthoflow_gtl:86 | OrthoPairGTLLoss adapter initialized (embed_dim=1024)
+2026-05-21 14:39:59 | INFO     | src.lightning.module:174 | Datasets configured: train=[DatasetSpec(name='FaceForensics++', split='train', split_ratio='T-V-T', log_name='FF-DF-C23', methods=['FF-REAL', 'FF-FS_DF'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='train', split_ratio='T-V-T', log_name='FF-F2F-C23', methods=['FF-REAL', 'FF-FR_F2F'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='train', split_ratio='T-V-T', log_name='FF-FS-C23', methods=['FF-REAL', 'FF-FS_FS'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='train', split_ratio='T-V-T', log_name='FF-NT-C23', methods=['FF-REAL', 'FF-FR_NT'], compression='c23', processing_group=None, integrity_checks=True)] val=[DatasetSpec(name='DeepSpeak-v2', split='val', split_ratio='80-20-T', log_name='DSv2-VAL', methods='all', compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='Celeb-DF-v3', split='val', split_ratio='80-20-T', log_name='CDFv3-VAL', methods='all', compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='val', split_ratio='T-V-T', log_name='FF-FSH-C23-VAL', methods=['FF-REAL', 'FF-FS_FSH'], compression='c23', processing_group=None, integrity_checks=True)] test=[DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-ORIGINAL-C23', methods=['FF-REAL', 'FF-FS_DF', 'FF-FR_F2F', 'FF-FS_FS', 'FF-FR_NT'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-DF-C23', methods=['FF-REAL', 'FF-FS_DF'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-F2F-C23', methods=['FF-REAL', 'FF-FR_F2F'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-FS-C23', methods=['FF-REAL', 'FF-FS_FS'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-NT-C23', methods=['FF-REAL', 'FF-FR_NT'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-FSH-C23', methods=['FF-REAL', 'FF-FS_FSH'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='Celeb-DF-v1', split='test', split_ratio='80-20-T', log_name='CDFv1', methods=['CDFv1-CR', 'CDFv1-YTR', 'CDFv1-FS_CS'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='Celeb-DF-v2', split='test', split_ratio='80-20-T', log_name='CDFv2', methods=['CDFv2-CR', 'CDFv2-YTR', 'CDFv2-FS_CS'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='Celeb-DF-v3', split='test', split_ratio='80-20-T', log_name='CDFv3', methods=['CDFv3-CR', 'CDFv3-YTR', 'CDFv3-FR_DAGAN', 'CDFv3-FR_FSRT', 'CDFv3-FR_HYPER', 'CDFv3-FR_LIA', 'CDFv3-FR_LP', 'CDFv3-FR_MCNET', 'CDFv3-FR_TPSMM', 'CDFv3-FS_BLEND', 'CDFv3-FS_CDFV2', 'CDFv3-FS_GHOST', 'CDFv3-FS_HIFI', 'CDFv3-FS_INSW', 'CDFv3-FS_MOBILE', 'CDFv3-FS_SIM', 'CDFv3-FS_UNI', 'CDFv3-TF_ANI', 'CDFv3-TF_ECHO', 'CDFv3-TF_EDTALK', 'CDFv3-TF_FLOAT', 'CDFv3-TF_IPLAP', 'CDFv3-TF_REAL3D', 'CDFv3-TF_SAD'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DeeperForensics-1.0', split='test', split_ratio='0-0-BM', log_name='DeFo', methods=['DeFo-SR', 'DeFo-FS_E2E', 'DeFo-FS_L1', 'DeFo-FS_L2', 'DeFo-FS_L3', 'DeFo-FS_L4', 'DeFo-FS_L5', 'DeFo-FS_RND', 'DeFo-FS_M2', 'DeFo-FS_M3', 'DeFo-FS_M4', 'DeFo-FR_RP'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DeepFakeDetection', split='test', split_ratio='0-0-100', log_name='DFD-C23', methods=['DFD-AR', 'DFD-FS_DFD'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='DeepSpeak-v1', split='test', split_ratio='80-20-T', log_name='DSv1', methods=['DSv1-AR', 'DSv1-FS_FF', 'DSv1-FS_FFGAN', 'DSv1-FS_FFLIVE', 'DSv1-LS_RT', 'DSv1-LS_W2L'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DeepSpeak-v2', split='test', split_ratio='80-20-T', log_name='DSv2', methods=['DSv2-AR', 'DSv2-FS_FF', 'DSv2-LS_D2L', 'DSv2-LS_LS', 'DSv2-TF_HM', 'DSv2-TF_LP', 'DSv2-TF_MEMO'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DFDC-P', split='test', split_ratio='80-20-T', log_name='DFDCP', methods=['DFDCP-REAL', 'DFDCP-FS_METHOD_A', 'DFDCP-FS_METHOD_B'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DFDC', split='test', split_ratio='0-0-T', log_name='DFDC', methods=['DFDC-REAL', 'DFDC-FS_FAKE'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DFDM', split='test', split_ratio='0-0-100', log_name='DFDM-C23', methods=['DFDM-REAL', 'DFDM-FS_DF', 'DFDM-FS_DFL', 'DFDM-FS_FS', 'DFDM-FS_IAE', 'DFDM-FS_LW'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FakeAVCeleb-v1_2', split='test', split_ratio='0-0-BM', log_name='FAVC', methods=['FAVC-RVRA', 'FAVC-FVFA', 'FAVC-FVRA', 'FAVC-RVFA'], compression=None, processing_group=None, integrity_checks=False), DatasetSpec(name='FFIW10K', split='test', split_ratio='T-V-T', log_name='FFIW10K', methods=['FFIW-REAL', 'FFIW-FS_FAKE'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='IDForge-v1', split='test', split_ratio='0-0-BM', log_name='IDFv1', methods=['IDFv1-REAL', 'IDFv1-RVC_TM', 'IDFv1-TTS_TG', 'IDFv1-TTS_TM', 'IDFv1-FS_AM_TM', 'IDFv1-FS_RVC_TM', 'IDFv1-FS_TTS', 'IDFv1-FS_TTS_TG', 'IDFv1-LS_AM_TM', 'IDFv1-LS_RVC_TM', 'IDFv1-LS_TTS_TG'], compression=None, processing_group=None, integrity_checks=False), DatasetSpec(name='KoDF', split='test', split_ratio='0-0-BM', log_name='KoDF', methods=['KoDF-REAL', 'KoDF-LS_AD', 'KoDF-FS_DFFS', 'KoDF-FS_DFL', 'KoDF-FR_FO', 'KoDF-FS_FSG'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='PolyGlotFake', split='test', split_ratio='0-0-100', log_name='PGF', methods=['PGF-AR', 'PGF-EN', 'PGF-ES', 'PGF-FR', 'PGF-JA', 'PGF-RU', 'PGF-ZH', 'PGF-LS_TO_AR', 'PGF-LS_TO_EN', 'PGF-LS_TO_ES', 'PGF-LS_TO_FR', 'PGF-LS_TO_JA', 'PGF-LS_TO_RU', 'PGF-LS_TO_ZH'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='UADFV', split='test', split_ratio='0-0-100', log_name='UADFV', methods=['UADFV-REAL', 'UADFV-FS_FAKE'], compression=None, processing_group=None, integrity_checks=True)]
+2026-05-21 14:39:59 | INFO     | src.lightning.module:183 | Initialized DeepfakeDetectorModule: model=orthoflow
+2026-05-21 14:39:59 | INFO     | src.lightning.datamodule:82 | Label mapping loaded from 'configs/datasets/labels/label_mappings_visual.yaml' (124 entries, type=Binary)
+2026-05-21 14:39:59 | INFO     | src.lightning.datamodule:87 | DeepfakeDataModule initialized: train=4, val=3, test=22
+2026-05-21 14:39:59 | INFO     | __main__:241 | Starting training loop
+2026-05-21 14:40:02 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='train' | videos=1440 | labels(video-level)={0: 720, 1: 720} | tasks(top)=[('REAL', 720), ('FS_DF', 720)] | scan_mode=balanced max_frames_per_video=32
+2026-05-21 14:40:02 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TRAIN] Indexed 46076 samples from 1440 videos (manifest videos=1440).
+2026-05-21 14:40:02 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TRAIN] Frame samples=46076 | labels(frame-level)={0:23038 (50.0%), 1:23038 (50.0%)}
+2026-05-21 14:40:02 | INFO     | src.lightning.datamodule:154 | Loaded training dataset: FaceForensics++ (23038 samples)
+2026-05-21 14:40:02 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='train' | videos=1440 | labels(video-level)={0: 720, 1: 720} | tasks(top)=[('REAL', 720), ('FR_F2F', 720)] | scan_mode=balanced max_frames_per_video=32
+2026-05-21 14:40:02 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TRAIN] Indexed 46078 samples from 1440 videos (manifest videos=1440).
+2026-05-21 14:40:02 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TRAIN] Frame samples=46078 | labels(frame-level)={0:23038 (50.0%), 1:23040 (50.0%)}
+2026-05-21 14:40:03 | INFO     | src.lightning.datamodule:154 | Loaded training dataset: FaceForensics++ (23040 samples)
+2026-05-21 14:40:03 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='train' | videos=1440 | labels(video-level)={0: 720, 1: 720} | tasks(top)=[('REAL', 720), ('FS_FS', 720)] | scan_mode=balanced max_frames_per_video=32
+2026-05-21 14:40:03 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TRAIN] Indexed 46076 samples from 1440 videos (manifest videos=1440).
+2026-05-21 14:40:03 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TRAIN] Frame samples=46076 | labels(frame-level)={0:23038 (50.0%), 1:23038 (50.0%)}
+2026-05-21 14:40:03 | INFO     | src.lightning.datamodule:154 | Loaded training dataset: FaceForensics++ (23038 samples)
+2026-05-21 14:40:03 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='train' | videos=1440 | labels(video-level)={0: 720, 1: 720} | tasks(top)=[('REAL', 720), ('FR_NT', 720)] | scan_mode=balanced max_frames_per_video=32
+2026-05-21 14:40:03 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TRAIN] Indexed 46077 samples from 1440 videos (manifest videos=1440).
+2026-05-21 14:40:03 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TRAIN] Frame samples=46077 | labels(frame-level)={0:23038 (50.0%), 1:23039 (50.0%)}
+2026-05-21 14:40:03 | INFO     | src.lightning.datamodule:154 | Loaded training dataset: FaceForensics++ (23039 samples)
+2026-05-21 14:40:03 | INFO     | src.lightning.datamodule:159 | Total training samples: 92155
+2026-05-21 14:40:04 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='val' | videos=2228 | labels(video-level)={0: 1315, 1: 913} | tasks(top)=[('AR', 1315), ('LS_LS', 194), ('TF_MEMO', 185)] | scan_mode=balanced max_frames_per_video=32
+2026-05-21 14:40:04 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][VAL] Indexed 71122 samples from 2228 videos (manifest videos=2228).
+2026-05-21 14:40:04 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][VAL] Frame samples=71122 | labels(frame-level)={0:41927 (59.0%), 1:29195 (41.0%)}
+2026-05-21 14:40:04 | INFO     | src.lightning.datamodule:221 | Loaded validation dataset: DSv2-VAL (71122 samples)
+2026-05-21 14:40:04 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='val' | videos=9052 | labels(video-level)={0: 163, 1: 8889} | tasks(top)=[('FS_CDFV2', 836), ('TF_ANI', 642), ('TF_FLOAT', 642)] | scan_mode=balanced max_frames_per_video=32
+2026-05-21 14:40:04 | WARNING  | src.dataset.core.base:375 | [256w_256h_1.3x_32f_insightface][VAL] 8889/8889 fake videos missing pair_id (may break strict pairing).
+2026-05-21 14:40:07 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][VAL] Indexed 289493 samples from 9052 videos (manifest videos=9052).
+2026-05-21 14:40:07 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][VAL] Frame samples=289493 | labels(frame-level)={0:5179 (1.8%), 1:284314 (98.2%)}
+2026-05-21 14:40:07 | INFO     | src.lightning.datamodule:221 | Loaded validation dataset: CDFv3-VAL (289493 samples)
+2026-05-21 14:40:07 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='val' | videos=280 | labels(video-level)={0: 140, 1: 140} | tasks(top)=[('REAL', 140), ('FS_FSH', 140)] | scan_mode=balanced max_frames_per_video=32
+2026-05-21 14:40:07 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][VAL] Indexed 8960 samples from 280 videos (manifest videos=280).
+2026-05-21 14:40:07 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][VAL] Frame samples=8960 | labels(frame-level)={0:4480 (50.0%), 1:4480 (50.0%)}
+2026-05-21 14:40:07 | INFO     | src.lightning.datamodule:221 | Loaded validation dataset: FF-FSH-C23-VAL (8960 samples)
+2026-05-21 14:40:08 | INFO     | src.lightning.module:837 | Optimizer Config:
+  • Head:     lr=5e-05, decay=0.0001 (2 tensors)
+  • Backbone: lr=5e-05, decay=0.0 (98 tensors)
+  • Loss:     lr=5e-05, decay=0.0 (0 tensors)
+2026-05-21 14:40:08 | INFO     | src.lightning.module:274 | Compiling model with torch.compile() (mode=default) ...
+2026-05-21 14:40:10 | INFO     | src.lightning.module:276 | torch.compile() applied
+2026-05-21 14:40:17 | INFO     | src.loss._orthoflow_gtl_core:594 | [LOSS-INFO] First batch composition: Total=64, Real=32, Fake=32, Pairs=32
+2026-05-21 14:40:18 | INFO     | src.lightning.callbacks:529 | Saved batch visualization: training/logs/orthoflow_gtl_ln_no_geom_s137/visualizations/batch_0000.png
+2026-05-21 14:40:18 | INFO     | src.lightning.callbacks:529 | Saved batch visualization: training/logs/orthoflow_gtl_ln_no_geom_s137/visualizations/batch_0001.png
+2026-05-21 14:40:19 | INFO     | src.lightning.callbacks:529 | Saved batch visualization: training/logs/orthoflow_gtl_ln_no_geom_s137/visualizations/batch_0002.png
+2026-05-21 14:40:19 | INFO     | src.lightning.callbacks:529 | Saved batch visualization: training/logs/orthoflow_gtl_ln_no_geom_s137/visualizations/batch_0003.png
+2026-05-21 14:40:20 | INFO     | src.lightning.callbacks:529 | Saved batch visualization: training/logs/orthoflow_gtl_ln_no_geom_s137/visualizations/batch_0004.png
+2026-05-21 14:40:20 | INFO     | src.lightning.callbacks:529 | Saved batch visualization: training/logs/orthoflow_gtl_ln_no_geom_s137/visualizations/batch_0005.png
+2026-05-21 14:40:21 | INFO     | src.lightning.callbacks:529 | Saved batch visualization: training/logs/orthoflow_gtl_ln_no_geom_s137/visualizations/batch_0006.png
+2026-05-21 14:40:21 | INFO     | src.lightning.callbacks:529 | Saved batch visualization: training/logs/orthoflow_gtl_ln_no_geom_s137/visualizations/batch_0007.png
+2026-05-21 14:40:21 | INFO     | src.lightning.callbacks:529 | Saved batch visualization: training/logs/orthoflow_gtl_ln_no_geom_s137/visualizations/batch_0008.png
+2026-05-21 14:40:22 | INFO     | src.lightning.callbacks:529 | Saved batch visualization: training/logs/orthoflow_gtl_ln_no_geom_s137/visualizations/batch_0009.png
+2026-05-21 14:56:05 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 14:56:05 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 0
+2026-05-21 14:56:05 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 14:56:05 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.6958  frame_acc=0.4300  frame_auc=0.4755 | video_acc=0.4219  video_auc=0.4719
+2026-05-21 14:56:05 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=0.6882  frame_acc=0.6563  frame_auc=0.5374 | video_acc=0.6607  video_auc=0.5519
+2026-05-21 14:56:05 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=0.6932  frame_acc=0.5002  frame_auc=0.5001 | video_acc=0.5000  video_auc=0.4987
+2026-05-21 14:56:05 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 14:56:05 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.6924  frame_auc=0.5043 | video_acc=0.5275  video_auc=0.5075
+2026-05-21 14:56:05 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 14:56:05 | INFO     | src.lightning.module:620 | --- Validation label counts (epoch 0 diagnostics) ---
+2026-05-21 14:56:05 | INFO     | src.lightning.module:624 |   DSv2-VAL: total=71122 | real=41927 (59.0%) | fake=29195 (41.0%)
+2026-05-21 14:56:05 | INFO     | src.lightning.module:624 |   CDFv3-VAL: total=289493 | real=5179 (1.8%) | fake=284314 (98.2%)
+2026-05-21 14:56:05 | INFO     | src.lightning.module:624 |   FF-FSH-C23-VAL: total=8960 | real=4480 (50.0%) | fake=4480 (50.0%)
+2026-05-21 14:56:05 | INFO     | src.lightning.module:629 | ---
+2026-05-21 14:56:05 | INFO     | src.lightning.callbacks:162 | Epoch 0 validation: video_auc_macro=0.5075
+2026-05-21 14:56:05 | INFO     | src.lightning.module:470 | [Train E0] loss=0.6925 | frame_acc=0.5200  frame_auc=0.5377 | video_acc=0.5250  video_auc=0.5420
+2026-05-21 15:12:16 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 15:12:16 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 1
+2026-05-21 15:12:16 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 15:12:16 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.6160  frame_acc=0.7103  frame_auc=0.6829 | video_acc=0.7280  video_auc=0.7375
+2026-05-21 15:12:16 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=0.9239  frame_acc=0.5133  frame_auc=0.7110 | video_acc=0.5077  video_auc=0.7535
+2026-05-21 15:12:16 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=0.7158  frame_acc=0.6487  frame_auc=0.7363 | video_acc=0.6357  video_auc=0.8390
+2026-05-21 15:12:16 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 15:12:16 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.7519  frame_auc=0.7101 | video_acc=0.6238  video_auc=0.7767
+2026-05-21 15:12:16 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 15:12:16 | INFO     | src.lightning.callbacks:162 | Epoch 1 validation: video_auc_macro=0.7767
+2026-05-21 15:12:16 | INFO     | src.lightning.module:470 | [Train E1] loss=0.4916 | frame_acc=0.7892  frame_auc=0.8598 | video_acc=0.9016  video_auc=0.9584
+2026-05-21 15:28:42 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 15:28:42 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 2
+2026-05-21 15:28:42 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 15:28:42 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.6376  frame_acc=0.7102  frame_auc=0.7173 | video_acc=0.7307  video_auc=0.7614
+2026-05-21 15:28:42 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=0.9142  frame_acc=0.5643  frame_auc=0.7474 | video_acc=0.5729  video_auc=0.7899
+2026-05-21 15:28:42 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=0.7488  frame_acc=0.6584  frame_auc=0.7618 | video_acc=0.6643  video_auc=0.8479
+2026-05-21 15:28:42 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 15:28:42 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.7669  frame_auc=0.7422 | video_acc=0.6560  video_auc=0.7997
+2026-05-21 15:28:42 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 15:28:42 | INFO     | src.lightning.callbacks:162 | Epoch 2 validation: video_auc_macro=0.7997
+2026-05-21 15:28:42 | INFO     | src.lightning.module:470 | [Train E2] loss=0.3227 | frame_acc=0.8712  frame_auc=0.9381 | video_acc=0.9444  video_auc=0.9842
+2026-05-21 15:44:20 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 15:44:20 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 3
+2026-05-21 15:44:20 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 15:44:20 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.6451  frame_acc=0.7151  frame_auc=0.7421 | video_acc=0.7464  video_auc=0.7799
+2026-05-21 15:44:20 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=0.8744  frame_acc=0.5973  frame_auc=0.7483 | video_acc=0.6203  video_auc=0.8004
+2026-05-21 15:44:20 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=0.7614  frame_acc=0.6667  frame_auc=0.7748 | video_acc=0.6929  video_auc=0.8577
+2026-05-21 15:44:20 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 15:44:20 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.7603  frame_auc=0.7550 | video_acc=0.6865  video_auc=0.8127
+2026-05-21 15:44:20 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 15:44:21 | INFO     | src.lightning.callbacks:162 | Epoch 3 validation: video_auc_macro=0.8127
+2026-05-21 15:44:21 | INFO     | src.lightning.module:470 | [Train E3] loss=0.2754 | frame_acc=0.8903  frame_auc=0.9541 | video_acc=0.9606  video_auc=0.9909
+2026-05-21 15:59:58 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 15:59:58 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 4
+2026-05-21 15:59:58 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 15:59:58 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.6617  frame_acc=0.7106  frame_auc=0.7416 | video_acc=0.7437  video_auc=0.7848
+2026-05-21 15:59:58 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0001  frame_acc=0.5615  frame_auc=0.7530 | video_acc=0.5768  video_auc=0.8032
+2026-05-21 15:59:58 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=0.8522  frame_acc=0.6538  frame_auc=0.7722 | video_acc=0.6464  video_auc=0.8581
+2026-05-21 15:59:58 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 15:59:58 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.8380  frame_auc=0.7556 | video_acc=0.6556  video_auc=0.8154
+2026-05-21 15:59:58 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 15:59:58 | INFO     | src.lightning.callbacks:162 | Epoch 4 validation: video_auc_macro=0.8154
+2026-05-21 15:59:58 | INFO     | src.lightning.module:470 | [Train E4] loss=0.2487 | frame_acc=0.8997  frame_auc=0.9619 | video_acc=0.9675  video_auc=0.9937
+2026-05-21 16:15:37 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 16:15:37 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 5
+2026-05-21 16:15:37 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 16:15:37 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.6739  frame_acc=0.7109  frame_auc=0.7502 | video_acc=0.7388  video_auc=0.7878
+2026-05-21 16:15:38 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=0.9507  frame_acc=0.5911  frame_auc=0.7564 | video_acc=0.6089  video_auc=0.8086
+2026-05-21 16:15:38 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=0.8393  frame_acc=0.6641  frame_auc=0.7832 | video_acc=0.6786  video_auc=0.8648
+2026-05-21 16:15:38 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 16:15:38 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.8213  frame_auc=0.7632 | video_acc=0.6754  video_auc=0.8204
+2026-05-21 16:15:38 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 16:15:38 | INFO     | src.lightning.callbacks:162 | Epoch 5 validation: video_auc_macro=0.8204
+2026-05-21 16:15:38 | INFO     | src.lightning.module:470 | [Train E5] loss=0.2322 | frame_acc=0.9059  frame_auc=0.9663 | video_acc=0.9738  video_auc=0.9953
+2026-05-21 16:31:15 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 16:31:15 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 6
+2026-05-21 16:31:15 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 16:31:15 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.6843  frame_acc=0.7173  frame_auc=0.7557 | video_acc=0.7473  video_auc=0.7914
+2026-05-21 16:31:15 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=0.9611  frame_acc=0.6006  frame_auc=0.7491 | video_acc=0.6182  video_auc=0.8090
+2026-05-21 16:31:15 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=0.8828  frame_acc=0.6607  frame_auc=0.7813 | video_acc=0.6821  video_auc=0.8630
+2026-05-21 16:31:15 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 16:31:15 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.8428  frame_auc=0.7620 | video_acc=0.6826  video_auc=0.8211
+2026-05-21 16:31:15 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 16:31:16 | INFO     | src.lightning.callbacks:162 | Epoch 6 validation: video_auc_macro=0.8211
+2026-05-21 16:31:16 | INFO     | src.lightning.module:470 | [Train E6] loss=0.2177 | frame_acc=0.9128  frame_auc=0.9704 | video_acc=0.9750  video_auc=0.9964
+2026-05-21 16:46:55 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 16:46:55 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 7
+2026-05-21 16:46:55 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 16:46:55 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.6880  frame_acc=0.7214  frame_auc=0.7523 | video_acc=0.7527  video_auc=0.7885
+2026-05-21 16:46:55 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0724  frame_acc=0.5632  frame_auc=0.7534 | video_acc=0.5759  video_auc=0.8169
+2026-05-21 16:46:55 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=0.9525  frame_acc=0.6507  frame_auc=0.7783 | video_acc=0.6536  video_auc=0.8600
+2026-05-21 16:46:55 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 16:46:55 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.9043  frame_auc=0.7613 | video_acc=0.6607  video_auc=0.8218
+2026-05-21 16:46:55 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 16:46:55 | INFO     | src.lightning.callbacks:162 | Epoch 7 validation: video_auc_macro=0.8218
+2026-05-21 16:46:55 | INFO     | src.lightning.module:470 | [Train E7] loss=0.2085 | frame_acc=0.9167  frame_auc=0.9727 | video_acc=0.9778  video_auc=0.9970
+2026-05-21 17:02:33 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 17:02:33 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 8
+2026-05-21 17:02:33 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 17:02:33 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.6961  frame_acc=0.7188  frame_auc=0.7536 | video_acc=0.7563  video_auc=0.7930
+2026-05-21 17:02:33 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0215  frame_acc=0.5845  frame_auc=0.7782 | video_acc=0.6052  video_auc=0.8196
+2026-05-21 17:02:33 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=0.9552  frame_acc=0.6539  frame_auc=0.7836 | video_acc=0.6536  video_auc=0.8653
+2026-05-21 17:02:33 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 17:02:33 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.8909  frame_auc=0.7718 | video_acc=0.6717  video_auc=0.8260
+2026-05-21 17:02:33 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 17:02:33 | INFO     | src.lightning.callbacks:162 | Epoch 8 validation: video_auc_macro=0.8260
+2026-05-21 17:02:33 | INFO     | src.lightning.module:470 | [Train E8] loss=0.2007 | frame_acc=0.9209  frame_auc=0.9747 | video_acc=0.9802  video_auc=0.9973
+2026-05-21 17:19:45 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 17:19:45 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 9
+2026-05-21 17:19:45 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 17:19:45 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.7027  frame_acc=0.7190  frame_auc=0.7544 | video_acc=0.7590  video_auc=0.7925
+2026-05-21 17:19:45 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0332  frame_acc=0.5814  frame_auc=0.7778 | video_acc=0.6026  video_auc=0.8237
+2026-05-21 17:19:45 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=0.9660  frame_acc=0.6532  frame_auc=0.7838 | video_acc=0.6607  video_auc=0.8653
+2026-05-21 17:19:45 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 17:19:45 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.9006  frame_auc=0.7720 | video_acc=0.6741  video_auc=0.8271
+2026-05-21 17:19:45 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 17:19:46 | INFO     | src.lightning.callbacks:162 | Epoch 9 validation: video_auc_macro=0.8271
+2026-05-21 17:19:46 | INFO     | src.lightning.module:470 | [Train E9] loss=0.1938 | frame_acc=0.9206  frame_auc=0.9757 | video_acc=0.9816  video_auc=0.9973
+2026-05-21 17:35:56 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 17:35:56 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 10
+2026-05-21 17:35:56 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 17:35:56 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.7028  frame_acc=0.7197  frame_auc=0.7603 | video_acc=0.7626  video_auc=0.7982
+2026-05-21 17:35:56 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0112  frame_acc=0.5970  frame_auc=0.7840 | video_acc=0.6161  video_auc=0.8266
+2026-05-21 17:35:56 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=0.9570  frame_acc=0.6573  frame_auc=0.7838 | video_acc=0.6607  video_auc=0.8644
+2026-05-21 17:35:56 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 17:35:56 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.8903  frame_auc=0.7760 | video_acc=0.6798  video_auc=0.8297
+2026-05-21 17:35:56 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 17:35:57 | INFO     | src.lightning.callbacks:162 | Epoch 10 validation: video_auc_macro=0.8297
+2026-05-21 17:35:57 | INFO     | src.lightning.module:470 | [Train E10] loss=0.1897 | frame_acc=0.9237  frame_auc=0.9774 | video_acc=0.9825  video_auc=0.9978
+2026-05-21 17:51:35 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 17:51:35 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 11
+2026-05-21 17:51:35 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 17:51:35 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.7140  frame_acc=0.7219  frame_auc=0.7626 | video_acc=0.7621  video_auc=0.7976
+2026-05-21 17:51:35 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0035  frame_acc=0.6045  frame_auc=0.7765 | video_acc=0.6273  video_auc=0.8240
+2026-05-21 17:51:35 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=0.9595  frame_acc=0.6618  frame_auc=0.7896 | video_acc=0.6643  video_auc=0.8687
+2026-05-21 17:51:35 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 17:51:35 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.8923  frame_auc=0.7762 | video_acc=0.6846  video_auc=0.8301
+2026-05-21 17:51:35 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 17:51:36 | INFO     | src.lightning.callbacks:162 | Epoch 11 validation: video_auc_macro=0.8301
+2026-05-21 17:51:36 | INFO     | src.lightning.module:470 | [Train E11] loss=0.1818 | frame_acc=0.9276  frame_auc=0.9791 | video_acc=0.9845  video_auc=0.9982
+2026-05-21 18:07:11 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 18:07:11 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 12
+2026-05-21 18:07:11 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 18:07:11 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.7121  frame_acc=0.7250  frame_auc=0.7587 | video_acc=0.7644  video_auc=0.7990
+2026-05-21 18:07:12 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0518  frame_acc=0.5905  frame_auc=0.7716 | video_acc=0.6090  video_auc=0.8251
+2026-05-21 18:07:12 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=1.0083  frame_acc=0.6545  frame_auc=0.7881 | video_acc=0.6536  video_auc=0.8678
+2026-05-21 18:07:12 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 18:07:12 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.9240  frame_auc=0.7728 | video_acc=0.6757  video_auc=0.8306
+2026-05-21 18:07:12 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 18:07:12 | INFO     | src.lightning.callbacks:162 | Epoch 12 validation: video_auc_macro=0.8306
+2026-05-21 18:07:12 | INFO     | src.lightning.module:470 | [Train E12] loss=0.1798 | frame_acc=0.9275  frame_auc=0.9790 | video_acc=0.9852  video_auc=0.9981
+2026-05-21 18:22:48 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 18:22:48 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 13
+2026-05-21 18:22:48 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 18:22:48 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.7134  frame_acc=0.7268  frame_auc=0.7638 | video_acc=0.7635  video_auc=0.8014
+2026-05-21 18:22:48 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0076  frame_acc=0.6058  frame_auc=0.7838 | video_acc=0.6273  video_auc=0.8251
+2026-05-21 18:22:48 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=0.9993  frame_acc=0.6556  frame_auc=0.7866 | video_acc=0.6571  video_auc=0.8647
+2026-05-21 18:22:48 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 18:22:48 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.9068  frame_auc=0.7781 | video_acc=0.6826  video_auc=0.8304
+2026-05-21 18:22:48 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 18:22:49 | INFO     | src.lightning.callbacks:162 | Epoch 13 validation: video_auc_macro=0.8304
+2026-05-21 18:22:49 | INFO     | src.lightning.module:470 | [Train E13] loss=0.1767 | frame_acc=0.9289  frame_auc=0.9797 | video_acc=0.9847  video_auc=0.9983
+2026-05-21 18:38:20 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 18:38:20 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 14
+2026-05-21 18:38:20 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 18:38:20 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.7178  frame_acc=0.7270  frame_auc=0.7638 | video_acc=0.7671  video_auc=0.8023
+2026-05-21 18:38:20 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0329  frame_acc=0.6006  frame_auc=0.7748 | video_acc=0.6214  video_auc=0.8259
+2026-05-21 18:38:20 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=1.0119  frame_acc=0.6559  frame_auc=0.7901 | video_acc=0.6643  video_auc=0.8684
+2026-05-21 18:38:20 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 18:38:20 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.9209  frame_auc=0.7763 | video_acc=0.6843  video_auc=0.8322
+2026-05-21 18:38:20 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 18:38:20 | INFO     | src.lightning.callbacks:162 | Epoch 14 validation: video_auc_macro=0.8322
+2026-05-21 18:38:21 | INFO     | src.lightning.module:470 | [Train E14] loss=0.1725 | frame_acc=0.9308  frame_auc=0.9808 | video_acc=0.9858  video_auc=0.9986
+2026-05-21 18:55:54 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 18:55:54 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 15
+2026-05-21 18:55:54 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 18:55:54 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.7245  frame_acc=0.7261  frame_auc=0.7626 | video_acc=0.7648  video_auc=0.8008
+2026-05-21 18:55:54 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0319  frame_acc=0.6012  frame_auc=0.7765 | video_acc=0.6226  video_auc=0.8268
+2026-05-21 18:55:54 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=1.0207  frame_acc=0.6562  frame_auc=0.7881 | video_acc=0.6607  video_auc=0.8655
+2026-05-21 18:55:54 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 18:55:54 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.9257  frame_auc=0.7757 | video_acc=0.6827  video_auc=0.8310
+2026-05-21 18:55:54 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 18:55:54 | INFO     | src.lightning.callbacks:162 | Epoch 15 validation: video_auc_macro=0.8310
+2026-05-21 18:55:54 | INFO     | src.lightning.module:470 | [Train E15] loss=0.1704 | frame_acc=0.9318  frame_auc=0.9813 | video_acc=0.9861  video_auc=0.9984
+2026-05-21 19:12:50 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 19:12:50 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 16
+2026-05-21 19:12:50 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 19:12:50 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.7305  frame_acc=0.7297  frame_auc=0.7632 | video_acc=0.7671  video_auc=0.8008
+2026-05-21 19:12:50 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0492  frame_acc=0.5980  frame_auc=0.7641 | video_acc=0.6211  video_auc=0.8264
+2026-05-21 19:12:50 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=1.0513  frame_acc=0.6513  frame_auc=0.7878 | video_acc=0.6500  video_auc=0.8651
+2026-05-21 19:12:50 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 19:12:50 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.9437  frame_auc=0.7717 | video_acc=0.6794  video_auc=0.8307
+2026-05-21 19:12:50 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 19:12:50 | INFO     | src.lightning.callbacks:162 | Epoch 16 validation: video_auc_macro=0.8307
+2026-05-21 19:12:50 | INFO     | src.lightning.module:470 | [Train E16] loss=0.1680 | frame_acc=0.9345  frame_auc=0.9818 | video_acc=0.9870  video_auc=0.9986
+2026-05-21 19:29:56 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 19:29:56 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 17
+2026-05-21 19:29:56 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 19:29:56 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.7334  frame_acc=0.7271  frame_auc=0.7623 | video_acc=0.7630  video_auc=0.8002
+2026-05-21 19:29:56 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0612  frame_acc=0.5899  frame_auc=0.7720 | video_acc=0.6156  video_auc=0.8281
+2026-05-21 19:29:56 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=1.0627  frame_acc=0.6490  frame_auc=0.7895 | video_acc=0.6536  video_auc=0.8677
+2026-05-21 19:29:56 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 19:29:56 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.9524  frame_auc=0.7746 | video_acc=0.6774  video_auc=0.8320
+2026-05-21 19:29:56 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 19:29:57 | INFO     | src.lightning.callbacks:162 | Epoch 17 validation: video_auc_macro=0.8320
+2026-05-21 19:29:57 | INFO     | src.lightning.module:470 | [Train E17] loss=0.1667 | frame_acc=0.9340  frame_auc=0.9824 | video_acc=0.9865  video_auc=0.9987
+2026-05-21 19:45:30 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 19:45:30 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 18
+2026-05-21 19:45:30 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 19:45:30 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.7307  frame_acc=0.7263  frame_auc=0.7650 | video_acc=0.7635  video_auc=0.8022
+2026-05-21 19:45:30 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0248  frame_acc=0.6076  frame_auc=0.7706 | video_acc=0.6310  video_auc=0.8270
+2026-05-21 19:45:30 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=1.0360  frame_acc=0.6552  frame_auc=0.7893 | video_acc=0.6643  video_auc=0.8671
+2026-05-21 19:45:30 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 19:45:30 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.9305  frame_auc=0.7750 | video_acc=0.6863  video_auc=0.8321
+2026-05-21 19:45:30 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 19:45:30 | INFO     | src.lightning.callbacks:162 | Epoch 18 validation: video_auc_macro=0.8321
+2026-05-21 19:45:30 | INFO     | src.lightning.module:470 | [Train E18] loss=0.1658 | frame_acc=0.9327  frame_auc=0.9822 | video_acc=0.9870  video_auc=0.9986
+2026-05-21 20:01:01 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 20:01:01 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 19
+2026-05-21 20:01:01 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 20:01:01 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.7328  frame_acc=0.7282  frame_auc=0.7629 | video_acc=0.7648  video_auc=0.8020
+2026-05-21 20:01:01 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0677  frame_acc=0.5926  frame_auc=0.7744 | video_acc=0.6146  video_auc=0.8262
+2026-05-21 20:01:01 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=1.0686  frame_acc=0.6490  frame_auc=0.7891 | video_acc=0.6536  video_auc=0.8668
+2026-05-21 20:01:01 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 20:01:01 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.9564  frame_auc=0.7755 | video_acc=0.6776  video_auc=0.8317
+2026-05-21 20:01:01 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 20:01:02 | INFO     | src.lightning.callbacks:162 | Epoch 19 validation: video_auc_macro=0.8317
+2026-05-21 20:01:02 | INFO     | src.lightning.module:470 | [Train E19] loss=0.1650 | frame_acc=0.9338  frame_auc=0.9823 | video_acc=0.9877  video_auc=0.9987
+2026-05-21 20:16:36 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 20:16:36 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 20
+2026-05-21 20:16:36 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 20:16:36 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.7325  frame_acc=0.7301  frame_auc=0.7653 | video_acc=0.7644  video_auc=0.8015
+2026-05-21 20:16:36 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0761  frame_acc=0.5910  frame_auc=0.7747 | video_acc=0.6115  video_auc=0.8263
+2026-05-21 20:16:36 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=1.0700  frame_acc=0.6490  frame_auc=0.7893 | video_acc=0.6500  video_auc=0.8669
+2026-05-21 20:16:36 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 20:16:36 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.9595  frame_auc=0.7764 | video_acc=0.6753  video_auc=0.8316
+2026-05-21 20:16:36 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 20:16:36 | INFO     | src.lightning.callbacks:162 | Epoch 20 validation: video_auc_macro=0.8316
+2026-05-21 20:16:36 | INFO     | src.lightning.module:470 | [Train E20] loss=0.1645 | frame_acc=0.9348  frame_auc=0.9825 | video_acc=0.9873  video_auc=0.9985
+2026-05-21 20:32:08 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 20:32:08 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 21
+2026-05-21 20:32:08 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 20:32:08 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.7310  frame_acc=0.7276  frame_auc=0.7650 | video_acc=0.7657  video_auc=0.8029
+2026-05-21 20:32:08 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0282  frame_acc=0.6063  frame_auc=0.7705 | video_acc=0.6310  video_auc=0.8271
+2026-05-21 20:32:08 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=1.0417  frame_acc=0.6546  frame_auc=0.7903 | video_acc=0.6643  video_auc=0.8678
+2026-05-21 20:32:08 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 20:32:08 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.9336  frame_auc=0.7753 | video_acc=0.6870  video_auc=0.8326
+2026-05-21 20:32:08 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 20:32:09 | INFO     | src.lightning.callbacks:162 | Epoch 21 validation: video_auc_macro=0.8326
+2026-05-21 20:32:09 | INFO     | src.lightning.module:470 | [Train E21] loss=0.1626 | frame_acc=0.9350  frame_auc=0.9831 | video_acc=0.9877  video_auc=0.9987
+2026-05-21 20:47:48 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 20:47:48 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 22
+2026-05-21 20:47:48 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 20:47:48 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.7332  frame_acc=0.7304  frame_auc=0.7662 | video_acc=0.7671  video_auc=0.8030
+2026-05-21 20:47:48 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0429  frame_acc=0.5999  frame_auc=0.7890 | video_acc=0.6256  video_auc=0.8284
+2026-05-21 20:47:48 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=1.0572  frame_acc=0.6516  frame_auc=0.7899 | video_acc=0.6536  video_auc=0.8670
+2026-05-21 20:47:48 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 20:47:48 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.9444  frame_auc=0.7817 | video_acc=0.6821  video_auc=0.8328
+2026-05-21 20:47:48 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 20:47:49 | INFO     | src.lightning.callbacks:162 | Epoch 22 validation: video_auc_macro=0.8328
+2026-05-21 20:47:49 | INFO     | src.lightning.module:470 | [Train E22] loss=0.1621 | frame_acc=0.9350  frame_auc=0.9833 | video_acc=0.9877  video_auc=0.9987
+2026-05-21 21:03:27 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 21:03:27 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 23
+2026-05-21 21:03:27 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 21:03:27 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.7340  frame_acc=0.7297  frame_auc=0.7661 | video_acc=0.7662  video_auc=0.8026
+2026-05-21 21:03:27 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0397  frame_acc=0.6043  frame_auc=0.7796 | video_acc=0.6269  video_auc=0.8282
+2026-05-21 21:03:27 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=1.0534  frame_acc=0.6527  frame_auc=0.7901 | video_acc=0.6571  video_auc=0.8674
+2026-05-21 21:03:27 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 21:03:27 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.9424  frame_auc=0.7786 | video_acc=0.6834  video_auc=0.8327
+2026-05-21 21:03:27 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 21:03:28 | INFO     | src.lightning.callbacks:162 | Epoch 23 validation: video_auc_macro=0.8327
+2026-05-21 21:03:28 | INFO     | src.lightning.module:470 | [Train E23] loss=0.1627 | frame_acc=0.9349  frame_auc=0.9825 | video_acc=0.9891  video_auc=0.9987
+2026-05-21 21:19:00 | INFO     | src.lightning.module:555 | ============================================================
+2026-05-21 21:19:00 | INFO     | src.lightning.module:556 | Validation Summary — Epoch 24
+2026-05-21 21:19:00 | INFO     | src.lightning.module:557 | ============================================================
+2026-05-21 21:19:00 | INFO     | src.lightning.module:592 |   DSv2-VAL: loss=0.7340  frame_acc=0.7312  frame_auc=0.7652 | video_acc=0.7666  video_auc=0.8024
+2026-05-21 21:19:00 | INFO     | src.lightning.module:592 |   CDFv3-VAL: loss=1.0581  frame_acc=0.5976  frame_auc=0.7795 | video_acc=0.6193  video_auc=0.8280
+2026-05-21 21:19:00 | INFO     | src.lightning.module:592 |   FF-FSH-C23-VAL: loss=1.0663  frame_acc=0.6506  frame_auc=0.7896 | video_acc=0.6500  video_auc=0.8668
+2026-05-21 21:19:00 | INFO     | src.lightning.module:609 | ------------------------------------------------------------
+2026-05-21 21:19:00 | INFO     | src.lightning.module:610 |   MACRO (3 datasets): loss=0.9528  frame_auc=0.7781 | video_acc=0.6786  video_auc=0.8324
+2026-05-21 21:19:00 | INFO     | src.lightning.module:616 | ============================================================
+2026-05-21 21:19:00 | INFO     | src.lightning.callbacks:162 | Epoch 24 validation: video_auc_macro=0.8324
+2026-05-21 21:19:00 | INFO     | src.lightning.module:470 | [Train E24] loss=0.1636 | frame_acc=0.9336  frame_auc=0.9826 | video_acc=0.9877  video_auc=0.9988
+2026-05-21 21:19:01 | INFO     | __main__:243 | Training completed
+2026-05-21 21:19:01 | INFO     | __main__:295 | Done!

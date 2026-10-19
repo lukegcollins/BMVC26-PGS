@@ -1,0 +1,10 @@
+run,variant,seed,peak_epoch,peak_macro_auc,final_epoch,final_macro_auc,overfit_gap_pts,plateau_within_0.5pt_epochs,post_peak_slope_pts_per_epoch
+orthoflow_gtl_gsd_lora_s42,gsd_lora,42,7,86.78,24,85.22,1.56,6,-0.0467
+orthoflow_gtl_gsd_lora_s137,gsd_lora,137,3,86.97,24,84.31,2.66,1,-0.045
+orthoflow_gtl_gsd_lora_s1729,gsd_lora,1729,7,86.51,24,85.16,1.35,1,-0.0197
+orthoflow_gtl_ln_s42,ln,42,18,85.29,24,85.13,0.16,13,-0.0229
+orthoflow_gtl_ln_s137,ln,137,23,85.56,24,85.55,0.01,11,
+orthoflow_gtl_ln_s1729,ln,1729,9,85.27,24,85.14,0.13,17,0.0061
+orthoflow_gtl_lora_s42,lora,42,4,87.17,24,83.89,3.28,1,-0.1103
+orthoflow_gtl_lora_s137,lora,137,5,85.02,24,81.41,3.61,3,-0.1501
+orthoflow_gtl_lora_s1729,lora,1729,1,86.02,24,80.9,5.12,2,-0.2037

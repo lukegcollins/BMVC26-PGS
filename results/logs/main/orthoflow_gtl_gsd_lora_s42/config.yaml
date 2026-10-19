@@ -1,0 +1,618 @@
+model_name: orthoflow
+task_target: orthoflow_gtl_gsd_lora_s42
+log_dir: ./training/logs
+backbone_name: dinov3
+backbone:
+  name: dinov3_vitl16
+  weights_dir: ./pretrained/dinov3
+  freeze_mode: lora
+  l2_normalize: true
+  mean:
+  - 0.485
+  - 0.456
+  - 0.406
+  std:
+  - 0.229
+  - 0.224
+  - 0.225
+  force_fp32: false
+  lora:
+    rank: 64
+    alpha: 128
+    dropout: 0.05
+    target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - up_proj
+    - down_proj
+  extra:
+    input_already_normalized: true
+    allow_timm_fallback: false
+head:
+  type: mlp
+  hidden_dim: 2048
+  dropout: 0.45
+  num_classes: 2
+  extra: {}
+loss:
+  weighting_mode: static
+  alpha: 1.0
+  beta: 0.5
+  gamma: 1.0
+  use_gtl: true
+  use_axis_margin: true
+  use_residual_uniformity: true
+  use_paired_slerp_aug: true
+  ce_only_in_eval: true
+  debug_log_params: false
+  residual_loss: l2
+  uniformity_t: 2.0
+  axis_margin: 1.5
+  residual_uniformity_t: 3.0
+  gtl_disc_weight: 1.0
+  gtl_small_weight: 0.2
+  gtl_hidden_dim: 512
+  gtl_output_dim: 256
+  use_hard_rr_negatives: true
+  slerp_pair_multiplier: 1
+  delta: 0.0
+  ortho_margin: 0.1
+  magnitude_tau: 0.05
+  spatial_ratio: 0.5
+  extra:
+    gsd_delta_concentration: 0.005
+    gsd_delta_coherence: 0.005
+    gsd_delta_dispersion: 0.002
+    gsd_enable_concentration: true
+    gsd_enable_coherence: true
+    gsd_enable_dispersion: true
+    gsd_real_c_dir_threshold: 0.3
+    gsd_min_group_size: 2
+    gsd_uniformity_t: 2.0
+data:
+  dataset_manifest_root: configs/datasets/manifests/rgb
+  default_processing_group: 256w_256h_1.3x_32f_insightface
+  dataset_type: standard
+  train_dataset_type: paired
+  val_dataset_type: single
+  test_dataset_type: single
+  temporal_alignment_mode: index_aligned
+  temporal_alignment_tolerance: 2
+  train_datasets:
+  - name: FaceForensics++
+    split: train
+    split_ratio: T-V-T
+    log_name: FF-DF-C23
+    methods:
+    - FF-REAL
+    - FF-FS_DF
+    compression: c23
+    processing_group: null
+    integrity_checks: true
+  - name: FaceForensics++
+    split: train
+    split_ratio: T-V-T
+    log_name: FF-F2F-C23
+    methods:
+    - FF-REAL
+    - FF-FR_F2F
+    compression: c23
+    processing_group: null
+    integrity_checks: true
+  - name: FaceForensics++
+    split: train
+    split_ratio: T-V-T
+    log_name: FF-FS-C23
+    methods:
+    - FF-REAL
+    - FF-FS_FS
+    compression: c23
+    processing_group: null
+    integrity_checks: true
+  - name: FaceForensics++
+    split: train
+    split_ratio: T-V-T
+    log_name: FF-NT-C23
+    methods:
+    - FF-REAL
+    - FF-FR_NT
+    compression: c23
+    processing_group: null
+    integrity_checks: true
+  val_datasets:
+  - name: DeepSpeak-v2
+    split: val
+    split_ratio: 80-20-T
+    log_name: DSv2-VAL
+    methods: all
+    compression: null
+    processing_group: null
+    integrity_checks: true
+  - name: Celeb-DF-v3
+    split: val
+    split_ratio: 80-20-T
+    log_name: CDFv3-VAL
+    methods: all
+    compression: null
+    processing_group: null
+    integrity_checks: true
+  - name: FaceForensics++
+    split: val
+    split_ratio: T-V-T
+    log_name: FF-FSH-C23-VAL
+    methods:
+    - FF-REAL
+    - FF-FS_FSH
+    compression: c23
+    processing_group: null
+    integrity_checks: true
+  test_datasets:
+  - name: FaceForensics++
+    split: test
+    split_ratio: T-V-T
+    log_name: FF-ORIGINAL-C23
+    methods:
+    - FF-REAL
+    - FF-FS_DF
+    - FF-FR_F2F
+    - FF-FS_FS
+    - FF-FR_NT
+    compression: c23
+    processing_group: null
+    integrity_checks: true
+  - name: FaceForensics++
+    split: test
+    split_ratio: T-V-T
+    log_name: FF-DF-C23
+    methods:
+    - FF-REAL
+    - FF-FS_DF
+    compression: c23
+    processing_group: null
+    integrity_checks: true
+  - name: FaceForensics++
+    split: test
+    split_ratio: T-V-T
+    log_name: FF-F2F-C23
+    methods:
+    - FF-REAL
+    - FF-FR_F2F
+    compression: c23
+    processing_group: null
+    integrity_checks: true
+  - name: FaceForensics++
+    split: test
+    split_ratio: T-V-T
+    log_name: FF-FS-C23
+    methods:
+    - FF-REAL
+    - FF-FS_FS
+    compression: c23
+    processing_group: null
+    integrity_checks: true
+  - name: FaceForensics++
+    split: test
+    split_ratio: T-V-T
+    log_name: FF-NT-C23
+    methods:
+    - FF-REAL
+    - FF-FR_NT
+    compression: c23
+    processing_group: null
+    integrity_checks: true
+  - name: FaceForensics++
+    split: test
+    split_ratio: T-V-T
+    log_name: FF-FSH-C23
+    methods:
+    - FF-REAL
+    - FF-FS_FSH
+    compression: c23
+    processing_group: null
+    integrity_checks: true
+  - name: Celeb-DF-v1
+    split: test
+    split_ratio: 80-20-T
+    log_name: CDFv1
+    methods:
+    - CDFv1-CR
+    - CDFv1-YTR
+    - CDFv1-FS_CS
+    compression: null
+    processing_group: null
+    integrity_checks: true
+  - name: Celeb-DF-v2
+    split: test
+    split_ratio: 80-20-T
+    log_name: CDFv2
+    methods:
+    - CDFv2-CR
+    - CDFv2-YTR
+    - CDFv2-FS_CS
+    compression: null
+    processing_group: null
+    integrity_checks: true
+  - name: Celeb-DF-v3
+    split: test
+    split_ratio: 80-20-T
+    log_name: CDFv3
+    methods:
+    - CDFv3-CR
+    - CDFv3-YTR
+    - CDFv3-FR_DAGAN
+    - CDFv3-FR_FSRT
+    - CDFv3-FR_HYPER
+    - CDFv3-FR_LIA
+    - CDFv3-FR_LP
+    - CDFv3-FR_MCNET
+    - CDFv3-FR_TPSMM
+    - CDFv3-FS_BLEND
+    - CDFv3-FS_CDFV2
+    - CDFv3-FS_GHOST
+    - CDFv3-FS_HIFI
+    - CDFv3-FS_INSW
+    - CDFv3-FS_MOBILE
+    - CDFv3-FS_SIM
+    - CDFv3-FS_UNI
+    - CDFv3-TF_ANI
+    - CDFv3-TF_ECHO
+    - CDFv3-TF_EDTALK
+    - CDFv3-TF_FLOAT
+    - CDFv3-TF_IPLAP
+    - CDFv3-TF_REAL3D
+    - CDFv3-TF_SAD
+    compression: null
+    processing_group: null
+    integrity_checks: true
+  - name: DeeperForensics-1.0
+    split: test
+    split_ratio: 0-0-BM
+    log_name: DeFo
+    methods:
+    - DeFo-SR
+    - DeFo-FS_E2E
+    - DeFo-FS_L1
+    - DeFo-FS_L2
+    - DeFo-FS_L3
+    - DeFo-FS_L4
+    - DeFo-FS_L5
+    - DeFo-FS_RND
+    - DeFo-FS_M2
+    - DeFo-FS_M3
+    - DeFo-FS_M4
+    - DeFo-FR_RP
+    compression: null
+    processing_group: null
+    integrity_checks: true
+  - name: DeepFakeDetection
+    split: test
+    split_ratio: 0-0-100
+    log_name: DFD-C23
+    methods:
+    - DFD-AR
+    - DFD-FS_DFD
+    compression: c23
+    processing_group: null
+    integrity_checks: true
+  - name: DeepSpeak-v1
+    split: test
+    split_ratio: 80-20-T
+    log_name: DSv1
+    methods:
+    - DSv1-AR
+    - DSv1-FS_FF
+    - DSv1-FS_FFGAN
+    - DSv1-FS_FFLIVE
+    - DSv1-LS_RT
+    - DSv1-LS_W2L
+    compression: null
+    processing_group: null
+    integrity_checks: true
+  - name: DeepSpeak-v2
+    split: test
+    split_ratio: 80-20-T
+    log_name: DSv2
+    methods:
+    - DSv2-AR
+    - DSv2-FS_FF
+    - DSv2-LS_D2L
+    - DSv2-LS_LS
+    - DSv2-TF_HM
+    - DSv2-TF_LP
+    - DSv2-TF_MEMO
+    compression: null
+    processing_group: null
+    integrity_checks: true
+  - name: DFDC-P
+    split: test
+    split_ratio: 80-20-T
+    log_name: DFDCP
+    methods:
+    - DFDCP-REAL
+    - DFDCP-FS_METHOD_A
+    - DFDCP-FS_METHOD_B
+    compression: null
+    processing_group: null
+    integrity_checks: true
+  - name: DFDC
+    split: test
+    split_ratio: 0-0-T
+    log_name: DFDC
+    methods:
+    - DFDC-REAL
+    - DFDC-FS_FAKE
+    compression: null
+    processing_group: null
+    integrity_checks: true
+  - name: DFDM
+    split: test
+    split_ratio: 0-0-100
+    log_name: DFDM-C23
+    methods:
+    - DFDM-REAL
+    - DFDM-FS_DF
+    - DFDM-FS_DFL
+    - DFDM-FS_FS
+    - DFDM-FS_IAE
+    - DFDM-FS_LW
+    compression: c23
+    processing_group: null
+    integrity_checks: true
+  - name: FakeAVCeleb-v1_2
+    split: test
+    split_ratio: 0-0-BM
+    log_name: FAVC
+    methods:
+    - FAVC-RVRA
+    - FAVC-FVFA
+    - FAVC-FVRA
+    - FAVC-RVFA
+    compression: null
+    processing_group: null
+    integrity_checks: false
+  - name: FFIW10K
+    split: test
+    split_ratio: T-V-T
+    log_name: FFIW10K
+    methods:
+    - FFIW-REAL
+    - FFIW-FS_FAKE
+    compression: null
+    processing_group: null
+    integrity_checks: true
+  - name: IDForge-v1
+    split: test
+    split_ratio: 0-0-BM
+    log_name: IDFv1
+    methods:
+    - IDFv1-REAL
+    - IDFv1-RVC_TM
+    - IDFv1-TTS_TG
+    - IDFv1-TTS_TM
+    - IDFv1-FS_AM_TM
+    - IDFv1-FS_RVC_TM
+    - IDFv1-FS_TTS
+    - IDFv1-FS_TTS_TG
+    - IDFv1-LS_AM_TM
+    - IDFv1-LS_RVC_TM
+    - IDFv1-LS_TTS_TG
+    compression: null
+    processing_group: null
+    integrity_checks: false
+  - name: KoDF
+    split: test
+    split_ratio: 0-0-BM
+    log_name: KoDF
+    methods:
+    - KoDF-REAL
+    - KoDF-LS_AD
+    - KoDF-FS_DFFS
+    - KoDF-FS_DFL
+    - KoDF-FR_FO
+    - KoDF-FS_FSG
+    compression: null
+    processing_group: null
+    integrity_checks: true
+  - name: PolyGlotFake
+    split: test
+    split_ratio: 0-0-100
+    log_name: PGF
+    methods:
+    - PGF-AR
+    - PGF-EN
+    - PGF-ES
+    - PGF-FR
+    - PGF-JA
+    - PGF-RU
+    - PGF-ZH
+    - PGF-LS_TO_AR
+    - PGF-LS_TO_EN
+    - PGF-LS_TO_ES
+    - PGF-LS_TO_FR
+    - PGF-LS_TO_JA
+    - PGF-LS_TO_RU
+    - PGF-LS_TO_ZH
+    compression: null
+    processing_group: null
+    integrity_checks: true
+  - name: UADFV
+    split: test
+    split_ratio: 0-0-100
+    log_name: UADFV
+    methods:
+    - UADFV-REAL
+    - UADFV-FS_FAKE
+    compression: null
+    processing_group: null
+    integrity_checks: true
+  dataset_json_folder: preprocessing/extended/dataset_json
+  compression: c23
+  train_batch_size: 32
+  test_batch_size: 96
+  workers: 16
+  frame_num_train: 32
+  frame_num_val: 32
+  frame_num_test: 32
+  resolution: 224
+  with_mask: false
+  with_landmark: false
+  use_data_augmentation: true
+  lmdb: false
+  scan_mode: balanced
+  max_frames_per_video: 50
+  label_mapping_file: configs/datasets/labels/label_mappings_visual.yaml
+  label_type: Binary
+  train_temporal_datasets: []
+  gpu_normalize: false
+  use_video_grouped_sampler: true
+  gsd_num_videos_per_batch: 8
+  gsd_frames_per_video: 4
+  temporal:
+    sequence_length: 1
+    temporal_stride: 1
+    window_step: 8
+    max_sequences_per_video: 10
+    pairing_mode: strict
+    sync_augmentations: true
+    sync_threshold: 5
+    aggregation_method: mean
+    aggregation_threshold: 0.5
+training:
+  start_epoch: 0
+  num_epochs: 25
+  seed: 42
+  grad_accum_steps: 4
+  grad_clip: 2.0
+  nan_check_frequency: 500
+  max_nan_tolerance: 5
+  use_amp: true
+  use_compile: true
+  compile_mode: default
+  cudnn_benchmark: true
+  deterministic: false
+  ddp: false
+  local_rank: 0
+optimizer:
+  type: adam
+  lr: 5.0e-05
+  weight_decay: 0.0001
+  beta1: 0.9
+  beta2: 0.999
+  eps: 1.0e-08
+  amsgrad: false
+  momentum: 0.9
+  nesterov: false
+  extra:
+    lr: 5.0e-05
+    weight_decay: 0.0001
+    beta1: 0.9
+    beta2: 0.999
+    eps: 1.0e-08
+    backbone_lr_multiplier: 1.0
+scheduler:
+  type: warmup_cosine_cyclic
+  warmup_epochs: 1
+  cycle_epochs: 25
+  cycles: 1
+  lr_base: 5.0e-05
+  lr_max: 5.0e-05
+  lr_min: 1.0e-06
+  extra: {}
+checkpoint:
+  metric: video_auc
+  aggregation: macro
+  save_per_dataset: true
+  save_average: true
+  save_legacy: false
+  save_last: true
+  save_top_k: 3
+augmentations:
+  training:
+  - name: Resize
+    params:
+      height: 224
+      width: 224
+      p: 1.0
+  - name: HorizontalFlip
+    params:
+      p: 0.5
+  - name: Affine
+    params:
+      translate_percent:
+      - -0.2
+      - 0.2
+      scale:
+      - 0.8
+      - 1.2
+      rotate:
+      - -20
+      - 20
+      border_mode: 0
+      p: 0.5
+  - name: GaussianBlur
+    params:
+      blur_limit:
+      - 3
+      - 7
+      sigma_limit:
+      - 0.1
+      - 2.0
+      p: 0.2
+  - name: ImageCompression
+    params:
+      quality_range:
+      - 30
+      - 90
+      p: 0.4
+  - name: CoarseDropout
+    params:
+      num_holes_range:
+      - 1
+      - 2
+      hole_height_range:
+      - 1
+      - 24
+      hole_width_range:
+      - 1
+      - 24
+      p: 0.25
+  - name: Normalize
+    params:
+      mean:
+      - 0.485
+      - 0.456
+      - 0.406
+      std:
+      - 0.229
+      - 0.224
+      - 0.225
+  - name: ToTensorV2
+  validation:
+  - name: Resize
+    params:
+      height: 224
+      width: 224
+      p: 1.0
+  - name: Normalize
+    params:
+      mean:
+      - 0.485
+      - 0.456
+      - 0.406
+      std:
+      - 0.229
+      - 0.224
+      - 0.225
+  - name: ToTensorV2
+  testing: null
+auto_test:
+  enabled: false
+  checkpoint: best
+  test_after_epoch: null
+  frame_num: null
+loss_type: orthoflow_gtl_gsd
+save_ckpt: true
+save_feat: true
+metric_scoring: video_auc

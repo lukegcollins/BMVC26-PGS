@@ -1,0 +1,246 @@
+2026-05-24 01:48:43 | INFO     | __main__:490 | Testing checkpoint: training/logs/orthoflow_gtl_ln_no_small_s137/checkpoints/epoch=15-video_auc=0.8510.ckpt
+2026-05-24 01:48:43 | INFO     | __main__:491 | Run name: orthoflow_gtl_ln_no_small_s137 | Checkpoint tag: epoch15_best_macro
+2026-05-24 01:48:43 | INFO     | __main__:492 | Master CSV: training/logs/test_master.csv
+2026-05-24 01:48:43 | INFO     | __main__:493 | Test datasets: [DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-ORIGINAL-C23', methods=['FF-REAL', 'FF-FS_DF', 'FF-FR_F2F', 'FF-FS_FS', 'FF-FR_NT'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-DF-C23', methods=['FF-REAL', 'FF-FS_DF'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-F2F-C23', methods=['FF-REAL', 'FF-FR_F2F'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-FS-C23', methods=['FF-REAL', 'FF-FS_FS'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-NT-C23', methods=['FF-REAL', 'FF-FR_NT'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-FSH-C23', methods=['FF-REAL', 'FF-FS_FSH'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='Celeb-DF-v1', split='test', split_ratio='80-20-T', log_name='CDFv1', methods=['CDFv1-CR', 'CDFv1-YTR', 'CDFv1-FS_CS'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='Celeb-DF-v2', split='test', split_ratio='80-20-T', log_name='CDFv2', methods=['CDFv2-CR', 'CDFv2-YTR', 'CDFv2-FS_CS'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='Celeb-DF-v3', split='test', split_ratio='80-20-T', log_name='CDFv3', methods=['CDFv3-CR', 'CDFv3-YTR', 'CDFv3-FR_DAGAN', 'CDFv3-FR_FSRT', 'CDFv3-FR_HYPER', 'CDFv3-FR_LIA', 'CDFv3-FR_LP', 'CDFv3-FR_MCNET', 'CDFv3-FR_TPSMM', 'CDFv3-FS_BLEND', 'CDFv3-FS_CDFV2', 'CDFv3-FS_GHOST', 'CDFv3-FS_HIFI', 'CDFv3-FS_INSW', 'CDFv3-FS_MOBILE', 'CDFv3-FS_SIM', 'CDFv3-FS_UNI', 'CDFv3-TF_ANI', 'CDFv3-TF_ECHO', 'CDFv3-TF_EDTALK', 'CDFv3-TF_FLOAT', 'CDFv3-TF_IPLAP', 'CDFv3-TF_REAL3D', 'CDFv3-TF_SAD'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DeeperForensics-1.0', split='test', split_ratio='0-0-BM', log_name='DeFo', methods=['DeFo-SR', 'DeFo-FS_E2E', 'DeFo-FS_L1', 'DeFo-FS_L2', 'DeFo-FS_L3', 'DeFo-FS_L4', 'DeFo-FS_L5', 'DeFo-FS_RND', 'DeFo-FS_M2', 'DeFo-FS_M3', 'DeFo-FS_M4', 'DeFo-FR_RP'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DeepFakeDetection', split='test', split_ratio='0-0-100', log_name='DFD-C23', methods=['DFD-AR', 'DFD-FS_DFD'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='DeepSpeak-v1', split='test', split_ratio='80-20-T', log_name='DSv1', methods=['DSv1-AR', 'DSv1-FS_FF', 'DSv1-FS_FFGAN', 'DSv1-FS_FFLIVE', 'DSv1-LS_RT', 'DSv1-LS_W2L'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DeepSpeak-v2', split='test', split_ratio='80-20-T', log_name='DSv2', methods=['DSv2-AR', 'DSv2-FS_FF', 'DSv2-LS_D2L', 'DSv2-LS_LS', 'DSv2-TF_HM', 'DSv2-TF_LP', 'DSv2-TF_MEMO'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DFDC-P', split='test', split_ratio='80-20-T', log_name='DFDCP', methods=['DFDCP-REAL', 'DFDCP-FS_METHOD_A', 'DFDCP-FS_METHOD_B'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DFDC', split='test', split_ratio='0-0-T', log_name='DFDC', methods=['DFDC-REAL', 'DFDC-FS_FAKE'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DFDM', split='test', split_ratio='0-0-100', log_name='DFDM-C23', methods=['DFDM-REAL', 'DFDM-FS_DF', 'DFDM-FS_DFL', 'DFDM-FS_FS', 'DFDM-FS_IAE', 'DFDM-FS_LW'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FakeAVCeleb-v1_2', split='test', split_ratio='0-0-BM', log_name='FAVC', methods=['FAVC-RVRA', 'FAVC-FVFA', 'FAVC-FVRA', 'FAVC-RVFA'], compression=None, processing_group=None, integrity_checks=False), DatasetSpec(name='FFIW10K', split='test', split_ratio='T-V-T', log_name='FFIW10K', methods=['FFIW-REAL', 'FFIW-FS_FAKE'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='IDForge-v1', split='test', split_ratio='0-0-BM', log_name='IDFv1', methods=['IDFv1-REAL', 'IDFv1-RVC_TM', 'IDFv1-TTS_TG', 'IDFv1-TTS_TM', 'IDFv1-FS_AM_TM', 'IDFv1-FS_RVC_TM', 'IDFv1-FS_TTS', 'IDFv1-FS_TTS_TG', 'IDFv1-LS_AM_TM', 'IDFv1-LS_RVC_TM', 'IDFv1-LS_TTS_TG'], compression=None, processing_group=None, integrity_checks=False), DatasetSpec(name='KoDF', split='test', split_ratio='0-0-BM', log_name='KoDF', methods=['KoDF-REAL', 'KoDF-LS_AD', 'KoDF-FS_DFFS', 'KoDF-FS_DFL', 'KoDF-FR_FO', 'KoDF-FS_FSG'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='PolyGlotFake', split='test', split_ratio='0-0-100', log_name='PGF', methods=['PGF-AR', 'PGF-EN', 'PGF-ES', 'PGF-FR', 'PGF-JA', 'PGF-RU', 'PGF-ZH', 'PGF-LS_TO_AR', 'PGF-LS_TO_EN', 'PGF-LS_TO_ES', 'PGF-LS_TO_FR', 'PGF-LS_TO_JA', 'PGF-LS_TO_RU', 'PGF-LS_TO_ZH'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='UADFV', split='test', split_ratio='0-0-100', log_name='UADFV', methods=['UADFV-REAL', 'UADFV-FS_FAKE'], compression=None, processing_group=None, integrity_checks=True)]
+2026-05-24 01:48:43 | INFO     | src.backbones.dinov3_backbone:254 | Loading DINOv3 from HuggingFace: facebook/dinov3-vitl16-pretrain-lvd1689m
+2026-05-24 01:48:43 | INFO     | src.backbones.dinov3_backbone:176 | Backbone params: 100,352 / 303,129,600 trainable (0.033%)
+2026-05-24 01:48:43 | INFO     | src.backbones.dinov3_backbone:111 | Initialized DINOv3 backbone: dinov3_vitl16, embed_dim=1024, patch=16, depth=24, freeze_mode=layernorm
+2026-05-24 01:48:43 | INFO     | src.heads.classification:56 | LinearHead: 1024 -> 2 (dropout=0.0)
+2026-05-24 01:48:43 | INFO     | src.detectors.orthoflow_detector:84 | ============================================================
+2026-05-24 01:48:43 | INFO     | src.detectors.orthoflow_detector:85 | OrthoFlowGTL Detector Statistics
+2026-05-24 01:48:43 | INFO     | src.detectors.orthoflow_detector:86 | ============================================================
+2026-05-24 01:48:43 | INFO     | src.detectors.orthoflow_detector:87 |   Backbone: 100,352 / 303,129,600 trainable (0.033%)
+2026-05-24 01:48:43 | INFO     | src.detectors.orthoflow_detector:91 |   Head: 2,050 / 2,050 trainable
+2026-05-24 01:48:43 | INFO     | src.detectors.orthoflow_detector:92 |   Total: 102,402 / 303,131,650 trainable
+2026-05-24 01:48:43 | INFO     | src.detectors.orthoflow_detector:93 | ============================================================
+2026-05-24 01:48:43 | INFO     | src.lightning.module:139 | Loss Function initialized with input dimension: 1024
+2026-05-24 01:48:43 | INFO     | src.lightning.module:81 | Using OrthoPairGTLGSDLoss (OPA + GSD, embed_dim=1024)
+2026-05-24 01:48:43 | INFO     | src.loss._orthoflow_gtl_core:353 | ============================================================
+2026-05-24 01:48:43 | INFO     | src.loss._orthoflow_gtl_core:354 | OrthoPairGTL Loss Configuration
+2026-05-24 01:48:43 | INFO     | src.loss._orthoflow_gtl_core:355 | ============================================================
+2026-05-24 01:48:43 | INFO     | src.loss._orthoflow_gtl_core:356 |   Weighting mode:     static
+2026-05-24 01:48:43 | INFO     | src.loss._orthoflow_gtl_core:357 |   Alpha (alignment):  1.0
+2026-05-24 01:48:43 | INFO     | src.loss._orthoflow_gtl_core:358 |   Beta (uniformity):  0.5
+2026-05-24 01:48:43 | INFO     | src.loss._orthoflow_gtl_core:359 |   Gamma (GTL):        1.0
+2026-05-24 01:48:43 | INFO     | src.loss._orthoflow_gtl_core:360 |   Use GTL:            True
+2026-05-24 01:48:43 | INFO     | src.loss._orthoflow_gtl_core:361 |   Use axis margin:    True (margin=1.5)
+2026-05-24 01:48:43 | INFO     | src.loss._orthoflow_gtl_core:362 |   Use residual unif:  True
+2026-05-24 01:48:43 | INFO     | src.loss._orthoflow_gtl_core:363 |   Use SLERP aug:      True
+2026-05-24 01:48:43 | INFO     | src.loss._orthoflow_gtl_core:364 |   Hard RR negatives:  True
+2026-05-24 01:48:43 | INFO     | src.loss._orthoflow_gtl_core:365 |   Residual loss:      l2
+2026-05-24 01:48:43 | INFO     | src.loss._orthoflow_gtl_core:366 |   Active tasks:       3 with weights [1.0, 0.5, 1.0]
+2026-05-24 01:48:43 | INFO     | src.loss._orthoflow_gtl_core:367 | ============================================================
+2026-05-24 01:48:43 | INFO     | src.loss.orthoflow_gtl:86 | OrthoPairGTLLoss adapter initialized (embed_dim=1024)
+2026-05-24 01:48:43 | INFO     | src.lightning.module:174 | Datasets configured: train=[DatasetSpec(name='FaceForensics++', split='train', split_ratio='T-V-T', log_name='FF-DF-C23', methods=['FF-REAL', 'FF-FS_DF'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='train', split_ratio='T-V-T', log_name='FF-F2F-C23', methods=['FF-REAL', 'FF-FR_F2F'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='train', split_ratio='T-V-T', log_name='FF-FS-C23', methods=['FF-REAL', 'FF-FS_FS'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='train', split_ratio='T-V-T', log_name='FF-NT-C23', methods=['FF-REAL', 'FF-FR_NT'], compression='c23', processing_group=None, integrity_checks=True)] val=[DatasetSpec(name='DeepSpeak-v2', split='val', split_ratio='80-20-T', log_name='DSv2-VAL', methods='all', compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='Celeb-DF-v3', split='val', split_ratio='80-20-T', log_name='CDFv3-VAL', methods='all', compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='val', split_ratio='T-V-T', log_name='FF-FSH-C23-VAL', methods=['FF-REAL', 'FF-FS_FSH'], compression='c23', processing_group=None, integrity_checks=True)] test=[DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-ORIGINAL-C23', methods=['FF-REAL', 'FF-FS_DF', 'FF-FR_F2F', 'FF-FS_FS', 'FF-FR_NT'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-DF-C23', methods=['FF-REAL', 'FF-FS_DF'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-F2F-C23', methods=['FF-REAL', 'FF-FR_F2F'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-FS-C23', methods=['FF-REAL', 'FF-FS_FS'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-NT-C23', methods=['FF-REAL', 'FF-FR_NT'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FaceForensics++', split='test', split_ratio='T-V-T', log_name='FF-FSH-C23', methods=['FF-REAL', 'FF-FS_FSH'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='Celeb-DF-v1', split='test', split_ratio='80-20-T', log_name='CDFv1', methods=['CDFv1-CR', 'CDFv1-YTR', 'CDFv1-FS_CS'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='Celeb-DF-v2', split='test', split_ratio='80-20-T', log_name='CDFv2', methods=['CDFv2-CR', 'CDFv2-YTR', 'CDFv2-FS_CS'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='Celeb-DF-v3', split='test', split_ratio='80-20-T', log_name='CDFv3', methods=['CDFv3-CR', 'CDFv3-YTR', 'CDFv3-FR_DAGAN', 'CDFv3-FR_FSRT', 'CDFv3-FR_HYPER', 'CDFv3-FR_LIA', 'CDFv3-FR_LP', 'CDFv3-FR_MCNET', 'CDFv3-FR_TPSMM', 'CDFv3-FS_BLEND', 'CDFv3-FS_CDFV2', 'CDFv3-FS_GHOST', 'CDFv3-FS_HIFI', 'CDFv3-FS_INSW', 'CDFv3-FS_MOBILE', 'CDFv3-FS_SIM', 'CDFv3-FS_UNI', 'CDFv3-TF_ANI', 'CDFv3-TF_ECHO', 'CDFv3-TF_EDTALK', 'CDFv3-TF_FLOAT', 'CDFv3-TF_IPLAP', 'CDFv3-TF_REAL3D', 'CDFv3-TF_SAD'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DeeperForensics-1.0', split='test', split_ratio='0-0-BM', log_name='DeFo', methods=['DeFo-SR', 'DeFo-FS_E2E', 'DeFo-FS_L1', 'DeFo-FS_L2', 'DeFo-FS_L3', 'DeFo-FS_L4', 'DeFo-FS_L5', 'DeFo-FS_RND', 'DeFo-FS_M2', 'DeFo-FS_M3', 'DeFo-FS_M4', 'DeFo-FR_RP'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DeepFakeDetection', split='test', split_ratio='0-0-100', log_name='DFD-C23', methods=['DFD-AR', 'DFD-FS_DFD'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='DeepSpeak-v1', split='test', split_ratio='80-20-T', log_name='DSv1', methods=['DSv1-AR', 'DSv1-FS_FF', 'DSv1-FS_FFGAN', 'DSv1-FS_FFLIVE', 'DSv1-LS_RT', 'DSv1-LS_W2L'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DeepSpeak-v2', split='test', split_ratio='80-20-T', log_name='DSv2', methods=['DSv2-AR', 'DSv2-FS_FF', 'DSv2-LS_D2L', 'DSv2-LS_LS', 'DSv2-TF_HM', 'DSv2-TF_LP', 'DSv2-TF_MEMO'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DFDC-P', split='test', split_ratio='80-20-T', log_name='DFDCP', methods=['DFDCP-REAL', 'DFDCP-FS_METHOD_A', 'DFDCP-FS_METHOD_B'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DFDC', split='test', split_ratio='0-0-T', log_name='DFDC', methods=['DFDC-REAL', 'DFDC-FS_FAKE'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='DFDM', split='test', split_ratio='0-0-100', log_name='DFDM-C23', methods=['DFDM-REAL', 'DFDM-FS_DF', 'DFDM-FS_DFL', 'DFDM-FS_FS', 'DFDM-FS_IAE', 'DFDM-FS_LW'], compression='c23', processing_group=None, integrity_checks=True), DatasetSpec(name='FakeAVCeleb-v1_2', split='test', split_ratio='0-0-BM', log_name='FAVC', methods=['FAVC-RVRA', 'FAVC-FVFA', 'FAVC-FVRA', 'FAVC-RVFA'], compression=None, processing_group=None, integrity_checks=False), DatasetSpec(name='FFIW10K', split='test', split_ratio='T-V-T', log_name='FFIW10K', methods=['FFIW-REAL', 'FFIW-FS_FAKE'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='IDForge-v1', split='test', split_ratio='0-0-BM', log_name='IDFv1', methods=['IDFv1-REAL', 'IDFv1-RVC_TM', 'IDFv1-TTS_TG', 'IDFv1-TTS_TM', 'IDFv1-FS_AM_TM', 'IDFv1-FS_RVC_TM', 'IDFv1-FS_TTS', 'IDFv1-FS_TTS_TG', 'IDFv1-LS_AM_TM', 'IDFv1-LS_RVC_TM', 'IDFv1-LS_TTS_TG'], compression=None, processing_group=None, integrity_checks=False), DatasetSpec(name='KoDF', split='test', split_ratio='0-0-BM', log_name='KoDF', methods=['KoDF-REAL', 'KoDF-LS_AD', 'KoDF-FS_DFFS', 'KoDF-FS_DFL', 'KoDF-FR_FO', 'KoDF-FS_FSG'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='PolyGlotFake', split='test', split_ratio='0-0-100', log_name='PGF', methods=['PGF-AR', 'PGF-EN', 'PGF-ES', 'PGF-FR', 'PGF-JA', 'PGF-RU', 'PGF-ZH', 'PGF-LS_TO_AR', 'PGF-LS_TO_EN', 'PGF-LS_TO_ES', 'PGF-LS_TO_FR', 'PGF-LS_TO_JA', 'PGF-LS_TO_RU', 'PGF-LS_TO_ZH'], compression=None, processing_group=None, integrity_checks=True), DatasetSpec(name='UADFV', split='test', split_ratio='0-0-100', log_name='UADFV', methods=['UADFV-REAL', 'UADFV-FS_FAKE'], compression=None, processing_group=None, integrity_checks=True)]
+2026-05-24 01:48:43 | INFO     | src.lightning.module:183 | Initialized DeepfakeDetectorModule: model=orthoflow
+2026-05-24 01:48:44 | INFO     | __main__:192 | Remapping torch.compile _orig_mod keys → plain keys
+2026-05-24 01:48:45 | INFO     | src.lightning.datamodule:82 | Label mapping loaded from 'configs/datasets/labels/label_mappings_visual.yaml' (124 entries, type=Binary)
+2026-05-24 01:48:45 | INFO     | src.lightning.datamodule:87 | DeepfakeDataModule initialized: train=4, val=3, test=22
+2026-05-24 01:48:45 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=700 | labels(video-level)={0: 140, 1: 560} | tasks(top)=[('REAL', 140), ('FS_DF', 140), ('FR_F2F', 140)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:45 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 22400 samples from 700 videos (manifest videos=700).
+2026-05-24 01:48:45 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=22400 | labels(frame-level)={0:4480 (20.0%), 1:17920 (80.0%)}
+2026-05-24 01:48:45 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: FF-ORIGINAL-C23 (22400 samples)
+2026-05-24 01:48:45 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=280 | labels(video-level)={0: 140, 1: 140} | tasks(top)=[('REAL', 140), ('FS_DF', 140)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:45 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 8960 samples from 280 videos (manifest videos=280).
+2026-05-24 01:48:45 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=8960 | labels(frame-level)={0:4480 (50.0%), 1:4480 (50.0%)}
+2026-05-24 01:48:45 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: FF-DF-C23 (8960 samples)
+2026-05-24 01:48:45 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=280 | labels(video-level)={0: 140, 1: 140} | tasks(top)=[('REAL', 140), ('FR_F2F', 140)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:45 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 8960 samples from 280 videos (manifest videos=280).
+2026-05-24 01:48:45 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=8960 | labels(frame-level)={0:4480 (50.0%), 1:4480 (50.0%)}
+2026-05-24 01:48:45 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: FF-F2F-C23 (8960 samples)
+2026-05-24 01:48:45 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=280 | labels(video-level)={0: 140, 1: 140} | tasks(top)=[('REAL', 140), ('FS_FS', 140)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:45 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 8960 samples from 280 videos (manifest videos=280).
+2026-05-24 01:48:45 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=8960 | labels(frame-level)={0:4480 (50.0%), 1:4480 (50.0%)}
+2026-05-24 01:48:45 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: FF-FS-C23 (8960 samples)
+2026-05-24 01:48:45 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=280 | labels(video-level)={0: 140, 1: 140} | tasks(top)=[('REAL', 140), ('FR_NT', 140)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:45 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 8960 samples from 280 videos (manifest videos=280).
+2026-05-24 01:48:45 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=8960 | labels(frame-level)={0:4480 (50.0%), 1:4480 (50.0%)}
+2026-05-24 01:48:45 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: FF-NT-C23 (8960 samples)
+2026-05-24 01:48:45 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=280 | labels(video-level)={0: 140, 1: 140} | tasks(top)=[('REAL', 140), ('FS_FSH', 140)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:46 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 8960 samples from 280 videos (manifest videos=280).
+2026-05-24 01:48:46 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=8960 | labels(frame-level)={0:4480 (50.0%), 1:4480 (50.0%)}
+2026-05-24 01:48:46 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: FF-FSH-C23 (8960 samples)
+2026-05-24 01:48:46 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=100 | labels(video-level)={0: 38, 1: 62} | tasks(top)=[('FS_CS', 62), ('YTR', 30), ('CR', 8)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:46 | WARNING  | src.dataset.core.base:375 | [256w_256h_1.3x_32f_insightface][TEST] 62/62 fake videos missing pair_id (may break strict pairing).
+2026-05-24 01:48:46 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 3200 samples from 100 videos (manifest videos=100).
+2026-05-24 01:48:46 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=3200 | labels(frame-level)={0:1216 (38.0%), 1:1984 (62.0%)}
+2026-05-24 01:48:46 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: CDFv1 (3200 samples)
+2026-05-24 01:48:46 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=518 | labels(video-level)={0: 178, 1: 340} | tasks(top)=[('FS_CS', 340), ('CR', 108), ('YTR', 70)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:46 | WARNING  | src.dataset.core.base:375 | [256w_256h_1.3x_32f_insightface][TEST] 340/340 fake videos missing pair_id (may break strict pairing).
+2026-05-24 01:48:46 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 16572 samples from 518 videos (manifest videos=518).
+2026-05-24 01:48:46 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=16572 | labels(frame-level)={0:5692 (34.3%), 1:10880 (65.7%)}
+2026-05-24 01:48:46 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: CDFv2 (16572 samples)
+2026-05-24 01:48:46 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=7107 | labels(video-level)={0: 178, 1: 6929} | tasks(top)=[('FS_CDFV2', 528), ('FS_BLEND', 308), ('FS_GHOST', 308)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:46 | WARNING  | src.dataset.core.base:375 | [256w_256h_1.3x_32f_insightface][TEST] 6929/6929 fake videos missing pair_id (may break strict pairing).
+2026-05-24 01:48:48 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 227272 samples from 7107 videos (manifest videos=7107).
+2026-05-24 01:48:48 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=227272 | labels(frame-level)={0:5692 (2.5%), 1:221580 (97.5%)}
+2026-05-24 01:48:49 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: CDFv3 (227272 samples)
+2026-05-24 01:48:49 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=3089 | labels(video-level)={0: 900, 1: 2189} | tasks(top)=[('SR', 900), ('FS_E2E', 201), ('FS_L1', 201)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:49 | WARNING  | src.dataset.core.base:375 | [256w_256h_1.3x_32f_insightface][TEST] 2189/2189 fake videos missing pair_id (may break strict pairing).
+2026-05-24 01:48:49 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 98189 samples from 3089 videos (manifest videos=3089).
+2026-05-24 01:48:49 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=98189 | labels(frame-level)={0:28798 (29.3%), 1:69391 (70.7%)}
+2026-05-24 01:48:50 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: DeFo (98189 samples)
+2026-05-24 01:48:50 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=3431 | labels(video-level)={0: 363, 1: 3068} | tasks(top)=[('FS_DFD', 3068), ('AR', 363)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:50 | WARNING  | src.dataset.core.base:375 | [256w_256h_1.3x_32f_insightface][TEST] 3068/3068 fake videos missing pair_id (may break strict pairing).
+2026-05-24 01:48:50 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 108763 samples from 3431 videos (manifest videos=3431).
+2026-05-24 01:48:50 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=108763 | labels(frame-level)={0:11087 (10.2%), 1:97676 (89.8%)}
+2026-05-24 01:48:51 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: DFD-C23 (108763 samples)
+2026-05-24 01:48:51 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=2913 | labels(video-level)={0: 1416, 1: 1497} | tasks(top)=[('AR', 1416), ('LS_RT', 412), ('LS_W2L', 399)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:51 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 93066 samples from 2913 videos (manifest videos=2913).
+2026-05-24 01:48:51 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=93066 | labels(frame-level)={0:45234 (48.6%), 1:47832 (51.4%)}
+2026-05-24 01:48:51 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: DSv1 (93066 samples)
+2026-05-24 01:48:51 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=3279 | labels(video-level)={0: 1863, 1: 1416} | tasks(top)=[('AR', 1863), ('LS_LS', 277), ('TF_LP', 252)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:52 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 104543 samples from 3279 videos (manifest videos=3279).
+2026-05-24 01:48:52 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=104543 | labels(frame-level)={0:59338 (56.8%), 1:45205 (43.2%)}
+2026-05-24 01:48:52 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: DSv2 (104543 samples)
+2026-05-24 01:48:52 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=770 | labels(video-level)={0: 275, 1: 495} | tasks(top)=[('FS_METHOD_A', 468), ('REAL', 275), ('FS_METHOD_B', 27)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:54 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 24317 samples from 770 videos (manifest videos=770).
+2026-05-24 01:48:54 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=24317 | labels(frame-level)={0:8697 (35.8%), 1:15620 (64.2%)}
+2026-05-24 01:48:54 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: DFDCP (24317 samples)
+2026-05-24 01:48:54 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=4979 | labels(video-level)={0: 2490, 1: 2489} | tasks(top)=[('REAL', 2490), ('FS_FAKE', 2489)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:54 | WARNING  | src.dataset.core.base:375 | [256w_256h_1.3x_32f_insightface][TEST] 2489/2489 fake videos missing pair_id (may break strict pairing).
+2026-05-24 01:48:55 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 158166 samples from 4979 videos (manifest videos=4979).
+2026-05-24 01:48:55 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=158166 | labels(frame-level)={0:79079 (50.0%), 1:79087 (50.0%)}
+2026-05-24 01:48:55 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: DFDC (158166 samples)
+2026-05-24 01:48:55 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=2740 | labels(video-level)={0: 590, 1: 2150} | tasks(top)=[('REAL', 590), ('FS_DF', 430), ('FS_DFL', 430)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:55 | WARNING  | src.dataset.core.base:375 | [256w_256h_1.3x_32f_insightface][TEST] 2150/2150 fake videos missing pair_id (may break strict pairing).
+2026-05-24 01:48:56 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 87572 samples from 2740 videos (manifest videos=2740).
+2026-05-24 01:48:56 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=87572 | labels(frame-level)={0:18836 (21.5%), 1:68736 (78.5%)}
+2026-05-24 01:48:56 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: DFDM-C23 (87572 samples)
+2026-05-24 01:48:56 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=2994 | labels(video-level)={0: 998, 1: 1996} | tasks(top)=[('FVFA', 998), ('FVRA', 998), ('RVRA', 499)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:56 | WARNING  | src.dataset.core.base:375 | [256w_256h_1.3x_32f_insightface][TEST] 1996/1996 fake videos missing pair_id (may break strict pairing).
+2026-05-24 01:48:57 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 95790 samples from 2994 videos (manifest videos=2994).
+2026-05-24 01:48:57 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=95790 | labels(frame-level)={0:31936 (33.3%), 1:63854 (66.7%)}
+2026-05-24 01:48:57 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: FAVC (95790 samples)
+2026-05-24 01:48:57 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=19949 | labels(video-level)={0: 9974, 1: 9975} | tasks(top)=[('FS_FAKE', 9975), ('REAL', 9974)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:48:57 | WARNING  | src.dataset.core.base:375 | [256w_256h_1.3x_32f_insightface][TEST] 9975/9975 fake videos missing pair_id (may break strict pairing).
+2026-05-24 01:49:02 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 628308 samples from 19949 videos (manifest videos=19949).
+2026-05-24 01:49:02 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=628308 | labels(frame-level)={0:314122 (50.0%), 1:314186 (50.0%)}
+2026-05-24 01:49:02 | WARNING  | src.dataset.core.base:405 | [256w_256h_1.3x_32f_insightface][TEST] 9974 videos with mixed labels.
+2026-05-24 01:49:02 | WARNING  | src.dataset.core.base:410 | [256w_256h_1.3x_32f_insightface][TEST] Mixed labels: video_id=test_00000000 labels=[0, 1]
+2026-05-24 01:49:02 | WARNING  | src.dataset.core.base:410 | [256w_256h_1.3x_32f_insightface][TEST] Mixed labels: video_id=test_00000001 labels=[0, 1]
+2026-05-24 01:49:02 | WARNING  | src.dataset.core.base:410 | [256w_256h_1.3x_32f_insightface][TEST] Mixed labels: video_id=test_00000002 labels=[0, 1]
+2026-05-24 01:49:02 | WARNING  | src.dataset.core.base:410 | [256w_256h_1.3x_32f_insightface][TEST] Mixed labels: video_id=test_00000003 labels=[0, 1]
+2026-05-24 01:49:02 | WARNING  | src.dataset.core.base:410 | [256w_256h_1.3x_32f_insightface][TEST] Mixed labels: video_id=test_00000004 labels=[0, 1]
+2026-05-24 01:49:02 | WARNING  | src.dataset.core.base:410 | [256w_256h_1.3x_32f_insightface][TEST] Mixed labels: video_id=test_00000005 labels=[0, 1]
+2026-05-24 01:49:02 | WARNING  | src.dataset.core.base:410 | [256w_256h_1.3x_32f_insightface][TEST] Mixed labels: video_id=test_00000006 labels=[0, 1]
+2026-05-24 01:49:02 | WARNING  | src.dataset.core.base:410 | [256w_256h_1.3x_32f_insightface][TEST] Mixed labels: video_id=test_00000007 labels=[0, 1]
+2026-05-24 01:49:02 | WARNING  | src.dataset.core.base:410 | [256w_256h_1.3x_32f_insightface][TEST] Mixed labels: video_id=test_00000008 labels=[0, 1]
+2026-05-24 01:49:02 | WARNING  | src.dataset.core.base:410 | [256w_256h_1.3x_32f_insightface][TEST] Mixed labels: video_id=test_00000009 labels=[0, 1]
+2026-05-24 01:49:02 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: FFIW10K (628308 samples)
+2026-05-24 01:49:02 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=2386 | labels(video-level)={0: 538, 1: 1848} | tasks(top)=[('REAL', 538), ('LS_RVC_TM', 267), ('FS_AM_TM', 266)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:49:02 | WARNING  | src.dataset.core.base:375 | [256w_256h_1.3x_32f_insightface][TEST] 1848/1848 fake videos missing pair_id (may break strict pairing).
+2026-05-24 01:49:03 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 75189 samples from 2386 videos (manifest videos=2386).
+2026-05-24 01:49:03 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=75189 | labels(frame-level)={0:17071 (22.7%), 1:58118 (77.3%)}
+2026-05-24 01:49:03 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: IDFv1 (75189 samples)
+2026-05-24 01:49:03 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=4618 | labels(video-level)={0: 2418, 1: 2200} | tasks(top)=[('REAL', 2418), ('FR_FO', 703), ('FS_DFFS', 441)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:49:04 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 147776 samples from 4618 videos (manifest videos=4618).
+2026-05-24 01:49:04 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=147776 | labels(frame-level)={0:77376 (52.4%), 1:70400 (47.6%)}
+2026-05-24 01:49:04 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: KoDF (147776 samples)
+2026-05-24 01:49:04 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=14367 | labels(video-level)={0: 762, 1: 13605} | tasks(top)=[('LS_TO_EN', 2399), ('LS_TO_ZH', 2383), ('LS_TO_ES', 2231)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:49:04 | WARNING  | src.dataset.core.base:375 | [256w_256h_1.3x_32f_insightface][TEST] 13605/13605 fake videos missing pair_id (may break strict pairing).
+2026-05-24 01:49:08 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 459620 samples from 14367 videos (manifest videos=14367).
+2026-05-24 01:49:08 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=459620 | labels(frame-level)={0:24370 (5.3%), 1:435250 (94.7%)}
+2026-05-24 01:49:08 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: PGF (459620 samples)
+2026-05-24 01:49:08 | INFO     | src.dataset.core.base:368 | [256w_256h_1.3x_32f_insightface] Manifest split='test' | videos=98 | labels(video-level)={0: 49, 1: 49} | tasks(top)=[('REAL', 49), ('FS_FAKE', 49)] | scan_mode=balanced max_frames_per_video=32
+2026-05-24 01:49:08 | WARNING  | src.dataset.core.base:375 | [256w_256h_1.3x_32f_insightface][TEST] 49/49 fake videos missing pair_id (may break strict pairing).
+2026-05-24 01:49:08 | INFO     | src.dataset.core.base:117 | [256w_256h_1.3x_32f_insightface][TEST] Indexed 3116 samples from 98 videos (manifest videos=98).
+2026-05-24 01:49:08 | INFO     | src.dataset.core.base:388 | [256w_256h_1.3x_32f_insightface][TEST] Frame samples=3116 | labels(frame-level)={0:1558 (50.0%), 1:1558 (50.0%)}
+2026-05-24 01:49:08 | INFO     | src.lightning.datamodule:244 | Loaded test dataset: UADFV (3116 samples)
+2026-05-24 01:49:08 | INFO     | __main__:262 | Testing on FF-ORIGINAL-C23...
+2026-05-24 01:49:52 | INFO     | __main__:316 |   FF-ORIGINAL-C23: Video AUC=0.9904, Video Acc=0.9514, Frame AUC=0.9720, Videos=700
+2026-05-24 01:49:54 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/FF-ORIGINAL-C23
+2026-05-24 01:49:55 | INFO     | __main__:262 | Testing on FF-DF-C23...
+2026-05-24 01:50:13 | INFO     | __main__:316 |   FF-DF-C23: Video AUC=0.9994, Video Acc=0.9821, Frame AUC=0.9899, Videos=280
+2026-05-24 01:50:14 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/FF-DF-C23
+2026-05-24 01:50:14 | INFO     | __main__:262 | Testing on FF-F2F-C23...
+2026-05-24 01:50:32 | INFO     | __main__:316 |   FF-F2F-C23: Video AUC=0.9929, Video Acc=0.9714, Frame AUC=0.9791, Videos=280
+2026-05-24 01:50:33 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/FF-F2F-C23
+2026-05-24 01:50:34 | INFO     | __main__:262 | Testing on FF-FS-C23...
+2026-05-24 01:50:52 | INFO     | __main__:316 |   FF-FS-C23: Video AUC=0.9991, Video Acc=0.9821, Frame AUC=0.9849, Videos=280
+2026-05-24 01:50:53 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/FF-FS-C23
+2026-05-24 01:50:53 | INFO     | __main__:262 | Testing on FF-NT-C23...
+2026-05-24 01:51:11 | INFO     | __main__:316 |   FF-NT-C23: Video AUC=0.9701, Video Acc=0.9214, Frame AUC=0.9339, Videos=280
+2026-05-24 01:51:12 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/FF-NT-C23
+2026-05-24 01:51:13 | INFO     | __main__:262 | Testing on FF-FSH-C23...
+2026-05-24 01:51:31 | INFO     | __main__:316 |   FF-FSH-C23: Video AUC=0.8952, Video Acc=0.6714, Frame AUC=0.7953, Videos=280
+2026-05-24 01:51:32 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/FF-FSH-C23
+2026-05-24 01:51:33 | INFO     | __main__:262 | Testing on CDFv1...
+2026-05-24 01:51:40 | INFO     | __main__:316 |   CDFv1: Video AUC=0.9359, Video Acc=0.8200, Frame AUC=0.8330, Videos=100
+2026-05-24 01:51:40 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/CDFv1
+2026-05-24 01:51:41 | INFO     | __main__:262 | Testing on CDFv2...
+2026-05-24 01:52:13 | INFO     | __main__:316 |   CDFv2: Video AUC=0.9272, Video Acc=0.7761, Frame AUC=0.8322, Videos=518
+2026-05-24 01:52:15 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/CDFv2
+2026-05-24 01:52:16 | INFO     | __main__:262 | Testing on CDFv3...
+2026-05-24 01:59:24 | INFO     | __main__:316 |   CDFv3: Video AUC=0.8060, Video Acc=0.4942, Frame AUC=0.7435, Videos=7107
+2026-05-24 01:59:48 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/CDFv3
+2026-05-24 01:59:48 | INFO     | __main__:262 | Testing on DeFo...
+2026-05-24 02:02:54 | INFO     | __main__:316 |   DeFo: Video AUC=0.9710, Video Acc=0.8045, Frame AUC=0.9294, Videos=3089
+2026-05-24 02:03:04 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/DeFo
+2026-05-24 02:03:04 | INFO     | __main__:262 | Testing on DFD-C23...
+2026-05-24 02:06:30 | INFO     | __main__:316 |   DFD-C23: Video AUC=0.9801, Video Acc=0.8744, Frame AUC=0.9357, Videos=3431
+2026-05-24 02:06:41 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/DFD-C23
+2026-05-24 02:06:42 | INFO     | __main__:262 | Testing on DSv1...
+2026-05-24 02:09:38 | INFO     | __main__:316 |   DSv1: Video AUC=0.8577, Video Acc=0.7463, Frame AUC=0.7990, Videos=2913
+2026-05-24 02:09:47 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/DSv1
+2026-05-24 02:09:48 | INFO     | __main__:262 | Testing on DSv2...
+2026-05-24 02:13:06 | INFO     | __main__:316 |   DSv2: Video AUC=0.8215, Video Acc=0.7396, Frame AUC=0.7687, Videos=3279
+2026-05-24 02:13:16 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/DSv2
+2026-05-24 02:13:17 | INFO     | __main__:262 | Testing on DFDCP...
+2026-05-24 02:14:04 | INFO     | __main__:316 |   DFDCP: Video AUC=0.8806, Video Acc=0.6831, Frame AUC=0.8106, Videos=770
+2026-05-24 02:14:07 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/DFDCP
+2026-05-24 02:14:07 | INFO     | __main__:262 | Testing on DFDC...
+2026-05-24 02:19:05 | INFO     | __main__:316 |   DFDC: Video AUC=0.8573, Video Acc=0.7337, Frame AUC=0.7891, Videos=4979
+2026-05-24 02:19:21 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/DFDC
+2026-05-24 02:19:22 | INFO     | __main__:262 | Testing on DFDM-C23...
+2026-05-24 02:22:09 | INFO     | __main__:316 |   DFDM-C23: Video AUC=0.9980, Video Acc=0.9803, Frame AUC=0.9818, Videos=2740
+2026-05-24 02:22:18 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/DFDM-C23
+2026-05-24 02:22:19 | INFO     | __main__:262 | Testing on FAVC...
+2026-05-24 02:25:19 | INFO     | __main__:316 |   FAVC: Video AUC=0.9813, Video Acc=0.8390, Frame AUC=0.9305, Videos=2994
+2026-05-24 02:25:29 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/FAVC
+2026-05-24 02:25:29 | INFO     | __main__:262 | Testing on FFIW10K...
+2026-05-24 02:45:08 | INFO     | __main__:316 |   FFIW10K: Video AUC=0.9048, Video Acc=0.7184, Frame AUC=0.8168, Videos=19949
+2026-05-24 02:46:13 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/FFIW10K
+2026-05-24 02:46:14 | INFO     | __main__:262 | Testing on IDFv1...
+2026-05-24 02:48:35 | INFO     | __main__:316 |   IDFv1: Video AUC=0.9667, Video Acc=0.7984, Frame AUC=0.9072, Videos=2386
+2026-05-24 02:48:43 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/IDFv1
+2026-05-24 02:48:44 | INFO     | __main__:262 | Testing on KoDF...
+2026-05-24 02:53:24 | INFO     | __main__:316 |   KoDF: Video AUC=0.9098, Video Acc=0.8235, Frame AUC=0.8877, Videos=4618
+2026-05-24 02:53:39 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/KoDF
+2026-05-24 02:53:40 | INFO     | __main__:262 | Testing on PGF...
+2026-05-24 03:08:01 | INFO     | __main__:316 |   PGF: Video AUC=0.9042, Video Acc=0.5911, Frame AUC=0.8320, Videos=14367
+2026-05-24 03:08:48 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/PGF
+2026-05-24 03:08:49 | INFO     | __main__:262 | Testing on UADFV...
+2026-05-24 03:08:56 | INFO     | __main__:316 |   UADFV: Video AUC=0.9821, Video Acc=0.8878, Frame AUC=0.9537, Videos=98
+2026-05-24 03:08:56 | INFO     | __main__:328 |   saved per-dataset outputs → training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/per_dataset/UADFV
+2026-05-24 03:08:57 | INFO     | __main__:383 | ============================================================
+2026-05-24 03:08:57 | INFO     | __main__:384 | Test Results Summary
+2026-05-24 03:08:57 | INFO     | __main__:385 | ============================================================
+2026-05-24 03:08:57 | INFO     | __main__:387 |   FF-ORIGINAL-C23: AUC=0.9904
+2026-05-24 03:08:57 | INFO     | __main__:387 |   FF-DF-C23: AUC=0.9994
+2026-05-24 03:08:57 | INFO     | __main__:387 |   FF-F2F-C23: AUC=0.9929
+2026-05-24 03:08:57 | INFO     | __main__:387 |   FF-FS-C23: AUC=0.9991
+2026-05-24 03:08:57 | INFO     | __main__:387 |   FF-NT-C23: AUC=0.9701
+2026-05-24 03:08:57 | INFO     | __main__:387 |   FF-FSH-C23: AUC=0.8952
+2026-05-24 03:08:57 | INFO     | __main__:387 |   CDFv1: AUC=0.9359
+2026-05-24 03:08:57 | INFO     | __main__:387 |   CDFv2: AUC=0.9272
+2026-05-24 03:08:57 | INFO     | __main__:387 |   CDFv3: AUC=0.8060
+2026-05-24 03:08:57 | INFO     | __main__:387 |   DeFo: AUC=0.9710
+2026-05-24 03:08:57 | INFO     | __main__:387 |   DFD-C23: AUC=0.9801
+2026-05-24 03:08:57 | INFO     | __main__:387 |   DSv1: AUC=0.8577
+2026-05-24 03:08:57 | INFO     | __main__:387 |   DSv2: AUC=0.8215
+2026-05-24 03:08:57 | INFO     | __main__:387 |   DFDCP: AUC=0.8806
+2026-05-24 03:08:57 | INFO     | __main__:387 |   DFDC: AUC=0.8573
+2026-05-24 03:08:57 | INFO     | __main__:387 |   DFDM-C23: AUC=0.9980
+2026-05-24 03:08:57 | INFO     | __main__:387 |   FAVC: AUC=0.9813
+2026-05-24 03:08:57 | INFO     | __main__:387 |   FFIW10K: AUC=0.9048
+2026-05-24 03:08:57 | INFO     | __main__:387 |   IDFv1: AUC=0.9667
+2026-05-24 03:08:57 | INFO     | __main__:387 |   KoDF: AUC=0.9098
+2026-05-24 03:08:57 | INFO     | __main__:387 |   PGF: AUC=0.9042
+2026-05-24 03:08:57 | INFO     | __main__:387 |   UADFV: AUC=0.9821
+2026-05-24 03:08:57 | INFO     | __main__:388 | ------------------------------------------------------------
+2026-05-24 03:08:57 | INFO     | __main__:389 |   MACRO Video AUC: 0.9332
+2026-05-24 03:08:57 | INFO     | __main__:390 |   MICRO Video AUC: 0.9143
+2026-05-24 03:08:57 | INFO     | __main__:391 | ============================================================
+2026-05-24 03:08:57 | INFO     | __main__:398 | Aggregate results saved to training/logs/orthoflow_gtl_ln_no_small_s137/test/epoch15_best_macro/test_results.json
+2026-05-24 03:08:57 | INFO     | __main__:514 | Testing completed!
