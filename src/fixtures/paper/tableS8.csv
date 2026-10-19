@@ -1,0 +1,17 @@
+row,col,value
+swap x swap,n,"514,605"
+swap x swap,mean cos(arc),+0.0139
+swap x swap,mean cos(z_perp),+0.0527
+swap x swap,Pearson r,+0.098
+swap x reenact,n,"817,075"
+swap x reenact,mean cos(arc),+0.0148
+swap x reenact,mean cos(z_perp),+0.0531
+swap x reenact,Pearson r,+0.122
+reenact x reenact,n,"323,610"
+reenact x reenact,mean cos(arc),+0.0138
+reenact x reenact,mean cos(z_perp),+0.0583
+reenact x reenact,Pearson r,+0.102
+all combinations,n,"1,655,290"
+all combinations,mean cos(arc),+0.0143
+all combinations,mean cos(z_perp),+0.0535
+all combinations,Pearson r,+0.111

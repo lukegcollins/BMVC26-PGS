@@ -1,0 +1,13 @@
+row,col,value
+LN,Peak epoch,16.7
+LN,Peak val-AUC (%),85.37
+LN,Post-peak slope (pp/epoch),−0.009
+LN,AUC-under-curve (%),83.60
+LoRA,Peak epoch,3.3
+LoRA,Peak val-AUC (%),86.07
+LoRA,Post-peak slope (pp/epoch),−0.155
+LoRA,AUC-under-curve (%),82.25
+GSD-LoRA,Peak epoch,5.7
+GSD-LoRA,Peak val-AUC (%),86.75
+GSD-LoRA,Post-peak slope (pp/epoch),−0.037
+GSD-LoRA,AUC-under-curve (%),84.07

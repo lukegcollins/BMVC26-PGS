@@ -1,0 +1,7 @@
+row,col,value
+LN,Backbone params,100K (0.03%)
+LN,Head,2.1K
+LoRA,Backbone params,28.3M (9.34%)
+LoRA,Head,2.1M
+GSD-LoRA,Backbone params,28.3M (9.34%)
+GSD-LoRA,Head,2.1M

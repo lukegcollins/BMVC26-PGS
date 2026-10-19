@@ -1,0 +1,225 @@
+row,col,value
+FA (reprod.),UADFV,99.42
+FA (reprod.),DFD,97.19
+FA (reprod.),DFDC,87.26
+FA (reprod.),CDFv2,95.69
+FA (reprod.),FFIW,89.41
+FA (reprod.),KoDF,89.44
+FA (reprod.),FAVC,92.29
+FA (reprod.),DFDM,97.11
+FA (reprod.),DSv1.1,82.09
+FA (reprod.),PGF,86.44
+FA (reprod.),IDFv1,85.91
+FA (reprod.),DSv2,73.40
+FA (reprod.),CDFv3,75.21
+FA (reprod.),MEAN,88.53
+FA (ours),UADFV,98.63
+FA (ours),UADFV Δ,−0.79
+FA (ours),DFD,96.57
+FA (ours),DFD Δ,−0.62
+FA (ours),DFDC,85.41
+FA (ours),DFDC Δ,−1.85
+FA (ours),CDFv2,93.74
+FA (ours),CDFv2 Δ,−1.95
+FA (ours),FFIW,83.06
+FA (ours),FFIW Δ,−6.35
+FA (ours),KoDF,83.60
+FA (ours),KoDF Δ,−5.84
+FA (ours),FAVC,89.06
+FA (ours),FAVC Δ,−3.23
+FA (ours),DFDM,96.02
+FA (ours),DFDM Δ,−1.09
+FA (ours),DSv1.1,83.89
+FA (ours),DSv1.1 Δ,+1.80
+FA (ours),PGF,82.88
+FA (ours),PGF Δ,−3.56
+FA (ours),IDFv1,85.85
+FA (ours),IDFv1 Δ,−0.06
+FA (ours),DSv2,72.04
+FA (ours),DSv2 Δ,−1.36
+FA (ours),CDFv3,73.98
+FA (ours),CDFv3 Δ,−1.23
+FA (ours),MEAN,86.52
+FA (ours),MEAN Δ,−2.01
+Effort (reprod.),UADFV,97.63
+Effort (reprod.),DFD,95.32
+Effort (reprod.),DFDC,85.29
+Effort (reprod.),CDFv2,93.00
+Effort (reprod.),FFIW,91.10
+Effort (reprod.),KoDF,90.57
+Effort (reprod.),FAVC,91.45
+Effort (reprod.),DFDM,98.20
+Effort (reprod.),DSv1.1,81.54
+Effort (reprod.),PGF,84.53
+Effort (reprod.),IDFv1,88.93
+Effort (reprod.),DSv2,63.90
+Effort (reprod.),CDFv3,79.63
+Effort (reprod.),MEAN,87.78
+Effort (ours),UADFV,97.92
+Effort (ours),UADFV Δ,+0.29
+Effort (ours),DFD,95.55
+Effort (ours),DFD Δ,+0.23
+Effort (ours),DFDC,84.02
+Effort (ours),DFDC Δ,−1.27
+Effort (ours),CDFv2,93.03
+Effort (ours),CDFv2 Δ,+0.03
+Effort (ours),FFIW,85.66
+Effort (ours),FFIW Δ,−5.44
+Effort (ours),KoDF,88.19
+Effort (ours),KoDF Δ,−2.38
+Effort (ours),FAVC,88.79
+Effort (ours),FAVC Δ,−2.66
+Effort (ours),DFDM,97.97
+Effort (ours),DFDM Δ,−0.23
+Effort (ours),DSv1.1,81.99
+Effort (ours),DSv1.1 Δ,+0.45
+Effort (ours),PGF,84.10
+Effort (ours),PGF Δ,−0.43
+Effort (ours),IDFv1,89.68
+Effort (ours),IDFv1 Δ,+0.75
+Effort (ours),DSv2,63.43
+Effort (ours),DSv2 Δ,−0.47
+Effort (ours),CDFv3,77.43
+Effort (ours),CDFv3 Δ,−2.20
+Effort (ours),MEAN,86.75
+Effort (ours),MEAN Δ,−1.03
+GenD-CLIP (reprod.),UADFV,99.00
+GenD-CLIP (reprod.),DFD,97.08
+GenD-CLIP (reprod.),DFDC,87.05
+GenD-CLIP (reprod.),CDFv2,96.25
+GenD-CLIP (reprod.),FFIW,91.93
+GenD-CLIP (reprod.),KoDF,88.98
+GenD-CLIP (reprod.),FAVC,96.19
+GenD-CLIP (reprod.),DFDM,99.82
+GenD-CLIP (reprod.),DSv1.1,92.04
+GenD-CLIP (reprod.),PGF,90.48
+GenD-CLIP (reprod.),IDFv1,94.75
+GenD-CLIP (reprod.),DSv2,73.28
+GenD-CLIP (reprod.),CDFv3,86.86
+GenD-CLIP (reprod.),MEAN,91.82
+GenD-CLIP (ours),UADFV,99.46
+GenD-CLIP (ours),UADFV Δ,+0.46
+GenD-CLIP (ours),DFD,97.58
+GenD-CLIP (ours),DFD Δ,+0.50
+GenD-CLIP (ours),DFDC,85.60
+GenD-CLIP (ours),DFDC Δ,−1.45
+GenD-CLIP (ours),CDFv2,94.79
+GenD-CLIP (ours),CDFv2 Δ,−1.46
+GenD-CLIP (ours),FFIW,87.47
+GenD-CLIP (ours),FFIW Δ,−4.46
+GenD-CLIP (ours),KoDF,86.71
+GenD-CLIP (ours),KoDF Δ,−2.27
+GenD-CLIP (ours),FAVC,94.81
+GenD-CLIP (ours),FAVC Δ,−1.38
+GenD-CLIP (ours),DFDM,99.77
+GenD-CLIP (ours),DFDM Δ,−0.05
+GenD-CLIP (ours),DSv1.1,90.24
+GenD-CLIP (ours),DSv1.1 Δ,−1.80
+GenD-CLIP (ours),PGF,89.50
+GenD-CLIP (ours),PGF Δ,−0.98
+GenD-CLIP (ours),IDFv1,94.01
+GenD-CLIP (ours),IDFv1 Δ,−0.74
+GenD-CLIP (ours),DSv2,73.73
+GenD-CLIP (ours),DSv2 Δ,+0.45
+GenD-CLIP (ours),CDFv3,79.19
+GenD-CLIP (ours),CDFv3 Δ,−7.67
+GenD-CLIP (ours),MEAN,90.22
+GenD-CLIP (ours),MEAN Δ,−1.60
+GenD-PE (reprod.),UADFV,98.63
+GenD-PE (reprod.),DFD,92.78
+GenD-PE (reprod.),DFDC,78.89
+GenD-PE (reprod.),CDFv2,91.39
+GenD-PE (reprod.),FFIW,86.15
+GenD-PE (reprod.),KoDF,85.50
+GenD-PE (reprod.),FAVC,94.71
+GenD-PE (reprod.),DFDM,96.41
+GenD-PE (reprod.),DSv1.1,82.74
+GenD-PE (reprod.),PGF,88.03
+GenD-PE (reprod.),IDFv1,87.82
+GenD-PE (reprod.),DSv2,77.59
+GenD-PE (reprod.),CDFv3,85.31
+GenD-PE (reprod.),MEAN,88.15
+GenD-PE (ours),UADFV,98.13
+GenD-PE (ours),UADFV Δ,−0.50
+GenD-PE (ours),DFD,97.71
+GenD-PE (ours),DFD Δ,+4.93
+GenD-PE (ours),DFDC,81.60
+GenD-PE (ours),DFDC Δ,+2.71
+GenD-PE (ours),CDFv2,95.66
+GenD-PE (ours),CDFv2 Δ,+4.27
+GenD-PE (ours),FFIW,86.47
+GenD-PE (ours),FFIW Δ,+0.32
+GenD-PE (ours),KoDF,85.98
+GenD-PE (ours),KoDF Δ,+0.48
+GenD-PE (ours),FAVC,97.03
+GenD-PE (ours),FAVC Δ,+2.32
+GenD-PE (ours),DFDM,98.54
+GenD-PE (ours),DFDM Δ,+2.13
+GenD-PE (ours),DSv1.1,89.51
+GenD-PE (ours),DSv1.1 Δ,+6.77
+GenD-PE (ours),PGF,92.47
+GenD-PE (ours),PGF Δ,+4.44
+GenD-PE (ours),IDFv1,95.05
+GenD-PE (ours),IDFv1 Δ,+7.23
+GenD-PE (ours),DSv2,79.19
+GenD-PE (ours),DSv2 Δ,+1.60
+GenD-PE (ours),CDFv3,87.96
+GenD-PE (ours),CDFv3 Δ,+2.65
+GenD-PE (ours),MEAN,91.18
+GenD-PE (ours),MEAN Δ,+3.03
+GenD-DINO (reprod.),UADFV,98.42
+GenD-DINO (reprod.),DFD,96.80
+GenD-DINO (reprod.),DFDC,84.88
+GenD-DINO (reprod.),CDFv2,92.37
+GenD-DINO (reprod.),FFIW,93.00
+GenD-DINO (reprod.),KoDF,92.21
+GenD-DINO (reprod.),FAVC,98.85
+GenD-DINO (reprod.),DFDM,99.82
+GenD-DINO (reprod.),DSv1.1,89.33
+GenD-DINO (reprod.),PGF,92.66
+GenD-DINO (reprod.),IDFv1,95.84
+GenD-DINO (reprod.),DSv2,79.77
+GenD-DINO (reprod.),CDFv3,83.45
+GenD-DINO (reprod.),MEAN,92.11
+GenD-DINO (ours),UADFV,98.88
+GenD-DINO (ours),UADFV Δ,+0.46
+GenD-DINO (ours),DFD,97.90
+GenD-DINO (ours),DFD Δ,+1.10
+GenD-DINO (ours),DFDC,84.66
+GenD-DINO (ours),DFDC Δ,−0.22
+GenD-DINO (ours),CDFv2,91.30
+GenD-DINO (ours),CDFv2 Δ,−1.07
+GenD-DINO (ours),FFIW,89.31
+GenD-DINO (ours),FFIW Δ,−3.69
+GenD-DINO (ours),KoDF,90.96
+GenD-DINO (ours),KoDF Δ,−1.25
+GenD-DINO (ours),FAVC,97.82
+GenD-DINO (ours),FAVC Δ,−1.03
+GenD-DINO (ours),DFDM,99.81
+GenD-DINO (ours),DFDM Δ,−0.01
+GenD-DINO (ours),DSv1.1,87.77
+GenD-DINO (ours),DSv1.1 Δ,−1.56
+GenD-DINO (ours),PGF,92.28
+GenD-DINO (ours),PGF Δ,−0.38
+GenD-DINO (ours),IDFv1,96.66
+GenD-DINO (ours),IDFv1 Δ,+0.82
+GenD-DINO (ours),DSv2,80.17
+GenD-DINO (ours),DSv2 Δ,+0.40
+GenD-DINO (ours),CDFv3,79.51
+GenD-DINO (ours),CDFv3 Δ,−3.94
+GenD-DINO (ours),MEAN,91.31
+GenD-DINO (ours),MEAN Δ,−0.80
+FST (ours),UADFV,98.21
+FST (ours),DFD,87.38
+FST (ours),DFDC,74.64
+FST (ours),CDFv2,89.83
+FST (ours),FFIW,71.82
+FST (ours),KoDF,81.48
+FST (ours),FAVC,88.24
+FST (ours),DFDM,99.67
+FST (ours),DSv1.1,73.95
+FST (ours),PGF,73.86
+FST (ours),IDFv1,88.97
+FST (ours),DSv2,61.91
+FST (ours),CDFv3,68.62
+FST (ours),MEAN,81.43

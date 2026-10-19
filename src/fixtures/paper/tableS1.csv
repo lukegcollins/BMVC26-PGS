@@ -1,0 +1,55 @@
+row,col,value
+UADFV,Year,2018
+UADFV,#Real,49
+UADFV,#Fake,49
+FF++ (c23),Year,2019
+FF++ (c23),#Real,140
+FF++ (c23),#Fake,560
+DFD,Year,2019
+DFD,#Real,363
+DFD,#Fake,"3,068"
+CDFv1,Year,2019
+CDFv1,#Real,38
+CDFv1,#Fake,62
+DFDCP,Year,2019
+DFDCP,#Real,275
+DFDCP,#Fake,495
+DFDC,Year,2020
+DFDC,#Real,"2,490"
+DFDC,#Fake,"2,489"
+CDFv2,Year,2020
+CDFv2,#Real,178
+CDFv2,#Fake,340
+FF-FSH (c23),Year,2020
+FF-FSH (c23),#Real,140
+FF-FSH (c23),#Fake,140
+DeFo,Year,2020
+DeFo,#Real,900
+DeFo,#Fake,"2,189"
+FFIW,Year,2021
+FFIW,#Real,"9,974"
+FFIW,#Fake,"9,975"
+KoDF,Year,2021
+KoDF,#Real,"2,418"
+KoDF,#Fake,"2,200"
+FAVC,Year,2021
+FAVC,#Real,998
+FAVC,#Fake,"1,996"
+DFDM,Year,2022
+DFDM,#Real,590
+DFDM,#Fake,"2,150"
+DSv1.1,Year,2024
+DSv1.1,#Real,"1,416"
+DSv1.1,#Fake,"1,497"
+PGF,Year,2024
+PGF,#Real,762
+PGF,#Fake,"13,605"
+IDFv1,Year,2024
+IDFv1,#Real,538
+IDFv1,#Fake,"1,848"
+DSv2,Year,2025
+DSv2,#Real,"1,863"
+DSv2,#Fake,"1,416"
+CDFv3,Year,2025
+CDFv3,#Real,178
+CDFv3,#Fake,"6,401"

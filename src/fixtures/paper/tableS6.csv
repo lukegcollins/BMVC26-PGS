@@ -1,0 +1,13 @@
+row,col,value
+macro-best (default),LN,91.97
+macro-best (default),LoRA,92.62
+macro-best (default),GSD-LoRA,92.82
+DSv2-VAL only,LN,90.42
+DSv2-VAL only,LoRA,92.48
+DSv2-VAL only,GSD-LoRA,92.80
+CDFv3-VAL only,LN,91.99
+CDFv3-VAL only,LoRA,92.35
+CDFv3-VAL only,GSD-LoRA,92.69
+FF-FSH-VAL only,LN,92.01
+FF-FSH-VAL only,LoRA,92.30
+FF-FSH-VAL only,GSD-LoRA,92.74

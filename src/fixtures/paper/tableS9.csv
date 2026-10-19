@@ -1,0 +1,9 @@
+row,col,value
+same target identity,n,"11,445"
+same target identity,mean cos(arc),+0.851
+same target identity,mean cos(z_perp),+0.232
+different target identity,n,"1,643,845"
+different target identity,mean cos(arc),+0.009
+different target identity,mean cos(z_perp),+0.053
+separation Δ (same−different),mean cos(arc),+0.843
+separation Δ (same−different),mean cos(z_perp),+0.179

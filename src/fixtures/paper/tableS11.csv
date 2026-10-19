@@ -1,0 +1,16 @@
+row,col,value
+"+ OPA + uniformity + GTL (Full method, anchor)",DSv2,81.33
+"+ OPA + uniformity + GTL (Full method, anchor)",CDFv3,83.37
+"+ OPA + uniformity + GTL (Full method, anchor)",MEAN,91.97
+"Full method, no hard RR negatives",DSv2,81.80
+"Full method, no hard RR negatives",CDFv3,81.26
+"Full method, no hard RR negatives",MEAN,91.76
+"Full method, no small-transform penalty",DSv2,82.03
+"Full method, no small-transform penalty",CDFv3,81.25
+"Full method, no small-transform penalty",MEAN,91.69
+"GSD-LoRA, per-pair v (anchor)",DSv2,83.08
+"GSD-LoRA, per-pair v (anchor)",CDFv3,83.77
+"GSD-LoRA, per-pair v (anchor)",MEAN,92.48
+"GSD-LoRA, per-video vbar instead of per-pair v",DSv2,82.25
+"GSD-LoRA, per-video vbar instead of per-pair v",CDFv3,82.59
+"GSD-LoRA, per-video vbar instead of per-pair v",MEAN,91.80

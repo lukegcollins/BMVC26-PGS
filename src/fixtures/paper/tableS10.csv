@@ -1,0 +1,10 @@
+row,col,value
+OPA outer weight,Value,1.0
+Uniformity outer weight,Value,0.5
+GTL outer weight,Value,1.0
+OPA axis-margin,Value,1.5
+GTL small-transform penalty,Value,0.2
+GTL angular/Euclidean mixing,Value,0.01
+GSD within-video concentration,Value,5x10^-3
+GSD within-video coherence,Value,5x10^-3
+GSD between-video dispersion,Value,2x10^-3

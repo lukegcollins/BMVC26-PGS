@@ -1,0 +1,13 @@
+row,col,value
+LN,MEAN-17 (%),91.97
+LN,Δ,+0.39
+LN,p,0.43
+LN,Wins,11/17
+LoRA,MEAN-17 (%),92.62
+LoRA,Δ,+1.04
+LoRA,p,0.020
+LoRA,Wins,13/17
+GSD-LoRA,MEAN-17 (%),92.82
+GSD-LoRA,Δ,+1.24
+GSD-LoRA,p,0.015
+GSD-LoRA,Wins,13/17

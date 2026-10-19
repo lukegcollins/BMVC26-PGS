@@ -1,0 +1,46 @@
+row,col,value
+Forensics Adapter,FF-DF,99.30
+Forensics Adapter,FF-F2F,95.64
+Forensics Adapter,FF-FS,97.70
+Forensics Adapter,FF-NT,89.46
+Forensics Adapter,MEAN,95.53
+Effort,FF-DF,99.42
+Effort,FF-F2F,93.79
+Effort,FF-FS,98.59
+Effort,FF-NT,84.20
+Effort,MEAN,94.00
+GenD-CLIP,FF-DF,99.17
+GenD-CLIP,FF-F2F,97.17
+GenD-CLIP,FF-FS,98.63
+GenD-CLIP,FF-NT,93.97
+GenD-CLIP,MEAN,97.24
+GenD-PE,FF-DF,99.70
+GenD-PE,FF-F2F,98.84
+GenD-PE,FF-FS,99.14
+GenD-PE,FF-NT,96.79
+GenD-PE,MEAN,98.62
+GenD-DINO,FF-DF,99.67
+GenD-DINO,FF-F2F,99.16
+GenD-DINO,FF-FS,99.38
+GenD-DINO,FF-NT,96.64
+GenD-DINO,MEAN,98.71
+FakeSTormer,FF-DF,98.93
+FakeSTormer,FF-F2F,78.21
+FakeSTormer,FF-FS,84.36
+FakeSTormer,FF-NT,79.56
+FakeSTormer,MEAN,85.27
+Ours (LN),FF-DF,99.94
+Ours (LN),FF-F2F,99.15
+Ours (LN),FF-FS,99.93
+Ours (LN),FF-NT,97.47
+Ours (LN),MEAN,99.12
+Ours (LoRA),FF-DF,99.99
+Ours (LoRA),FF-F2F,99.34
+Ours (LoRA),FF-FS,99.89
+Ours (LoRA),FF-NT,98.23
+Ours (LoRA),MEAN,99.36
+Ours (GSD-LoRA),FF-DF,99.99
+Ours (GSD-LoRA),FF-F2F,99.21
+Ours (GSD-LoRA),FF-FS,99.89
+Ours (GSD-LoRA),FF-NT,98.44
+Ours (GSD-LoRA),MEAN,99.38

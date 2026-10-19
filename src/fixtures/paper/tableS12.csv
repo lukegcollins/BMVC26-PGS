@@ -1,0 +1,31 @@
+row,col,value
+Hinge margin m | 0.5,Epoch,09
+Hinge margin m | 0.5,FF-FSH,88.55
+Hinge margin m | 0.5,MEAN-17,90.72
+Hinge margin m | 1.0,Epoch,09
+Hinge margin m | 1.0,FF-FSH,88.35
+Hinge margin m | 1.0,MEAN-17,91.01
+Hinge margin m | 2.0,Epoch,09
+Hinge margin m | 2.0,FF-FSH,87.65
+Hinge margin m | 2.0,MEAN-17,90.71
+Hinge margin m | 3.0,Epoch,09
+Hinge margin m | 3.0,FF-FSH,87.80
+Hinge margin m | 3.0,MEAN-17,90.58
+Small-transform penalty lambda_small | 0.05,Epoch,07
+Small-transform penalty lambda_small | 0.05,FF-FSH,88.98
+Small-transform penalty lambda_small | 0.05,MEAN-17,90.76
+Small-transform penalty lambda_small | 0.5,Epoch,07
+Small-transform penalty lambda_small | 0.5,FF-FSH,87.27
+Small-transform penalty lambda_small | 0.5,MEAN-17,91.07
+GTL mixing constant c | 0.001,Epoch,09
+GTL mixing constant c | 0.001,FF-FSH,88.24
+GTL mixing constant c | 0.001,MEAN-17,91.02
+GTL mixing constant c | 0.1,Epoch,07
+GTL mixing constant c | 0.1,FF-FSH,88.36
+GTL mixing constant c | 0.1,MEAN-17,91.21
+GSD weight eta_c=eta_h | 1x10^-3,Epoch,06
+GSD weight eta_c=eta_h | 1x10^-3,FF-FSH,89.72
+GSD weight eta_c=eta_h | 1x10^-3,MEAN-17,92.33
+GSD weight eta_c=eta_h | 2x10^-2,Epoch,03
+GSD weight eta_c=eta_h | 2x10^-2,FF-FSH,90.72
+GSD weight eta_c=eta_h | 2x10^-2,MEAN-17,93.06

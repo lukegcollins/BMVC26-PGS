@@ -1,0 +1,81 @@
+row,col,value
+FA (reprod.),FF-DF,99.71
+FA (reprod.),FF-F2F,96.95
+FA (reprod.),FF-FS,98.65
+FA (reprod.),FF-NT,91.89
+FA (reprod.),MEAN,96.80
+FA (ours),FF-DF,99.30
+FA (ours),FF-DF Δ,−0.41
+FA (ours),FF-F2F,95.64
+FA (ours),FF-F2F Δ,−1.31
+FA (ours),FF-FS,97.70
+FA (ours),FF-FS Δ,−0.95
+FA (ours),FF-NT,89.46
+FA (ours),FF-NT Δ,−2.43
+FA (ours),MEAN,95.53
+FA (ours),MEAN Δ,−1.27
+Effort (reprod.),FF-DF,99.42
+Effort (reprod.),FF-F2F,93.43
+Effort (reprod.),FF-FS,98.49
+Effort (reprod.),FF-NT,84.76
+Effort (reprod.),MEAN,94.03
+Effort (ours),FF-DF,99.42
+Effort (ours),FF-DF Δ,+0.00
+Effort (ours),FF-F2F,93.79
+Effort (ours),FF-F2F Δ,+0.36
+Effort (ours),FF-FS,98.59
+Effort (ours),FF-FS Δ,+0.10
+Effort (ours),FF-NT,84.20
+Effort (ours),FF-NT Δ,−0.56
+Effort (ours),MEAN,94.00
+Effort (ours),MEAN Δ,−0.03
+GenD-CLIP (reprod.),FF-DF,99.54
+GenD-CLIP (reprod.),FF-F2F,98.20
+GenD-CLIP (reprod.),FF-FS,98.77
+GenD-CLIP (reprod.),FF-NT,95.28
+GenD-CLIP (reprod.),MEAN,97.95
+GenD-CLIP (ours),FF-DF,99.17
+GenD-CLIP (ours),FF-DF Δ,−0.37
+GenD-CLIP (ours),FF-F2F,97.17
+GenD-CLIP (ours),FF-F2F Δ,−1.03
+GenD-CLIP (ours),FF-FS,98.63
+GenD-CLIP (ours),FF-FS Δ,−0.14
+GenD-CLIP (ours),FF-NT,93.97
+GenD-CLIP (ours),FF-NT Δ,−1.31
+GenD-CLIP (ours),MEAN,97.24
+GenD-CLIP (ours),MEAN Δ,−0.71
+GenD-PE (reprod.),FF-DF,98.74
+GenD-PE (reprod.),FF-F2F,98.65
+GenD-PE (reprod.),FF-FS,98.49
+GenD-PE (reprod.),FF-NT,95.15
+GenD-PE (reprod.),MEAN,97.76
+GenD-PE (ours),FF-DF,99.70
+GenD-PE (ours),FF-DF Δ,+0.96
+GenD-PE (ours),FF-F2F,98.84
+GenD-PE (ours),FF-F2F Δ,+0.19
+GenD-PE (ours),FF-FS,99.14
+GenD-PE (ours),FF-FS Δ,+0.65
+GenD-PE (ours),FF-NT,96.79
+GenD-PE (ours),FF-NT Δ,+1.64
+GenD-PE (ours),MEAN,98.62
+GenD-PE (ours),MEAN Δ,+0.86
+GenD-DINO (reprod.),FF-DF,99.72
+GenD-DINO (reprod.),FF-F2F,99.49
+GenD-DINO (reprod.),FF-FS,99.36
+GenD-DINO (reprod.),FF-NT,97.28
+GenD-DINO (reprod.),MEAN,98.96
+GenD-DINO (ours),FF-DF,99.67
+GenD-DINO (ours),FF-DF Δ,−0.05
+GenD-DINO (ours),FF-F2F,99.16
+GenD-DINO (ours),FF-F2F Δ,−0.33
+GenD-DINO (ours),FF-FS,99.38
+GenD-DINO (ours),FF-FS Δ,+0.02
+GenD-DINO (ours),FF-NT,96.64
+GenD-DINO (ours),FF-NT Δ,−0.64
+GenD-DINO (ours),MEAN,98.71
+GenD-DINO (ours),MEAN Δ,−0.25
+FakeSTormer (ours),FF-DF,98.93
+FakeSTormer (ours),FF-F2F,78.21
+FakeSTormer (ours),FF-FS,84.36
+FakeSTormer (ours),FF-NT,79.56
+FakeSTormer (ours),MEAN,85.27
