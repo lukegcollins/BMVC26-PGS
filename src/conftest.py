@@ -11,7 +11,7 @@ if str(SRC) not in sys.path:
 
 def run_script(rel_path: str, *args: str) -> str:
     """Run a repository script with the current interpreter from the repository root and return its stdout."""
-    env = dict(os.environ, MPLBACKEND="Agg")
+    env = dict(os.environ, MPLBACKEND="Agg", SOURCE_DATE_EPOCH="0")
     done = subprocess.run(
         [sys.executable, rel_path, *args], cwd=REPO, env=env, check=False, capture_output=True, text=True
     )
