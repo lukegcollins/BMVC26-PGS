@@ -27,7 +27,7 @@ package = false
 
 [tool.pytest.ini_options]
 testpaths = ["src"]
-norecursedirs = ["data", ".venv", "results", "figures", "configs", "pdfs", "method", "patches", "checkpoints"]
+norecursedirs = ["data", ".venv", "results", "figures", "configs", "pdfs", "method", "patches"]
 python_files = ["test_*.py"]
 addopts = "-ra"
 
