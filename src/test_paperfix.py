@@ -7,6 +7,11 @@ def test_agrees_formats():
     assert not agrees("92.82", 92.8251)
 
 
+def test_agrees_accepts_exact_ties():
+    assert agrees("97.24", 97.235) and agrees("-1.27", -1.275) and agrees("97.23", 97.235)
+    assert not agrees("92.82", 92.8251)
+
+
 def test_rows_parses_fixed_width():
     t = "Configuration   n   DSv2  CDFv3  MEAN-17\n  + OPA          3  81.67  83.88    92.36\n"
     assert rows(t)["+ OPA"] == [3, 81.67, 83.88, 92.36]

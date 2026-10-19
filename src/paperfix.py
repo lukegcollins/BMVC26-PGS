@@ -20,16 +20,11 @@ def _to_float(token: str) -> float:
     return float(token.replace(_MINUS, "-").replace(",", "").lstrip("+"))
 
 
-def _fixed(value: float, decimals: int) -> str:
-    text = f"{value:.{decimals}f}"
-    return text[1:] if text.startswith("-") and not text.strip("-0.") else text
-
-
 def agrees(printed: str, value: float) -> bool:
-    """True when `value`, formatted to the printed number's decimals, equals the printed number."""
+    """True when `value` lies within half a unit of the printed number's last decimal (exact ties pass either way)."""
     text = printed.strip().replace(",", "")
     decimals = len(text.split(".")[1]) if "." in text else 0
-    return _fixed(value, decimals) == _fixed(_to_float(text), decimals)
+    return abs(value - _to_float(text)) <= 0.5 * 10 ** (-decimals) + 1e-9
 
 
 def rows(text: str) -> dict[str, list[float]]:
