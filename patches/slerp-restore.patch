@@ -1,0 +1,55 @@
+--- a/method/src/loss/_orthoflow_gtl_core.py
++++ b/method/src/loss/_orthoflow_gtl_core.py
+@@ -133,6 +133,29 @@
+         return uniform_loss
+ 
+ 
++def _slerp_augmentation(zr: torch.Tensor, zf: torch.Tensor, multiplier: int = 1) -> torch.Tensor:
++    """Paired SLERP points on the great-circle arc between aligned real/fake embeddings.
++
++    SLERP(z_r, z_f, tau) = sin((1-tau)W)/sin(W) z_r + sin(tau W)/sin(W) z_f, tau ~ U(0,1), W the
++    geodesic angle; ``multiplier`` draws per pair. These are appended to the uniformity set (BMVC
++    method, eq. slerp). Restored 2026-09-29: deleted in the 2026-03-11 cleanup (d73d1689) while the
++    ``use_paired_slerp_aug`` flag survived, so runs between those dates had SLERP inactive.
++    """
++    P = min(zr.shape[0], zf.shape[0])
++    if P < 1 or multiplier < 1:
++        return zr.new_zeros(0, zr.shape[-1])
++    zr_p, zf_p = zr[:P], zf[:P]
++    dot = (zr_p * zf_p).sum(dim=1, keepdim=True).clamp(-1.0 + _ACOS_EPS, 1.0 - _ACOS_EPS)
++    omega = torch.acos(dot)
++    sin_omega = torch.sin(omega).clamp_min(_EPS)
++    points = []
++    for _ in range(multiplier):
++        tau = torch.rand(P, 1, device=zr.device, dtype=zr.dtype)
++        interp = (torch.sin((1.0 - tau) * omega) / sin_omega) * zr_p + (torch.sin(tau * omega) / sin_omega) * zf_p
++        points.append(_safe_normalize(interp, dim=1))
++    return torch.cat(points, dim=0)
++
++
+ def _validate_paired_batch(labels: torch.Tensor) -> bool:
+     """Validate that batch has proper [real, fake] pairing."""
+     if labels.numel() < 2 or labels.numel() % 2 != 0:
+@@ -358,7 +381,7 @@
+         logger.info(f"  Use GTL:            {use_gtl}")
+         logger.info(f"  Use axis margin:    {use_axis_margin} (margin={axis_margin})")
+         logger.info(f"  Use residual unif:  {use_residual_uniformity}")
+-        logger.info(f"  Use SLERP aug:      {use_paired_slerp_aug}")
++        logger.info(f"  Use SLERP aug:      {use_paired_slerp_aug} (x{slerp_pair_multiplier}; active since 2026-09-29)")
+         logger.info(f"  Hard RR negatives:  {use_hard_rr_negatives}")
+         logger.info(f"  Residual loss:      {residual_loss}")
+         logger.info(f"  Active tasks:       {self.num_tasks} with weights {priors}")
+@@ -629,7 +652,12 @@
+         # =====================================================================
+         loss_uni = z.new_zeros([])
+         if self.training:
+-            loss_uni = _uniformity_loss(z, t=self.uniformity_t)
++            z_for_uni = z
++            if self.use_slerp_aug and P > 0:
++                z_for_uni = torch.cat(
++                    [z, _slerp_augmentation(zr[:P], zf[:P], multiplier=self.slerp_multiplier)], dim=0
++                )
++            loss_uni = _uniformity_loss(z_for_uni, t=self.uniformity_t)
+ 
+             # Optional: add residual uniformity
+             if self.use_residual_uniformity and residuals is not None:
