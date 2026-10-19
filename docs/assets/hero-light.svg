@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="220" viewBox="0 0 880 220" role="img" aria-labelledby="t d">
   <title id="t">Paired Geometric Supervision</title>
-  <desc id="d">Paired Geometric Supervision trains a partly frozen DINOv3 backbone on paired real and fake frames for cross-dataset deepfake detection. Three chips: OPA, orthogonal pair alignment; GTL, geodesic transformation learning; GSD, set-level coherence within each video.</desc>
+  <desc id="d">Paired Geometric Supervision trains a partly frozen DINOv3 backbone on paired real and fake frames for cross-dataset deepfake detection. Three chips: OPA, orthogonal paired alignment; GTL, geodesic transformation learning; GSD, set-level coherence within each video.</desc>
   <rect width="880" height="220" fill="#FAFAFA"/>
   <rect x="16.5" y="16.5" width="847" height="187" rx="10" fill="none" stroke="rgba(9,9,11,0.08)" stroke-width="1"/>
   <text x="44" y="78" font-family="'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif" font-size="34" font-weight="600" fill="#09090B">Paired Geometric Supervision</text>
   <text x="44" y="108" font-family="'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#52525B">Real and fake pairs, a partly frozen DINOv3 backbone, and cross-dataset deepfake detection</text>
-  <rect x="44" y="150" width="258" height="30" rx="6" fill="none" stroke="rgba(9,9,11,0.08)" stroke-width="1"/>
-  <text x="56" y="170" font-family="'IBM Plex Mono', 'JetBrains Mono', ui-monospace, monospace" font-size="13" fill="#09090B" xml:space="preserve"><tspan font-weight="600">OPA</tspan><tspan fill="#52525B">  orthogonal pair alignment</tspan></text>
-  <rect x="314" y="150" width="250" height="30" rx="6" fill="none" stroke="rgba(9,9,11,0.08)" stroke-width="1"/>
-  <text x="326" y="170" font-family="'IBM Plex Mono', 'JetBrains Mono', ui-monospace, monospace" font-size="13" fill="#09090B" xml:space="preserve"><tspan font-weight="600">GTL</tspan><tspan fill="#52525B">  geodesic transformations</tspan></text>
-  <rect x="576" y="150" width="211" height="30" rx="6" fill="none" stroke="rgba(9,9,11,0.08)" stroke-width="1"/>
-  <text x="588" y="170" font-family="'IBM Plex Mono', 'JetBrains Mono', ui-monospace, monospace" font-size="13" fill="#09090B" xml:space="preserve"><tspan font-weight="600">GSD</tspan><tspan fill="#52525B">  set-level coherence</tspan></text>
+  <rect x="44" y="150" width="274" height="30" rx="6" fill="none" stroke="rgba(9,9,11,0.08)" stroke-width="1"/>
+  <text x="56" y="170" font-family="'IBM Plex Mono', 'JetBrains Mono', ui-monospace, monospace" font-size="13" fill="#09090B" xml:space="preserve"><tspan font-weight="600">OPA</tspan><tspan fill="#52525B">  orthogonal paired alignment</tspan></text>
+  <rect x="330" y="150" width="250" height="30" rx="6" fill="none" stroke="rgba(9,9,11,0.08)" stroke-width="1"/>
+  <text x="342" y="170" font-family="'IBM Plex Mono', 'JetBrains Mono', ui-monospace, monospace" font-size="13" fill="#09090B" xml:space="preserve"><tspan font-weight="600">GTL</tspan><tspan fill="#52525B">  geodesic transformations</tspan></text>
+  <rect x="592" y="150" width="211" height="30" rx="6" fill="none" stroke="rgba(9,9,11,0.08)" stroke-width="1"/>
+  <text x="604" y="170" font-family="'IBM Plex Mono', 'JetBrains Mono', ui-monospace, monospace" font-size="13" fill="#09090B" xml:space="preserve"><tspan font-weight="600">GSD</tspan><tspan fill="#52525B">  set-level coherence</tspan></text>
 </svg>

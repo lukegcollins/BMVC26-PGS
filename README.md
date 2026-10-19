@@ -7,7 +7,7 @@
 
 This repository holds the tables, figures, evidence and released models behind *Paired Geometric Supervision for Generalizable Deepfake Detection*, by Luke Collins, Chang-Tsun Li, Duc Thanh Nguyen and Victor Sanchez (Deakin University and the University of Warwick).
 
-The method trains a partly frozen DINOv3 ViT-L/16 on pairs of a real frame and its manipulated counterpart. Orthogonal pair alignment (OPA) splits each pair into a manipulation direction and an identity-preserving residual. Geodesic transformation learning (GTL) separates real-to-fake trajectories from real-to-real variation. Set-geometric descriptor regularisation (GSD) asks for consistency within a video. Three configurations are reported, each at three seeds: LayerNorm tuning (LN), LoRA, and LoRA with GSD (GSD-LoRA). On 17 unseen datasets under one preprocessing pipeline, GSD-LoRA scores 92.82 MEAN-17 Video-AUC against 91.58 for the strongest of six re-evaluated baselines. The LN configuration is not significantly better than that baseline, and GSD adds only 0.20 over plain LoRA, within seed variation.
+The method, OrthoPairGTL, trains a partly frozen DINOv3 ViT-L/16 on pairs of a real frame and its manipulated counterpart. Orthogonal Paired Alignment (OPA) splits each pair into a manipulation direction and an identity-preserving residual. Geodesic Transformation Learning (GTL) separates real-to-fake trajectories from real-to-real variation. Set-Geometric Descriptor (GSD) regularisation asks for consistency within a video. Three configurations are reported, each at three seeds: LayerNorm tuning (LN), LoRA, and LoRA with GSD (GSD-LoRA). On 17 unseen datasets under one preprocessing pipeline, GSD-LoRA scores 92.82 MEAN-17 Video-AUC against 91.58 for the strongest of six re-evaluated baselines. The LN configuration is not significantly better than that baseline, and GSD adds only 0.20 over plain LoRA, within seed variation.
 
 The paper describes a paired SLERP augmentation that was inactive in every run. The text has been corrected to match what trained; the numbers have not changed. `CORRECTIONS.md` records the change, and `results/slerp_rerun/` holds a matched rerun with the interpolation restored.
 
@@ -62,7 +62,7 @@ Table 5 has a script written for this repository, `src/dynamics/table5.py`, beca
 
 Training is not repeated here. `method/` holds the code that defined the method, and the logs hold what it produced. The twenty-five ablation runs and ten sweep runs used a later commit of the same codebase; `method/METHOD.md` lists the differences.
 
-About the configurations: `configs/` set `use_paired_slerp_aug: false`, which matches what ran. The run logs and the sidecar configurations of the released checkpoints keep the recorded `true`. The flag had no effect in that code (`method/METHOD.md`, `patches/`, `results/slerp_rerun/`).
+About the configurations: `configs/` set `use_paired_slerp_aug: false`, which matches what ran. The headline run logs and the sidecar configurations of the released checkpoints keep the recorded `true`. The flag had no effect in that code (`method/METHOD.md`, `patches/`, `results/slerp_rerun/`).
 
 ## Models
 
@@ -107,4 +107,6 @@ The keys are those in the `source` column of `results/published/published_number
 
 ## Licence
 
-Code and text are MIT (`LICENSE`). The released model files are distributed under the DINOv3 License (`LICENSE-DINOv3.md`).
+- Code and text: MIT (`LICENSE`).
+- The paper PDFs in `pdfs/`: BMVC's own notice, printed on their first page (the copyright resides with the authors, and the PDFs may be distributed unchanged).
+- The released model files: the DINOv3 License (`LICENSE-DINOv3.md`).

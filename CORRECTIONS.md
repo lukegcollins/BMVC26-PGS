@@ -2,13 +2,12 @@
 
 ## 2026-10-19: paired SLERP removed from the method description; ablation labels
 
-**Before.** Git tag `bmvc26-camera-ready` (commit `83fb53a`), `paper_camera_ready.pdf` and
-`paper_camera_ready_supp.pdf`, and the supplementary archive uploaded with the paper (its `*.log`
+**Before.** The camera-ready paper and supplementary (`paper_camera_ready.pdf` and
+`paper_camera_ready_supp.pdf`), and the supplementary archive uploaded with the paper (its `*.log`
 files are carried in `results/logs/`). The camera-ready PDFs are not in this repository.
 
-**After.** The corrected build, `pdfs/paper.pdf` and `pdfs/supplementary.pdf` (17 + 22 pp; the body
-now ends on p13, and the References start on p14), together with the release tree in this
-repository: `configs/`, `results/` and `pdfs/`.
+**After.** The corrected paper and supplementary, `pdfs/paper.pdf` and `pdfs/supplementary.pdf`,
+together with `configs/`, `results/` and `pdfs/` in this repository.
 
 **Why.** The paired SLERP augmentation described in §3 (Manifold Regularisation) was not active in
 any reported run:
@@ -20,10 +19,10 @@ any reported run:
 - **No number changes.** The reported numbers are correct for the model that was trained, and
   this correction makes the text describe that model.
 - **Matched three-seed rerun with the interpolation restored as described** (the verdict is
-  `publication/SLERP_Rerun/results/slerp_rerun_verdict.md` in the research workbench repository).
-  On minus off, MEAN-17 changes by +0.13 (LN), −0.46 (LoRA) and −0.49 (GSD-LoRA) pp, all under the
-  registered 0.5 pp threshold. With it off, the rerun gives 91.51 / 92.64 / 92.89 (reported:
-  91.97 / 92.62 / 92.82).
+  `results/slerp_rerun/slerp_rerun_verdict.md`). Over the three seeds, SLERP on minus off changes
+  MEAN-17 by +0.13 (LN), −0.46 (LoRA) and −0.49 (GSD-LoRA) pp.
+  - The registration's 0.5 pp figure was the gate for the seed-42 pilot, which the pilot crossed
+    (LoRA −0.83 and GSD-LoRA −0.62 pp), so the rerun went on to all three seeds.
 
 ### Main paper (paper source, `sections/`)
 
@@ -55,17 +54,9 @@ any reported run:
     neutral (92.24→92.21)". There is no LoRA + OPA-only row, so the step is OPA + uniformity
     against no geometry.
 
-### Posters (outside this repository)
-
-- gemini: "paired SLERP augmentation and hyperspherical uniformity" → "hyperspherical uniformity on
-  the embeddings and residuals".
-- betterposter: "SLERP + uniformity" → "Uniformity".
-
-### Release (`configs/`, `results/`, `pdfs/`)
+### This repository (`configs/`, `src/`)
 
 - `configs/`: the configs change `use_paired_slerp_aug: true` → `false`. An inline comment marks the
   change in 34 of the 46 files, and `configs/ablations/_generate.py` is changed to match. `results/logs/` keep the flag as
   recorded.
-- The release README: "SLERP + hyperspherical uniformity" → "hyperspherical uniformity"; new section
-  "Note on paired SLERP" (what happened, what ran, the rerun numbers).
-- `reproduce_tables.py`: same ablation labels as Table 6; label column widened.
+- `src/tables/reproduce_tables.py`: same ablation labels as Table 6; label column widened.

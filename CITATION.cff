@@ -3,7 +3,9 @@ message: "If you use this code, models or these results, please cite the paper b
 title: "bmvc26-pgs: Paired Geometric Supervision"
 type: software
 version: 1.0.0
+date-released: 2026-10-19
 license: MIT
+repository-code: "https://github.com/lukegcollins/BMVC26-PGS"
 authors:
   - family-names: Collins
     given-names: Luke
