@@ -93,8 +93,14 @@ def hf_key(ckpt_key: str) -> str | None:
     return rest
 
 
+def _bytes(t):
+    return t.detach().contiguous().reshape(-1).view(torch.uint8)
+
+
 def _identical(a, b) -> bool:
-    return a.dtype == b.dtype and a.shape == b.shape and bool(torch.equal(a, b))
+    """Bitwise equality: equal dtype and shape, then equal bytes (so ``-0.0`` differs from ``+0.0``, and a NaN
+    equals only the same NaN)."""
+    return a.dtype == b.dtype and a.shape == b.shape and bool(torch.equal(_bytes(a), _bytes(b)))
 
 
 def _group(key: str) -> str:

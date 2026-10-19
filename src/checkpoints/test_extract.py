@@ -105,6 +105,18 @@ def test_hf_key_mapping():
     assert hf_key("loss_fn.opa.core.transform_discriminator.weight") is None
 
 
+def test_identical_is_bitwise():
+    assert etp._identical(torch.tensor([0.0, 1.0]), torch.tensor([0.0, 1.0]))
+    assert not etp._identical(torch.tensor([-0.0, 1.0]), torch.tensor([0.0, 1.0]))
+    assert not etp._identical(torch.tensor([1.0]), torch.tensor([1.0], dtype=torch.float64))
+    assert not etp._identical(torch.ones(2, 2), torch.ones(4))
+    nan = torch.tensor([float("nan")])
+    assert etp._identical(nan, nan.clone())
+    strided = torch.arange(8.0)[::2]
+    assert etp._identical(strided, torch.tensor([0.0, 2.0, 4.0, 6.0]))
+    assert etp._identical(torch.tensor(3), torch.tensor(3))
+
+
 def test_select_trained_keeps_only_differences():
     hf = _hf()
     ln = _ln_sd(hf)
@@ -113,7 +125,7 @@ def test_select_trained_keeps_only_differences():
         BB + "layer.0.norm1.weight", BB + "layer.0.norm1.bias", HEAD + "head.1.weight", HEAD + "head.1.bias"
     ]
     for k, v in kept.items():
-        assert torch.equal(v, ln[k])
+        assert etp._identical(v, ln[k])
 
     lora = _lora_sd(hf)
     kept = select_trained(lora, hf)
@@ -142,7 +154,7 @@ def test_reassemble_round_trip():
         out = reassemble(select_trained(sd, hf), hf, keys)
         assert list(out) == keys
         for k in keys:
-            assert out[k].dtype == sd[k].dtype and torch.equal(out[k], sd[k]), k
+            assert etp._identical(out[k], sd[k]), k
 
 
 def test_reassemble_refuses_a_key_it_cannot_source():
