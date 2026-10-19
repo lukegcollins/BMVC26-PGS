@@ -1,0 +1,36 @@
+[project]
+name = "bmvc26-pgs"
+version = "0.1.0"
+description = "Paired Geometric Supervision: tables, figures, evidence and released models for the BMVC 2026 paper"
+readme = "README.md"
+requires-python = "==3.12.*"
+license = "MIT"
+authors = [
+  { name = "Luke Collins", email = "luke.collins@research.deakin.edu.au" },
+  { name = "Chang-Tsun Li" },
+  { name = "Duc Thanh Nguyen" },
+  { name = "Victor Sanchez" },
+]
+dependencies = [
+  "numpy==2.5.4",
+  "pandas==3.0.6",
+  "scipy==1.18.1",
+  "matplotlib>=3.10,<4",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.4,<9", "ruff>=0.8,<1"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["src"]
+norecursedirs = ["data", ".venv", "results", "figures", "configs", "pdfs", "method", "patches", "checkpoints"]
+python_files = ["test_*.py"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+exclude = ["data", "method"]

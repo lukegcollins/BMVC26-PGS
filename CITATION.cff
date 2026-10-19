@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you use this code, models or these results, please cite the paper below."
+title: "bmvc26-pgs: Paired Geometric Supervision"
+type: software
+version: 1.0.0
+license: MIT
+authors:
+  - family-names: Collins
+    given-names: Luke
+    orcid: "https://orcid.org/0009-0002-7771-1081"
+    affiliation: "Deakin University"
+  - family-names: Li
+    given-names: Chang-Tsun
+    affiliation: "Deakin University"
+  - family-names: Nguyen
+    given-names: Duc Thanh
+    affiliation: "Deakin University"
+  - family-names: Sanchez
+    given-names: Victor
+    affiliation: "University of Warwick"
+preferred-citation:
+  type: conference-paper
+  title: "Paired Geometric Supervision for Generalizable Deepfake Detection"
+  authors:
+    - family-names: Collins
+      given-names: Luke
+      orcid: "https://orcid.org/0009-0002-7771-1081"
+      affiliation: "Deakin University"
+    - family-names: Li
+      given-names: Chang-Tsun
+      affiliation: "Deakin University"
+    - family-names: Nguyen
+      given-names: Duc Thanh
+      affiliation: "Deakin University"
+    - family-names: Sanchez
+      given-names: Victor
+      affiliation: "University of Warwick"
+  collection-title: "British Machine Vision Conference (BMVC)"
+  conference:
+    name: "British Machine Vision Conference (BMVC)"
+  year: 2026

@@ -1,0 +1,34 @@
+# environments and caches
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+.env
+
+# data and bulk outputs live outside git (see data/README.md and results/README.md)
+data/*
+!data/README.md
+*.npz
+*.npy
+*.parquet
+openml_cache/
+results/**/run/cells/
+results/**/run/inner/
+results/**/run/scores/
+results/E2/run/
+results/E3/run/
+results/E4/run/
+results/E7/run/
+results/T2/run/cells/
+results/E6/e6_rows.csv
+deepfake/analysis/revision/coee_e8_c_size.csv
+*.log
+
+# editor
+.vscode/
+.idea/
+
+# BMVC26-PGS: keep the release assets and checkpoints out of git
+*.safetensors
+*.ckpt
