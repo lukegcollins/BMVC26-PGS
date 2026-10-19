@@ -48,9 +48,7 @@ def main() -> None:
     print("Table 5: training stability, mean over three seeds")
     print("Variant  Peak epoch  Peak val-AUC (%)  Post-peak slope (pp/epoch)  AUC-under-curve (%)")
     for label, v in table.items():
-        print(
-            f"{label}  {v['peak_epoch']:.1f}  {v['peak_auc']:.2f}  {v['slope']:.3f}  {v['auc_under_curve']:.2f}"
-        )
+        print(f"{label}  {v['peak_epoch']:.1f}  {v['peak_auc']:.2f}  {v['slope']:.3f}  {v['auc_under_curve']:.2f}")
 
 
 if __name__ == "__main__":
