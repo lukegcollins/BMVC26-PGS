@@ -46,7 +46,7 @@ The last command prints Table 4 from `results/baselines/comparison_master.csv` a
 | LN against GenD-DINO (91.58) | MEAN-17 91.97, +0.39, p 0.43, 11 of 17 datasets; not significant | Table 4; `src/tables/table4_wilcoxon.py` |
 | LoRA against GenD-DINO | MEAN-17 92.62, +1.04, p 0.020, 13 of 17 datasets | Table 4 |
 | GSD-LoRA against GenD-DINO | MEAN-17 92.82, +1.24, p 0.015, 13 of 17 datasets | Table 4 |
-| GSD over plain LoRA | +0.20 MEAN-17, p 0.40; within seed variation | Table 6; `src/tables/reproduce_tables.py ablations` |
+| GSD over plain LoRA | +0.20 MEAN-17, p 0.40; within seed variation | MEAN-17 from Table 6; the p-value is in the paper's text, not a table. `uv run python src/tables/table4_wilcoxon.py --reference lora`; checked by `test_gsd_over_lora` in `src/tables/test_table4.py` |
 
 The p-values are exact two-sided Wilcoxon signed-rank tests over the 17 datasets. For the GSD-over-LoRA row, the same test is run with plain LoRA as the reference.
 

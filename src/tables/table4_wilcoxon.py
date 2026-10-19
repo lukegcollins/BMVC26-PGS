@@ -5,6 +5,7 @@ MEAN-17. Delta is MEAN-17(ours) minus MEAN-17(reference); wins counts the datase
 Run from any directory; prints one row per variant: Variant MEAN-17 Delta p Wins.
 """
 
+import argparse
 from pathlib import Path
 
 import pandas as pd
@@ -42,11 +43,15 @@ def _format_p(p: float) -> str:
     return f"{p:.3f}" if p < 0.1 else f"{p:.2f}"
 
 
-def main() -> None:
+def main(argv: list[str] | None = None) -> None:
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument("--reference", default=REFERENCE,
+                        help="reference method: GenD-DINO (default) or a comparison_master.csv row id such as lora")
+    args = parser.parse_args(argv)
     cm = pd.read_csv(MASTER, index_col=0)
     print("Variant MEAN-17 Delta p Wins")
     for variant in VARIANTS:
-        r = wilcoxon_vs(cm, variant)
+        r = wilcoxon_vs(cm, variant, reference=args.reference)
         print(f"{variant} {r['mean17']:.2f} {r['delta']:+.2f} {_format_p(r['p'])} {r['wins']}/{r['n']}")
 
 
