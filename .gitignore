@@ -18,3 +18,8 @@ data/*
 # editor
 .vscode/
 .idea/
+
+# figure-script outputs that are not paper figures
+figures/training_dynamics_combined.*
+figures/training_dynamics_val_curve.*
+figures/val_curves.*

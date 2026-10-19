@@ -23,6 +23,8 @@ def per_run(curves: pd.DataFrame) -> pd.DataFrame:
         epochs = sub["epoch"].to_numpy(float)
         auc = sub["val_video_auc"].to_numpy(float) * 100.0
         peak = int(np.argmax(auc))
+        # Fitted from the peak through the final epoch with at least two points, as the paper describes.
+        # LN seed 137 peaks at epoch 23, so its fit uses two points (-0.0100).
         slope = float(np.polyfit(epochs[peak:], auc[peak:], 1)[0])
         area = float(np.sum((auc[1:] + auc[:-1]) / 2 * np.diff(epochs)) / (epochs[-1] - epochs[0]))
         out.append(
