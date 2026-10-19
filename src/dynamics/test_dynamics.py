@@ -31,7 +31,10 @@ def test_table5_matches_paper():
 
 
 def test_figS6_written():
+    targets = [REPO / "figures" / f"figS6_training_dynamics.{suffix}" for suffix in ("pdf", "png")]
+    before = {p: (p.stat().st_mtime_ns if p.exists() else None) for p in targets}
     run_script("src/dynamics/build_training_dynamics_figure.py")
-    for suffix in ("pdf", "png"):
-        path = REPO / "figures" / f"figS6_training_dynamics.{suffix}"
-        assert path.exists() and path.stat().st_size > 0
+    for path in targets:
+        assert path.exists() and path.stat().st_size > 10_000
+        assert path.stat().st_mtime_ns != before[path], f"{path.name} was not rewritten"
+        assert path.read_bytes()[:4] == (b"%PDF" if path.suffix == ".pdf" else b"\x89PNG")
