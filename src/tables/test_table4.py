@@ -64,3 +64,27 @@ def test_gsd_over_lora_cli():
                           env=env, capture_output=True, text=True, check=False)
     assert done.returncode == 0, done.stderr
     assert any(line.startswith("GSD-LoRA 92.82 +0.20 0.40 ") for line in done.stdout.splitlines()), done.stdout
+
+
+def _cli(*args):
+    import os
+    import subprocess
+    import sys
+
+    env = dict(os.environ, MPLBACKEND="Agg")
+    return subprocess.run([sys.executable, "src/tables/table4_wilcoxon.py", *args], cwd=REPO, env=env,
+                          capture_output=True, text=True, check=False)
+
+
+def test_cli_leaves_out_the_variant_that_is_the_reference():
+    done = _cli("--reference", "lora")
+    assert done.returncode == 0, done.stderr
+    assert [line.split()[0] for line in done.stdout.strip().splitlines()[1:]] == ["LN", "GSD-LoRA"]
+
+
+def test_cli_accepts_only_known_references():
+    done = _cli("--reference", "GenD-DINOv3")
+    assert done.returncode == 2
+    assert "invalid choice" in done.stderr
+    for ref in ("GenD-DINO", "GenD_DINOv3_L", "ForensicAdapter_v1", "ln", "lora", "gsd_lora"):
+        assert _cli("--reference", ref).returncode == 0, ref

@@ -2,7 +2,8 @@
 
 Reads `results/baselines/comparison_master.csv`. The test runs over the 17 cross-dataset columns that make up
 MEAN-17. Delta is MEAN-17(ours) minus MEAN-17(reference); wins counts the datasets where ours scores higher.
-Run from any directory; prints one row per variant: Variant MEAN-17 Delta p Wins.
+Run from any directory; prints one row per variant: Variant MEAN-17 Delta p Wins. With `--reference` set to
+one of the Ours rows (ln, lora or gsd_lora), that variant's own row is left out.
 """
 
 import argparse
@@ -44,13 +45,15 @@ def _format_p(p: float) -> str:
 
 
 def main(argv: list[str] | None = None) -> None:
+    cm = pd.read_csv(MASTER, index_col=0)
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--reference", default=REFERENCE,
+    parser.add_argument("--reference", default=REFERENCE, choices=[REFERENCE, *cm.index],
                         help="reference method: GenD-DINO (default) or a comparison_master.csv row id such as lora")
     args = parser.parse_args(argv)
-    cm = pd.read_csv(MASTER, index_col=0)
     print("Variant MEAN-17 Delta p Wins")
-    for variant in VARIANTS:
+    for variant, row in VARIANTS.items():
+        if row == args.reference:
+            continue
         r = wilcoxon_vs(cm, variant, reference=args.reference)
         print(f"{variant} {r['mean17']:.2f} {r['delta']:+.2f} {_format_p(r['p'])} {r['wins']}/{r['n']}")
 

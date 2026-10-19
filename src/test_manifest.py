@@ -73,24 +73,24 @@ def test_manifest_has_commands():
     assert len(manifest_commands(MANIFEST)) >= 10
 
 
-def test_manifest_commands_run_from_root():
-    """Run each command from the repository root with the figure-test environment; figures stay byte-identical."""
+COMMANDS = manifest_commands(MANIFEST)
+
+
+def test_only_the_arcface_command_needs_release_assets():
+    needing = [args for args, status in COMMANDS if status.startswith(NEEDS_ASSETS)]
+    assert len(needing) == 1 and needing[0].startswith("src/arcface/correlate_across_pairs.py "), needing
+
+
+@pytest.mark.parametrize("args,status", COMMANDS, ids=[args for args, _ in COMMANDS])
+def test_manifest_commands_run_from_root(args, status):
+    """Run one command from the repository root with the figure-test environment; tracked files stay unchanged."""
+    if status.startswith(NEEDS_ASSETS) and not all((ROOT / "data" / "arcface" / n).exists() for n in ASSET_FILES):
+        pytest.skip("needs data/arcface/arcface_embeddings.npz and zperp_embeddings.npz (release assets)")
     env = dict(os.environ, MPLBACKEND="Agg", SOURCE_DATE_EPOCH="0")
-    have_assets = all((ROOT / "data" / "arcface" / name).exists() for name in ASSET_FILES)
     before = _tracked_state()
-    ran = 0
-    skipped = []
-    for args, status in manifest_commands(MANIFEST):
-        if status.startswith(NEEDS_ASSETS) and not have_assets:
-            skipped.append(args)
-            continue
-        done = subprocess.run(
-            [sys.executable, *shlex.split(args)], cwd=ROOT, env=env, capture_output=True, text=True, check=False
-        )
-        assert done.returncode == 0, f"{args}\n{done.stderr}"
-        ran += 1
-    assert ran > 0
+    done = subprocess.run(
+        [sys.executable, *shlex.split(args)], cwd=ROOT, env=env, capture_output=True, text=True, check=False
+    )
+    assert done.returncode == 0, f"{args}\n{done.stderr}"
     if before is not None:
-        assert _tracked_state() == before, "running the MANIFEST commands changed tracked files"
-    if skipped:
-        pytest.skip(f"ran {ran} commands; skipped {len(skipped)} that need data/arcface/*.npz (release assets)")
+        assert _tracked_state() == before, f"{args} changed tracked files"

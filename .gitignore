@@ -23,3 +23,6 @@ data/*
 figures/training_dynamics_combined.*
 figures/training_dynamics_val_curve.*
 figures/val_curves.*
+
+# written by src/dynamics/parse_train_logs.py beside the shipped curves; not used by any table or figure
+results/training_dynamics/train_curves.csv

@@ -77,17 +77,7 @@ if SRC_DIR.exists():
 
 
 def load_model(ckpt_path: str, config_path: str, device: torch.device):
-    """Load a trained OrthoflowGTL model from a Lightning .ckpt + matching config.
-
-    The project may expose a higher-level loader (e.g.
-    src.detectors.registry.build_from_config, OrthoflowDetector.load_from_checkpoint,
-    or a Lightning Trainer test-time path). If so, prefer that loader and have
-    it return an object with a .backbone callable that maps (B, 3, H, W) tensors
-    to (B, d) L2-normalised DINOv3 features.
-
-    The fallback below assumes a straightforward Lightning load and that the
-    detector module exposes `model.backbone(x) -> (B, d)`.
-    """
+    """Load a trained OrthoflowGTL model from a Lightning .ckpt + matching config."""
     cfg = yaml.safe_load(open(config_path))
 
     # Try the project's high-level loader first; fall back to plain Lightning.
@@ -97,7 +87,6 @@ def load_model(ckpt_path: str, config_path: str, device: torch.device):
             ckpt_path, map_location=device, strict=False,
         )
     except Exception:
-        # Manual reconstruction path — adapt as needed for the project's API.
         import pytorch_lightning as pl
         model = pl.LightningModule.load_from_checkpoint(
             ckpt_path, map_location=device, strict=False,
@@ -186,11 +175,6 @@ def main() -> int:
             if not tensors:
                 continue
             batch = torch.stack(tensors).to(device)
-            # Adjust to whatever attribute exposes the (B,d) L2-normalised
-            # DINOv3 features. Common patterns:
-            #   feats = model.backbone(batch)
-            #   feats = model.encoder(batch)
-            #   feats, _ = model.forward_features(batch)
             feats = model.backbone(batch)
             if hasattr(feats, "last_hidden_state"):
                 feats = feats.last_hidden_state.mean(dim=1)  # if backbone returns HF-style output

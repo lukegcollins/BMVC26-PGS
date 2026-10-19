@@ -2,7 +2,6 @@
 
 import importlib.util
 import re
-from pathlib import Path
 
 import pytest
 
@@ -14,7 +13,9 @@ PM = re.compile(r"(-?\d+\.\d{2})\s*±\s*(\d+\.\d{2})")
 
 COLS6 = {"DSv2": 1, "CDFv3": 2, "MEAN": 3}
 COLS3 = {"MEAN": 0}
-# the script prints DF, F2F, FS, NT, ORIGINAL; the paper's MEAN column is the ORIGINAL (last) column
+# the script prints DF, F2F, FS, NT, ORIGINAL, and the paper's MEAN is checked against ORIGINAL (the last column).
+# ORIGINAL and the mean of the four per-manipulation AUCs agree to 4 dp for every row, so the data cannot tell
+# which of the two the paper's MEAN is.
 COLS2 = {"FF-DF": 0, "FF-F2F": 1, "FF-FS": 2, "FF-NT": 3, "MEAN": 4}
 CONFIGS = {"LN": 0, "LoRA": 1, "GSD-LoRA": 2}
 CROSS17 = ["FFSH", "CDFv1", "CDFv2", "CDFv3", "DeFo", "DFD", "DSv1", "DSv2", "DFDCP", "DFDC",

@@ -38,3 +38,20 @@ def test_figS6_written():
         assert path.exists() and path.stat().st_size > 10_000
         assert path.stat().st_mtime_ns != before[path], f"{path.name} was not rewritten"
         assert path.read_bytes()[:4] == (b"%PDF" if path.suffix == ".pdf" else b"\x89PNG")
+
+
+def test_slope_needs_two_points_from_the_peak():
+    import math
+
+    import pandas as pd
+
+    from dynamics.table5 import per_run
+
+    def curve(run, aucs):
+        return pd.DataFrame({"run": run, "variant": "ln", "seed": 42, "epoch": range(len(aucs)), "criterion": "macro",
+                             "val_loss": 0.5, "val_video_auc": aucs})
+
+    runs = per_run(pd.concat([curve("peak_last", [0.80, 0.82, 0.85]), curve("peak_middle", [0.80, 0.85, 0.84])]))
+    slopes = dict(zip(["peak_last", "peak_middle"], runs["slope"]))
+    assert math.isnan(slopes["peak_last"])
+    assert agrees("-1.00", slopes["peak_middle"])

@@ -9,10 +9,7 @@ experiment for R2's circularity charge. The companion `rebuttal_arcface_embed.py
 extracts ArcFace embeddings; this script needs a separately-produced NPZ of
 DINOv3 z_perp residuals on the same frames.
 
-Expected DINOv3 z_perp NPZ schema (produced by your existing inference
-pipeline; not shipped here — easiest path is to add an inference flag that
-saves the residual computed in src.loss._orthoflow_gtl_core.OrthoflowGTLLoss._orthogonal_alignment
-post-projection):
+Expected DINOv3 z_perp NPZ schema:
     ids:           (N,)        object array, must align with ArcFace ids
     z_perp:        (N, d)      float32 — unit-norm OPA residuals z_perp in
                                 DINOv3 embedding space

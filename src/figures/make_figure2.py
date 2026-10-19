@@ -137,7 +137,7 @@ def main():
     outdir.mkdir(parents=True, exist_ok=True)
     for ext in ("pdf", "png"):
         fig.savefig(outdir / f"fig2_val_curves.{ext}", dpi=300)
-    print("wrote", outdir / "figure2_option1_asymmetry.pdf")
+    print("wrote", outdir / "fig2_val_curves.{pdf,png}")
 
 
 if __name__ == "__main__":

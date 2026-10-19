@@ -2,7 +2,8 @@
 
 Per run, on the macro validation Video-AUC (25 logged epochs, 0-24):
   peak epoch and peak AUC; the least-squares slope from the peak through the final epoch (pp/epoch, any run with
-  at least two points from the peak); and the trapezoidal time-average of the curve (endpoints half-weighted).
+  at least two points from the peak, otherwise NaN); and the trapezoidal time-average of the curve (endpoints
+  half-weighted).
 """
 
 from pathlib import Path
@@ -24,8 +25,9 @@ def per_run(curves: pd.DataFrame) -> pd.DataFrame:
         auc = sub["val_video_auc"].to_numpy(float) * 100.0
         peak = int(np.argmax(auc))
         # Fitted from the peak through the final epoch with at least two points, as the paper describes.
-        # LN seed 137 peaks at epoch 23, so its fit uses two points (-0.0100).
-        slope = float(np.polyfit(epochs[peak:], auc[peak:], 1)[0])
+        # LN seed 137 peaks at epoch 23, so its fit uses two points (-0.0100). A run that peaks at its final
+        # epoch has no slope (NaN).
+        slope = float(np.polyfit(epochs[peak:], auc[peak:], 1)[0]) if len(epochs) - peak >= 2 else float("nan")
         area = float(np.sum((auc[1:] + auc[:-1]) / 2 * np.diff(epochs)) / (epochs[-1] - epochs[0]))
         out.append(
             {
