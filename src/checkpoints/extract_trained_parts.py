@@ -27,7 +27,12 @@ and load the released tensors over them. ``reassemble`` does the same at the lev
 Usage (training environment, which provides torch and safetensors; run from the repository root)::
 
     python src/checkpoints/extract_trained_parts.py --hf <model.safetensors> --out data/release \\
-        --sidecars checkpoints [--forbid <name> ...] <run>/checkpoints/<file>.ckpt ...
+        --sidecars checkpoints [--forbid <name> ...] [--evaluated-as <run>/checkpoints/<alias>.ckpt ...] \\
+        <run>/checkpoints/<file>.ckpt ...
+
+``--evaluated-as`` names a second file of a run that a test run loaded instead of the extracted file. Its
+``state_dict`` is compared with the extracted file's tensor by tensor (one file loaded at a time); if every tensor is
+equal, the sidecar records it as ``evaluated_as``, and otherwise no sidecar is written.
 
 The sidecars are refused if any string in them is an absolute or home-relative path, or contains a ``--forbid``
 string. Machine and directory names to refuse are passed at run time rather than listed here, since a list in
@@ -283,6 +288,44 @@ def extract(ckpt: Path, hf_file: Path, out_dir: Path, run: str, forbid: tuple[st
     return sidecar
 
 
+def tensor_digests(ckpt: Path) -> dict[str, tuple[str, tuple[int, ...], str]]:
+    """dtype, shape and sha256 of every ``state_dict`` tensor of one checkpoint, which is freed before returning."""
+    blob = _load_checkpoint(Path(ckpt))
+    try:
+        out = {}
+        for key, tensor in blob["state_dict"].items():
+            flat = tensor.detach().reshape(-1).contiguous()
+            digest = hashlib.sha256(flat.view(torch.uint8).numpy() if flat.numel() else b"").hexdigest()
+            out[key] = (str(tensor.dtype), tuple(tensor.shape), digest)
+            del flat
+    finally:
+        del blob
+        gc.collect()
+    return out
+
+
+def evaluated_alias(ckpt: Path, alias: Path, run: str) -> dict:
+    """The sidecar's ``evaluated_as`` record for ``alias``, a second file of the run whose ``state_dict`` equals that
+    of ``ckpt`` tensor by tensor (a test run loaded it under another name). ValueError if any tensor differs.
+
+    The two files are loaded one after the other, never together.
+    """
+    ckpt, alias = Path(ckpt), Path(alias)
+    if alias.parent.name != "checkpoints" or alias.parent.parent.name != run:
+        raise ValueError(f"expected <run>/checkpoints/<file> for run {run!r}, got {alias.name!r} elsewhere")
+    first = tensor_digests(ckpt)
+    second = tensor_digests(alias)
+    n_differ = sum(1 for k in first.keys() | second.keys() if first.get(k) != second.get(k))
+    if n_differ:
+        raise ValueError(f"{alias.name}: {n_differ} state_dict tensors differ from {ckpt.name}")
+    return {
+        "source_file": f"{run}/checkpoints/{alias.name}",
+        "source_sha256": sha256_file(alias),
+        "state_dict_tensors": len(first),
+        "state_dict_identical": True,
+    }
+
+
 def verify(ckpt: Path, hf_file: Path, parts: Path) -> dict:
     """Rebuild every non-``loss_fn`` tensor of ``ckpt`` from ``parts`` and the base weights and compare."""
     released = load_file(str(parts))
@@ -315,9 +358,17 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--out", type=Path, required=True, help="directory for <run>.safetensors")
     ap.add_argument("--sidecars", type=Path, required=True, help="directory for <run>.json")
     ap.add_argument("--forbid", action="append", default=[], help="a string no sidecar may contain (repeatable)")
+    ap.add_argument("--evaluated-as", type=Path, action="append", default=[], metavar="ALIAS",
+                    help="<run>/checkpoints/<file>.ckpt that a test run loaded in place of the extracted file of the "
+                         "same run; recorded as evaluated_as if its state_dict is identical (repeatable)")
     ap.add_argument("ckpt", type=Path, nargs="+", help="<run>/checkpoints/epoch=<n>-video_auc=<auc>.ckpt")
     args = ap.parse_args(argv)
 
+    runs = {ckpt.parent.parent.name for ckpt in args.ckpt}
+    aliases = {alias.parent.parent.name: alias for alias in args.evaluated_as}
+    if len(aliases) != len(args.evaluated_as) or not aliases.keys() <= runs:
+        print("each --evaluated-as file must belong to a different run that is being extracted", file=sys.stderr)
+        return 1
     if torch is None:
         print("This script needs torch and safetensors, which the repository environment does not provide.",
               file=sys.stderr)
@@ -345,6 +396,15 @@ def main(argv: list[str] | None = None) -> int:
         if not ok:
             print(f"{run}: verification failed; no sidecar written", file=sys.stderr)
             return 1
+        if run in aliases:
+            try:
+                sidecar["evaluated_as"] = evaluated_alias(ckpt, aliases[run], run)
+            except ValueError as err:
+                print(f"{run}: {err}; no sidecar written", file=sys.stderr)
+                return 1
+            gc.collect()
+            sanitise_config(sidecar, tuple(args.forbid))
+            print(json.dumps({"run": run, "evaluated_as": sidecar["evaluated_as"]}))
         args.sidecars.mkdir(parents=True, exist_ok=True)
         text = json.dumps(sidecar, indent=2, allow_nan=False) + "\n"
         (args.sidecars / f"{run}.json").write_text(text, encoding="utf-8")

@@ -801,5 +801,11 @@
     "save_feat": true,
     "metric_scoring": "video_auc"
   },
-  "parts_sha256": "96903341644799ad2c2261b0386051b8018da1a8864fd874514ef97e163959f6"
+  "parts_sha256": "96903341644799ad2c2261b0386051b8018da1a8864fd874514ef97e163959f6",
+  "evaluated_as": {
+    "source_file": "orthoflow_gtl_gsd_lora_s1729/checkpoints/best_CDFv3-VAL.ckpt",
+    "source_sha256": "29b5349a85f3da8195dd471e9d8900362ab83892d2e42ba32cb816035e71097f",
+    "state_dict_tensors": 724,
+    "state_dict_identical": true
+  }
 }

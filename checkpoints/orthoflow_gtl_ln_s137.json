@@ -2,10 +2,10 @@
   "run": "orthoflow_gtl_ln_s137",
   "variant": "LN",
   "seed": 137,
-  "epoch": 22,
+  "epoch": 24,
   "val_video_auc": 0.8555,
-  "source_file": "orthoflow_gtl_ln_s137/checkpoints/epoch=22-video_auc=0.8555.ckpt",
-  "source_sha256": "fa5950f1076b3937b11a5217853ab1bdaeae5172c2ccf14089b6bbf79f13533e",
+  "source_file": "orthoflow_gtl_ln_s137/checkpoints/epoch=24-video_auc=0.8555.ckpt",
+  "source_sha256": "3569da18f63814189e9b58f3ace282bfe9136c4d2c395553d1bb6e5fa6a91112",
   "hf_id": "facebook/dinov3-vitl16-pretrain-lvd1689m",
   "hf_revision": "ea8dc2863c51be0a264bab82070e3e8836b02d51",
   "hf_sha256": "dcb2e45127cccbf1601e5f42fef165eea275c8e5213197e8dcf3f48822718179",
@@ -789,5 +789,5 @@
     "save_feat": true,
     "metric_scoring": "video_auc"
   },
-  "parts_sha256": "f684131ef6139fb8c22bba4f9a97dc18f8100770a45364300e685970cb95042f"
+  "parts_sha256": "c4915518ba74066147c215aa056920710b3ef038c24cf81d672ea97a0b4a3ffa"
 }

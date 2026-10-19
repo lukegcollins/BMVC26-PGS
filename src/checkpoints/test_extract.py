@@ -11,14 +11,14 @@ import pytest
 REASON = "{} is not in the repository environment; the extraction runs in the training environment"
 torch = pytest.importorskip("torch", reason=REASON.format("torch"))
 pytest.importorskip("safetensors", reason=REASON.format("safetensors"))
-from safetensors.torch import load_file, save_file  # noqa: E402
+from safetensors.torch import load_file, save_file
 
 HERE = Path(__file__).resolve().parent
 if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
-import extract_trained_parts as etp  # noqa: E402
-from extract_trained_parts import (  # noqa: E402
+import extract_trained_parts as etp
+from extract_trained_parts import (
     HF_ID,
     HF_REVISION,
     extract,
@@ -289,3 +289,79 @@ def test_extract_writes_the_same_bytes_every_time(tmp_path):
     ckpt, hf_file = _synthetic_release(tmp_path, run, "epoch=02-video_auc=0.8567.ckpt", 2, _lora_sd(_hf()))
     digests = {extract(ckpt, hf_file, tmp_path / f"release{i}", run)["parts_sha256"] for i in range(8)}
     assert len(digests) == 1
+
+
+def _alias_of(ckpt: Path, name: str, sd=None) -> Path:
+    """A second file in the same folder, as a second checkpoint callback writes it: other callback state, same weights."""
+    blob = torch.load(ckpt, map_location="cpu", weights_only=False)
+    blob["callbacks"] = {"ModelCheckpoint{'monitor': 'val/other'}": {"best_model_score": 0.5}}
+    if sd is not None:
+        blob["state_dict"] = sd
+    alias = ckpt.parent / name
+    torch.save(blob, alias)
+    return alias
+
+
+def test_tensor_digests_ignore_everything_but_the_state_dict(tmp_path):
+    run = "orthoflow_gtl_gsd_lora_s1729"
+    sd = _lora_sd(_hf())
+    ckpt, _ = _synthetic_release(tmp_path, run, "epoch=07-video_auc=0.8651.ckpt", 7, sd)
+    same = _alias_of(ckpt, "best_CDFv3-VAL.ckpt")
+    assert _sha256(same) != _sha256(ckpt)
+    digests = etp.tensor_digests(ckpt)
+    assert list(digests) == list(sd)
+    assert digests == etp.tensor_digests(same)
+
+    changed = OrderedDict(sd)
+    changed[HEAD + "head.3.bias"] = sd[HEAD + "head.3.bias"] + 1e-7
+    other = _alias_of(ckpt, "best_DSv2-VAL.ckpt", changed)
+    assert etp.tensor_digests(other) != digests
+
+
+def test_cli_records_the_evaluated_alias(tmp_path, monkeypatch):
+    run = "orthoflow_gtl_gsd_lora_s1729"
+    sd = _lora_sd(_hf())
+    ckpt, hf_file = _synthetic_release(tmp_path, run, "epoch=07-video_auc=0.8651.ckpt", 7, sd)
+    alias = _alias_of(ckpt, "best_CDFv3-VAL.ckpt")
+    monkeypatch.setattr(etp, "HF_SHA256", _sha256(hf_file))
+    out, sidecars = tmp_path / "data" / "release", tmp_path / "checkpoints"
+    argv = ["--hf", str(hf_file), "--out", str(out), "--sidecars", str(sidecars), "--evaluated-as", str(alias), str(ckpt)]
+    assert etp.main(argv) == 0
+    side = json.loads((sidecars / f"{run}.json").read_text(encoding="utf-8"))
+    assert set(side) == SIDECAR_KEYS | {"evaluated_as"}
+    assert side["source_file"] == f"{run}/checkpoints/epoch=07-video_auc=0.8651.ckpt"
+    assert side["evaluated_as"] == {
+        "source_file": f"{run}/checkpoints/best_CDFv3-VAL.ckpt",
+        "source_sha256": _sha256(alias),
+        "state_dict_tensors": len(sd),
+        "state_dict_identical": True,
+    }
+
+
+def test_cli_refuses_an_alias_with_other_tensors(tmp_path, monkeypatch):
+    run = "orthoflow_gtl_gsd_lora_s1729"
+    sd = _lora_sd(_hf())
+    ckpt, hf_file = _synthetic_release(tmp_path, run, "epoch=07-video_auc=0.8651.ckpt", 7, sd)
+    changed = OrderedDict(sd)
+    changed["loss_fn.opa.core.strategy.weights"] = torch.zeros(3)
+    alias = _alias_of(ckpt, "best_CDFv3-VAL.ckpt", changed)
+    monkeypatch.setattr(etp, "HF_SHA256", _sha256(hf_file))
+    sidecars = tmp_path / "checkpoints"
+    argv = ["--hf", str(hf_file), "--out", str(tmp_path / "out"), "--sidecars", str(sidecars),
+            "--evaluated-as", str(alias), str(ckpt)]
+    assert etp.main(argv) != 0
+    assert not sidecars.exists() or not any(sidecars.iterdir())
+
+
+def test_cli_refuses_an_alias_for_a_run_it_is_not_extracting(tmp_path, monkeypatch):
+    run = "orthoflow_gtl_gsd_lora_s1729"
+    ckpt, hf_file = _synthetic_release(tmp_path, run, "epoch=07-video_auc=0.8651.ckpt", 7, _lora_sd(_hf()))
+    stray = tmp_path / "runs" / "orthoflow_gtl_lora_s42" / "checkpoints" / "best_CDFv3-VAL.ckpt"
+    stray.parent.mkdir(parents=True)
+    stray.write_bytes(b"")
+    monkeypatch.setattr(etp, "HF_SHA256", _sha256(hf_file))
+    sidecars = tmp_path / "checkpoints"
+    argv = ["--hf", str(hf_file), "--out", str(tmp_path / "out"), "--sidecars", str(sidecars),
+            "--evaluated-as", str(stray), str(ckpt)]
+    assert etp.main(argv) != 0
+    assert not sidecars.exists() or not any(sidecars.iterdir())
