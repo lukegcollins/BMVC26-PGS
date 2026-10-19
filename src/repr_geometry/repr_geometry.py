@@ -3,13 +3,12 @@
 repr_geometry.py — RQ2 representation-geometry battery, regenerated from
 ALREADY-EXTRACTED DSv2 features (no GPU / no model load).
 
-Definitions follow the original tooling:
+Uses the recovered definitions from the original tooling:
   - V_K identity subspace = PCA on L2-normalised, per-video mean-pooled
     frozen-DINOv3 CLS embeddings              (tools/otg/fit_identity_pca.py)
   - identity decontamination z_perp = z - V_K V_K^T z   (tools/otg/otg_extractor.py)
   - OPA pairwise residual orthogonal to v=unit(Delta)   (extract_zperp.py)
 
-Reports several coupling formulations and a held-out nearest-prototype test.
 
 Features on disk:
   RAW (frozen)   : frozen_probe_s42 / epoch24_best_macro / DSv2
