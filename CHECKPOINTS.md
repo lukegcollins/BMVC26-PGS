@@ -4,7 +4,7 @@ The nine headline models of the paper (LN, LoRA and GSD-LoRA, each at seeds 42, 
 
 ## The files
 
-Each file is made from the checkpoint the paper evaluated: the one named on the first line ("Testing checkpoint: ...") of the run's macro-best `test.log`, `results/logs/main/<run>/test/epochNN_best_macro/test.log`. The epoch and validation Video-AUC are those in that checkpoint's file name. `src/checkpoints/test_evaluated_checkpoints.py` checks every sidecar against its `test.log`. The files are assets of the `v1.0` release of this repository and are not kept in git. The sha256 of each is also recorded as `parts_sha256` in its sidecar.
+Each file is made from the checkpoint the paper evaluated: the one named on the first line ("Testing checkpoint: ...") of the run's macro-best `test.log`, `results/logs/main/<run>/test/epochNN_best_macro/test.log`. The epoch and validation Video-AUC are those in that checkpoint's file name. `src/checkpoints/test_evaluated_checkpoints.py` checks every sidecar against its `test.log`. The original Lightning checkpoints are kept offline by the authors and are not part of this repository. The files are assets of the `v1.0` release of this repository and are not kept in git. The sha256 of each is also recorded as `parts_sha256` in its sidecar.
 
 | Run | Epoch | Val AUC | File | Size | sha256 | Release URL |
 |---|---|---|---|---|---|---|
